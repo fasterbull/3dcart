@@ -1,0 +1,178 @@
+<script type="text/javascript" src="/admin/templates/js/ajax.js"></script>
+<script type="text/javascript" src="/admin/templates/js/ajax-dynamic-content.js"></script>
+<style type="text/css">
+    /*Drop Drill Down*/
+
+    .drilldown-cats {
+        padding: 60px 0px;
+    }
+
+    select.teamSearch {
+        padding: 10px 20px 10px 30px;
+        background: #0a1b2f;
+        display: inline-block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+        width: 100%;
+        height: 66px;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 700;
+        vertical-align: middle;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: left;
+        border: solid 3px #ffa500;
+        box-shadow: inset 3px 2px 5px rgba(0,0,0,0.2);
+    }
+    .drilldown-inner {
+        position: relative;
+        max-width: 90%;
+        display: inline-block;
+        width: 100%;
+    }
+    .cat-drilldown {
+        width: 32.3%;
+        display: inline-block;
+    }
+    .cat-drilldown:after {
+        content: '>';
+        font: 30px Consolas, monospace;
+        color: #bdbdbd;
+        font-weight: 700;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        right: -5px;
+        top: 5px;
+        border-bottom: 0px solid #aaa;
+        position: relative;
+        pointer-events: none;
+        width: 65px;
+        padding: 0 0 5px 0;
+        text-indent: 14px;
+    }
+    .cat-drilldown:last-child:after {
+        content: '';
+    }
+    .drilldown-inner:after {
+        content: '>';
+        font: 30px Consolas, monospace;
+        color: #fff;
+        font-weight: 700;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        right: 5px;
+        top: 5px;
+        border-bottom: 0px solid #aaa;
+        position: absolute;
+        pointer-events: none;
+        width: 65px;
+        padding: 0 0 5px 0;
+        text-indent: 14px;
+    }
+    @media (max-width: 767px) {
+        .cat-drilldown {
+            width: 100%;
+            display: inline-block;
+            margin: 20px 0px;
+        }
+        .cat-drilldown:after {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    function refresh_section22() {
+        ajax_loadContent('drop_down_section22', 'drop_downs.asp?template=dropdowntemplate&catparent=' + document.dropdowns2.section1s.options[document.dropdowns2.section1s.selectedIndex].value);
+    }
+
+    function refresh_section33() {
+        if (document.dropdowns2.section2s.options[document.dropdowns2.section2s.selectedIndex].value > -1){
+            ajax_loadContent('drop_down_section33', 'drop_downs.asp?template=dropdowntemplate&level=3&catparent=' + document.dropdowns2.section2s.options[document.dropdowns2.section2s.selectedIndex].value);
+        }
+    }
+
+
+    function redirect_cat2() {
+        var number = document.dropdowns2.section2bs.selectedIndex;
+        var catid = document.dropdowns2.section2bs.options[number].value;
+        window.setTimeout('redirect1(' + catid + ')', 100);
+    }
+
+    function redirect_cat3() {
+        var number = document.dropdowns2.section3bs.selectedIndex;
+        if (number> -1){
+        var catid = document.dropdowns2.section3bs.options[number].value;
+        window.setTimeout('redirect1(' + catid + ')', 100);
+        }
+    }
+
+
+    function redirect1(catid) {
+        window.location.href = 'category_c_' + catid + '-1-0.html';
+    }
+</script>
+<div class="drilldown-cats">
+    <form name="dropdowns2">
+
+        <div class="cat-drilldown">
+            <div class="drilldown-inner">
+                <!--START: section1-->
+                <select name='section1s' onChange='refresh_section22();' class="teamSearch first">
+                <option value='-1'>Select Make</option>
+                <!--START: section1_items-->
+                <option value='[link_id]'>[link_name]</option>
+                <!--END: section1_items-->
+                </select>
+                <!--END: section1-->
+            </div>
+        </div>
+
+
+        <div class="cat-drilldown">
+            <div class="drilldown-inner">
+                <!--START: section2-->
+                <div id="drop_down_section22">
+                    <select name='section2s' onChange='refresh_section33();' class="teamSearch">
+                    <option value='-1'>Select Year</option>
+                    <!--START: section2_items-->
+                    <option value='[link_id]'>[link_name]</option>
+                    <!--END: section2_items-->
+                    </select>
+                </div>
+                <!--END: section2-->
+            </div>
+        </div>
+
+
+        <div class="cat-drilldown">
+            <div class="drilldown-inner">
+                <!--START: section3-->
+                <div id="drop_down_section33">
+                    <select name='section3bs' onChange='redirect_cat3();' class="teamSearch three">
+                    <option value='-1'>Select a model</option>
+                    <!--START: section3_items-->
+                    <option value='[link_id]'>[link_name]</option>
+                    <!--END: section3_items-->
+                    </select>
+                </div>
+                <!--END: section3-->
+            </div>
+        </div>
+
+
+    </form>
+</div>
+<script>
+    window.setTimeout('refresh_section22()', 1000);
+</script>
