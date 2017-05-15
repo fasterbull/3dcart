@@ -1,0 +1,25 @@
+.search-inner {
+  form {
+    position: relative;
+  }
+  input[type="text"] {
+    padding-right: 32px;
+    padding-left: 5px;
+    height: 26px;
+    width: 100%;
+  }
+  input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.4;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-position: center center;
+    background-image: url('../images/lens.png');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 26px;
+  }
+}

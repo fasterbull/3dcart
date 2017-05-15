@@ -1,0 +1,83 @@
+2017-05-09 21:53:57: Turn Off Copy Attributes, as one of file systems does not support it
+2017-05-09 21:53:57: Turn Off Copy/Compare Extended Attributes, as one of file systems does not support it
+2017-05-09 21:53:57: Turn Off Copy Symbolic LInks, as one of file systems does not support it. You may want to consider using Job -> Options -> Advanced -> Links -> Drill Down, if you need to copy folder to which the link points
+2017-05-09 21:53:57: Disable Copy original filesystem names option. ConsoleVault's sides do not support it
+2017-05-09 21:53:57: -- Analysis Started by User Command
+2017-05-09 21:53:57: L: State file does not exist: /Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/_gsdata_/_file_state_v4._gs
+2017-05-09 21:53:57: R: State file does not exist: ftps://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/_gsdata_/_file_state_v4._gs
+2017-05-09 21:53:59: /3dcart_screenshot_desktop.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /3dcart_screenshot_mobile.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /3dcart_screenshot_tablet.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /_notes/dwsync.xml: Conflict: New files that differ
+2017-05-09 21:53:59: /css/_notes/dwsync.xml: Conflict: New files that differ
+2017-05-09 21:53:59: /css/default.css: Conflict: New files that differ
+2017-05-09 21:53:59: /drilldown-styles.html: Conflict: New files that differ
+2017-05-09 21:53:59: /frame.html: Conflict: New files that differ
+2017-05-09 21:53:59: /images/_notes/dwsync.xml: Conflict: New files that differ
+2017-05-09 21:53:59: /images/angle.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/banner.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/banner2.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/cards.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/cart.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/dark-arrow.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/div.gif: Conflict: New files that differ
+2017-05-09 21:53:59: /images/div.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/dots.gif: Conflict: New files that differ
+2017-05-09 21:53:59: /images/front-sample-picture.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/go-arrow.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/hello-icon.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/lens.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/logo.png: Conflict: New files that differ
+2017-05-09 21:53:59: /images/slider.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/spacer.gif: Conflict: New files that differ
+2017-05-09 21:53:59: /images/watches-theme_03.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/watches-theme_05.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/watches-theme_07.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/watches-theme_13.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/watches-theme_15.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /images/watches-theme_17.jpg: Conflict: New files that differ
+2017-05-09 21:53:59: /js/_notes/dwsync.xml: Conflict: New files that differ
+2017-05-09 21:53:59: /js/functions.js: Conflict: New files that differ
+2017-05-09 21:53:59: /theme_settings.json: Conflict: New files that differ
+2017-05-09 21:53:59: Analyze has finished with Conflicts. Resolve Conflicts by selecting the correct sync direction, then click Sync
+2017-05-09 21:53:59: Changes: 34, Conflicts: 34, CopyTime: 0, FixState: 7, Errors: 0, All: 41
+2017-05-09 21:53:59: -- Analysis Complete. Time 00:00:03, Speed: 13 files/s
+2017-05-09 21:53:59: 
+2017-05-09 21:54:25: New _gsdata_ folder(s) created, so rescan all job folders for their ghosts
+2017-05-09 21:54:25: == Sync Started by User Command
+2017-05-09 21:54:26: /3dcart_screenshot_desktop.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /3dcart_screenshot_mobile.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /3dcart_screenshot_tablet.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /_notes/dwsync.xml: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /css/_notes/dwsync.xml: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /css/default.css: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /drilldown-styles.html: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /frame.html: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/_notes/dwsync.xml: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/angle.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/banner.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/banner2.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/cards.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/cart.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/dark-arrow.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/div.gif: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/div.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/dots.gif: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/front-sample-picture.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/go-arrow.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/hello-icon.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/lens.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/logo.png: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/slider.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/spacer.gif: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/watches-theme_03.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/watches-theme_05.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/watches-theme_07.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/watches-theme_13.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/watches-theme_15.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /images/watches-theme_17.jpg: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /js/_notes/dwsync.xml: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /js/functions.js: unresolved conflict results in No Copy
+2017-05-09 21:54:26: /theme_settings.json: unresolved conflict results in No Copy
+2017-05-09 21:54:28: == Sync Complete. Time: 00:00:04, Speed: 10.4 KB/s, OK: 7, Errors: 0, Conflicts: 34
+2017-05-09 21:54:28: 

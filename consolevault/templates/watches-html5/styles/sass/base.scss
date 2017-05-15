@@ -1,0 +1,15 @@
+@import 'settings';
+@import 'foundation';
+
+@import 'mixins';
+@import 'variables';
+@import 'global';
+
+// - Partials
+@import 'partials/top-bar';
+@import 'partials/search-box';
+@import 'partials/navigation-header';
+@import 'partials/multi-dropdown-menu';
+@import 'partials/image-slider';
+@import 'partials/home';
+@import 'partials/footer';

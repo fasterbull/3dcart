@@ -1,0 +1,42 @@
+2017-05-09 23:15:14: On File Change Monitoring started on file:///Users/Chris/Sites/3dcart/consolevault/templates/watches-html5
+2017-05-09 23:15:15: File Monitoring not available on: ftps://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5
+2017-05-09 23:15:16: -- Analysis Started by On File Change First Full Analyze Upon File Monitoring Start
+2017-05-09 23:15:20: Changes: 34, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 42
+2017-05-09 23:15:20: Left to Right: Copy File: 34 
+2017-05-09 23:15:20: == Sync Started by On File Change First Full Analyze Upon File Monitoring Start
+2017-05-09 23:15:21: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/3dcart_screenshot_desktop.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/3dcart_screenshot_desktop.jpg'
+2017-05-09 23:15:22: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/3dcart_screenshot_mobile.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/3dcart_screenshot_mobile.jpg'
+2017-05-09 23:15:23: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/3dcart_screenshot_tablet.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/3dcart_screenshot_tablet.jpg'
+2017-05-09 23:15:24: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/_notes/dwsync.xml' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/_notes/dwsync.xml'
+2017-05-09 23:15:25: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/css/_notes/dwsync.xml' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/css/_notes/dwsync.xml'
+2017-05-09 23:15:26: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/css/default.css' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/css/default.css'
+2017-05-09 23:15:27: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/drilldown-styles.html' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/drilldown-styles.html'
+2017-05-09 23:15:28: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/frame.html' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/frame.html'
+2017-05-09 23:15:29: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/_notes/dwsync.xml' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/_notes/dwsync.xml'
+2017-05-09 23:15:29: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/angle.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/angle.png'
+2017-05-09 23:15:30: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/banner.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/banner.jpg'
+2017-05-09 23:15:32: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/banner2.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/banner2.jpg'
+2017-05-09 23:15:32: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/cards.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/cards.png'
+2017-05-09 23:15:33: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/cart.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/cart.png'
+2017-05-09 23:15:34: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/dark-arrow.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/dark-arrow.png'
+2017-05-09 23:15:35: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/div.gif' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/div.gif'
+2017-05-09 23:15:36: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/div.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/div.png'
+2017-05-09 23:15:36: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/dots.gif' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/dots.gif'
+2017-05-09 23:15:37: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/front-sample-picture.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/front-sample-picture.jpg'
+2017-05-09 23:15:38: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/go-arrow.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/go-arrow.png'
+2017-05-09 23:15:39: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/hello-icon.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/hello-icon.png'
+2017-05-09 23:15:40: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/lens.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/lens.png'
+2017-05-09 23:15:41: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/logo.png' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/logo.png'
+2017-05-09 23:15:42: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/slider.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/slider.jpg'
+2017-05-09 23:15:43: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/spacer.gif' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/spacer.gif'
+2017-05-09 23:15:44: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/watches-theme_03.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/watches-theme_03.jpg'
+2017-05-09 23:15:45: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/watches-theme_05.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/watches-theme_05.jpg'
+2017-05-09 23:15:46: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/watches-theme_07.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/watches-theme_07.jpg'
+2017-05-09 23:15:47: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/watches-theme_13.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/watches-theme_13.jpg'
+2017-05-09 23:15:47: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/watches-theme_15.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/watches-theme_15.jpg'
+2017-05-09 23:15:49: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/images/watches-theme_17.jpg' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/images/watches-theme_17.jpg'
+2017-05-09 23:15:49: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/js/_notes/dwsync.xml' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/js/_notes/dwsync.xml'
+2017-05-09 23:15:50: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/js/functions.js' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/js/functions.js'
+2017-05-09 23:15:51: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/theme_settings.json' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/theme_settings.json'
+2017-05-09 23:15:52: == Sync Complete. Time: 00:00:32, Speed: 40.8 KB/s, OK: 34, Errors: 0
+2017-05-09 23:15:53: 
