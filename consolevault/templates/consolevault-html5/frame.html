@@ -1,0 +1,545 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>[TITLE]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    [META]
+    
+    <script type="text/javascript" src="assets/templates/common-html5/js/modernizr.min.js"></script>
+    <script type="text/javascript" src="assets/templates/common-html5/js/utilities.js"></script>
+    
+    <!-- font families -->
+    <link href='https://fonts.googleapis.com/css?family=Exo:400,100,200,300,500,600,500italic,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,300,600,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    
+    
+    <link rel="stylesheet" href="assets/templates/common-html5/css/layout.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/templates/common-html5/css/responsive.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="assets/templates/[template]/css/[stylesheet]" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/templates/common-html5/quicksearch/quicksearch.css" />
+    <link rel="stylesheet" href="assets/templates/common-html5/css/fontello.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/templates/common-html5/css/fontello-ie7.css" />
+    <![endif]-->
+    
+    <!--START: FRAME_RSSFEEDS -->
+    <link rel="alternate" type="application/rss+xml" title="Featured Items (RSS 2.0)" href="[store_url]/rss.asp?type=home" />
+    <link rel="alternate" type="application/rss+xml" title="Products On Sale (RSS 2.0)" href="[store_url]/rss.asp?type=onsale" />
+    <link rel="alternate" type="application/rss+xml" title="New Releases (RSS 2.0)" href="[store_url]/rss.asp?type=newreleases" />
+    <link rel="alternate" type="application/rss+xml" title="Best Sellers (RSS 2.0)" href="[store_url]/rss.asp?type=bestsellers" />
+    <link rel="alternate" type="application/rss+xml" title="Latest Blog Posts (RSS 2.0)" href="[store_url]/rss.asp?type=blog" />
+    <!--END: FRAME_RSSFEEDS -->
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write("<script type=\"text/javascript\" src=\"/assets/templates/common-html5/js/jquery.min.js\"></" + "script>");
+        }
+    </script>
+</head>
+<body>
+	<div class="hidden-mobile-bg" style="display: none;"></div>
+    <!--
+	<div class="mob-menu-bar">
+    	<div id="mob-Search"  style="display: none;"><i class="icon-search"></i></div>
+    	<div id="mob-Cart" onClick='window.location.href="/view_cart.asp"' style="display: none;"><i class="icon-basket"></i></div>
+        <div class="mob-menu-trigger mob-ham"><i class="icon-menu"></i></div>
+    </div>
+    -->
+	<header>
+        <div class="m-container">
+            <div class="col-group">
+                <div class="inline-left header-left">
+                    <div class="logo">
+                        <a href="/home.asp"><!--START: global_header-->
+                          <h1 class="store-name">[storename]</h1>
+                          <div class="store-slogan">[storeslogan]</div>
+                        <!--END: global_header--></a>
+                    </div>
+                </div>
+                
+                <div class="inline-right header-right">
+                   <div class="tab-micon-container">
+                    	<div class="mob-menu-trigger tab-micon"><i class="icon-menu"></i></div>
+                    </div>
+                   
+                    <div class="cart-area">
+                        <a href="/view_cart.asp"><img src="/assets/templates/[template]/images/cart-icon.png" /> <span>[ITEMSINCART] item(s) in cart</span></a>
+                    </div>
+                   
+                   <div class="search-cart col-group">
+                   		<!--START: shopping_cart-->
+                        <div class="cart-area">
+                            <a href="/view_cart.asp"><i class="icon-basket"></i> <span>Shopping Cart ([ITEMSINCART]) item(s)</span></a>
+                        </div>
+                         <script type="text/javascript">
+                            jQuery(document).ready(function(e) {
+                                jQuery('#mob-Cart').removeAttr('style');
+                            });
+                        </script>
+                        <!--END: shopping_cart-->
+                        
+						<!--START: FRAME_SEARCH--> 
+                        <div class="search-area">
+                            <div id="searchBox" class="searchBox">  
+                                 <form method="get" name="searchForm" action="search.asp">
+                                    <input id="searchlight" type="text" name="keyword" value="" placeholder="[frame_search]" class="search-text" />
+                                    <button type="submit" class="search-btn"><!--<i class="icon-search"></i>--></button>
+                                </form>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            jQuery(document).ready(function(e) {
+                                jQuery('#mob-Search').removeAttr('style');
+                            });
+                        </script>
+                        <!--END: FRAME_SEARCH-->
+                   </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    
+    <nav class="link-menu">
+        <div class="m-container col-group">
+            <!--START: FRAME_MENU-->
+            <ul id="links-list" class="links-list">
+                <!--START: menuitems_view--> 
+                <!--START: TOP_LINK_FORMAT-->
+                <li><a href="infopage.asp?page=[link_id]" target="[link_target]">[link_name]</a></li>
+                <!--END: TOP_LINK_FORMAT--> 
+                <!--END: menuitems_view--> 
+            </ul>
+            <!--END: FRAME_MENU-->
+            
+            <div id="welcome-msg" class="welcome-msg">
+                <!--START: login-->
+                Hello Guest, <a href="myaccount.asp">Login?</a>
+                <!--END: login--> 
+                <!--START: username-->
+                Hello [username], <a href="logout.asp">Logout</a>
+                <!--END: username-->
+            </div>
+            <div class="clear"></div>
+        </div>
+    </nav>
+    
+    <div class="content-area">
+    	<div class="m-container">
+        	<div id="mainContainer" class="col-group">
+                  <!--START: LEFT BAR-->
+                  <aside id="leftContent" class="height hidden-mobile-mini">
+                    <div id="column1" class="column">
+                      <!--START: LEFT_BAR_BLOCKS-->
+                      	
+                        <!--START: FRAME_MANUFACTURER-->
+                        <div id="Brands_section" class="mod_bg">
+                            <div id="Brands_menu-slide" class="menu-headers">[frame_manufacturer]</div>
+                            <div class="allmanf">
+                                <div id="Brands_items">
+                                    <div id="Show-Brands" class="filter"><div class="hov">Select Brand</div></div>
+                                    <ul id="Brands-List" class="all-guides">
+                                      <!--START: manufacturer_format-->
+                                      <li><a href="search_groups.asp?manf=[mfgid]">[manufacturer]</a></li>
+                                      <!--END: manufacturer_format-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <!--END: FRAME_MANUFACTURER-->
+                        
+                        <!--START: FRAME_CATEGORY-->
+                        <div id="category_section" class="mod_bg">
+                        <div id="category_section-slide" class="menu-headers">Browse By Category</div>
+                        <div id="category_section_items" class="cat-menu">
+                            <ul id="cat-list" class="cat-list">
+                               <!--START: CATEGORIES-->
+                                <li>
+                                    <!--START: CATEGORY_FORMAT-->
+                                    <a href="view_category.asp?cat=CATID"><span>+</span> CATEGORY</a>
+                                    <!--END: CATEGORY_FORMAT-->
+                                    <ul class="subMenu col-group">
+                                    <!--START: SUB_CATEGORY_FORMAT-->
+                                        <li class="subcat"><a href="view_category.asp?cat=CATID">CATEGORY</a></li>
+                                    <!--END: SUB_CATEGORY_FORMAT-->
+                                    </ul>
+                                </li>
+                                <!--END: CATEGORIES--> 
+                            </ul>
+                        </div>
+                        </div>
+                        <!--END: FRAME_CATEGORY-->                  
+                          
+                        <!--START: FRAME_BYPRICE-->
+                        <div id="sidebar-BP" class="mod_bg hidden-tab"></div>
+                        <!--END: FRAME_BYPRICE-->
+                      
+                        <!--START: NEW_RELEASES_BLOCK-->
+                        <div id="sidebar-NS" class="mod_bg"></div>
+                        <!--END: NEW_RELEASES_BLOCK-->
+                      
+                        <!--START: TOP_SELLERS_BLOCK-->
+                        <div id="sidebar-TS" class="mod_bg"></div>
+                        <!--END: TOP_SELLERS_BLOCK-->
+                      
+                        <div id="LEFT-BANNER">
+                        <!--START: LEFT_BANNER-->
+                          <div class="mod_bg global-banners">[LEFT_BANNER]</div>
+                          <div class="clear"></div>
+                        <!--END: LEFT_BANNER-->
+                        </div>
+                        <div class="clear"></div>
+                        <div id="RIGHT-BANNER">
+                        <!--START: RIGHT_BANNER-->
+                          <div class="mod_bg global-banners">[RIGHT_BANNER]</div>
+                          <div class="clear"></div>
+                        <!--END: RIGHT_BANNER-->
+                        </div>
+                      <div class="clear"></div>
+                      <!--END: LEFT_BAR_BLOCKS-->
+                    </div>
+                  </aside>
+                  <!--END: LEFT BAR-->
+                  <!--start middle column-->
+                  <div id="midContent" class="data">MIDDLE</div>
+                  <!--end middle column-->
+              </div>
+        </div>
+    </div>
+              
+	<footer>
+    	<div class="m-container">
+        	<div class="footer-widgets col-group">
+            	<!--
+                <div class="footer-widget">
+                	<div class="footer-widget-heading">Customer Care</div>
+                    <ul>
+                    	<li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                	<div class="footer-widget-heading">Our Policies</div>
+                    <ul>
+                    	<li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                -->
+                <div class="footer-widget footer-menu">
+                	<div class="footer-widget-heading">Menu Links</div>
+                    <ul>
+                        <!--START: LINKS--> 
+                        <!--START: LINK_FORMAT-->
+                        <li><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom">[link_name]</a></li>
+                        <!--END: LINK_FORMAT--> 
+                        <!--END: LINKS-->
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                
+                <div class="footer-widget newsletter-widget">
+                	<!--START: FRAME_MAILLIST-->
+                    <div id="mailinglist" class="mailinglist">
+                         <form method="post" name="mailing" action="mailing_list.asp?action=add" onSubmit="return mailing_list();">
+                            <div class="mailinglist-box">
+                                <div class="mailinglist_text">[mailinglist_text]</div>
+                                <div class="mailinglist-form">
+                                    <input type="text" size="16" name="email" class="mailinglist-txt" value="" />
+                                    <button type="submit" class="mailinglist-btn"><!--[mailinglist_button]-->Send</button>
+                                </div>
+                                <div class="col-group mailinglist-options">
+                                    <div class="mailinglist-subscribe inline-left"><input type="radio" name="subscribe" value="1" checked="checked" />[mailinglist_subscribe]</div>
+                                    <div class="mailinglist-subscribe inline-left"><input type="radio" name="subscribe" value="0" />[mailinglist_unsubscribe]</div>
+                                </div>
+                            </div>
+                         </form>
+                    </div>
+                    <!--END: FRAME_MAILLIST-->
+                </div>
+                
+                <div class="footer-widget social-block">
+					<div class="social-icons col-group">
+                    	<span>Let's Stay Connected</span>
+                        <!--START: social_link_facebook-->
+                        <a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook"></a>
+                        <!--END: social_link_facebook-->
+                        <!--START: social_link_twitter-->
+                        <a href="[social_link_twitter_url]" class="twitter" target="_blank" title="Follow Us on Twitter"></a>
+                        <!--END: social_link_twitter-->
+                        <!--START: social_link_googleplus-->
+                        <a href="[social_link_googleplus_url]" class="gplus" target="_blank" title="Follow Us on Google+"></a>
+                        <!--END: social_link_googleplus-->
+                        <!--START: social_link_youTube-->
+                        <a href="[social_link_youTube_url]" class="youtube" target="_blank" title="Subscribe to our Channel"></a>
+                        <!--END: social_link_youTube-->
+                        <!--START: social_link_pinterest-->
+                        <a href="[social_link_pinterest_url]" class="pinterest" target="_blank" title="Follow Us on Pinterest"></a>
+                        <!--END: social_link_pinterest-->
+                        <!--START: social_link_instagram-->
+                        <a href="[social_link_instagram_url]" class="instagram" target="_blank" title="Follow Us on Instagram"></a>
+                        <!--END: social_link_instagram-->
+                        <!--START: social_link_tumblr-->
+                        <a href="[social_link_tumblr_url]" class="tumblr" target="_blank" title="Follow Us on Tumblr"></a>
+                        <!--END: social_link_tumblr-->
+                        <!--START: social_link_blog-->
+                        <a href="[social_link_blog_url]" class="blog" target="_blank" title="Subscribe to our Blog"></a>
+                        <!--END: social_link_blog-->
+                    </div>
+                </div>
+            </div>
+        	
+            <div class="clear"></div>
+            <div id="globalFooter" class="globalFooter">[GLOBAL_FOOTER]</div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-group bottom-credits">
+        	<div class="m-container">
+                <div class="footer-left">
+                    <div id="copyright" class="copyright">[frame_copyright1]</div>
+                    <div class="clear"></div>                    
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-cards">
+                        <img src="/assets/templates/[template]/images/cards.png" alt="Payment Methods" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <div id="mob-menu" class="mob-menu">
+    	<div id="mob-menu-close" class="mob-menu-close"><i class="icon-cancel-circled"></i></div>
+        
+        <div id="mob-welcome-msg" class="mob-menu-mod"></div>
+        
+    	<div class="mob-menu-mod">
+        	<div class="mob-mod-heading">Information</div>
+            <div id="mob-links" class="mob-mod-content"></div>
+        </div>
+        
+        <div class="mob-menu-mod visible-mob">
+        	<div class="mob-mod-heading">Browse By Category</div>
+            <div id="mob-cats" class="mob-mod-content"></div>
+        </div>
+        <!--
+        <div class="mob-menu-mod visible-tab">
+        	<div class="mob-mod-heading">Browse By Price</div>
+            <div id="mob-byprice" class="mob-mod-content"></div>
+        </div>
+        
+         <div class="mob-menu-mod visible-mob">
+        	<div class="mob-mod-heading">New Releases</div>
+            <div id="mob-newreleases" class="mob-mod-content"></div>
+        </div>
+        
+         <div class="mob-menu-mod visible-mob">
+        	<div class="mob-mod-heading">Top Sellers</div>
+            <div id="mob-topsellers" class="mob-mod-content"></div>
+        </div>
+        -->
+    </div>
+    
+    <div id="m-search-area" class="m-search-area">
+    	<div id="mob-search-close" class="mob-search-close"><i class="icon-cancel-circled"></i></div>
+        <div class="search-area">
+            <div id="mSearchBox" class="searchBox">  
+                 <form method="get" name="searchForm" action="search.asp">
+                    <input type="text" name="keyword" value="" placeholder="[frame_search]" class="search-text" />
+                    <button type="submit" class="search-btn"><i class="icon-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div id="mobile-menu-mods" style="display: none;">  
+    
+        <div id="Prices_section">
+            <div id="Prices_menu-slide" class="menu-headers">[frame_byprice]</div>
+            <div id="Prices_items">
+                <ul class="cat">
+                  <!--START: byprice_format-->
+                  <li class="default"><a href="search_groups.asp?keyword=[id]&byprice=[id]">[title]</a></li>
+                  <!--END: byprice_format-->
+                </ul>
+            </div>
+        </div>
+        
+        <div id="NR_section">
+            <div id="NR_menu-slide" class="menu-headers">[frame_new-releases]</div>
+              <div id="NR_items">
+                <!--START: newreleases-->
+                <!--START: newreleases_topitem-->
+                <div class="Tsellers-section Tsellers-section-top newreleases_topitem">
+                    <div class="col-group">
+                        <div class="image-container">
+                            <div><a href="product.asp?itemid=[catalogid]"><img src="[thumbnail]" alt="[name]" /></a></div>
+                        </div>
+                        <div class="products-info">
+                            <div class="name"><a href="product.asp?itemid=[catalogid]">[name]</a></div>
+                            <div class="clear"></div>
+                            <!--START: product_review-->
+                            <!--START: product_review_average-->
+                            <div class="products-review">            
+                                  <img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" border="0" /><span>([review_count])</span>
+                            </div>
+                            <!--END: product_review_average-->
+                            <!--END: product_review-->
+                            <div class="clear"></div>
+                            <div class="products-price">
+                              <!--START: ITEMPRICE-->[ITEMPRICE]<!--END: ITEMPRICE--> 
+                              <!--START: SALEPRICE-->[ITEMSALEPRICE]<!--END: SALEPRICE-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-sellers-star">[ranking]</div>
+                </div>
+                <!--END: newreleases_topitem-->
+                <!--START: newreleases_item-->
+                <div class="Tsellers-section">
+                    <div class="image-container">
+                        <div><a href="product.asp?itemid=[catalogid]"><img src="[thumbnail]" alt="[name]" /></a></div>
+                    </div>
+                    <div class="products-info"><a href="product.asp?itemid=[catalogid]">[name]</a></div>
+                    <!--START: product_review-->
+                    <!--START: product_review_average-->
+                    <div class="products-review">            
+                          <img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" border="0" /><span>([review_count])</span>
+                    </div>
+                    <!--END: product_review_average-->
+                    <!--END: product_review-->
+                    <div class="products-price">
+                      <!--START: ITEMPRICE-->[ITEMPRICE]<!--END: ITEMPRICE--> 
+                      <!--START: SALEPRICE-->[ITEMSALEPRICE]<!--END: SALEPRICE-->
+                    </div>
+                    <div class="clear"></div> 
+                    <div class="top-sellers-star">[ranking]</div>           
+                </div>
+                <!--END: newreleases_item-->
+                <!--END: newreleases-->
+              </div>
+        </div>
+        
+        <div id="TS_section">
+            <div id="TS_menu-slide" class="menu-headers">[frame_top-sellers]</div>
+              <div id="TS_items">
+              <!--START: topsellers-->
+              <!--START: topsellers_topitem-->
+                <div class="Tsellers-section Tsellers-section-top">
+                    <div class="image-container">
+                        <div><a href="product.asp?itemid=[catalogid]"><img src="[thumbnail]" alt="[name]" /></a></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="products-info"><a href="product.asp?itemid=[catalogid]">[name]</a></div>
+                    <div class="clear"></div>
+                    <!--START: product_review-->
+                    <!--START: product_review_average-->
+                    <div class="products-review">            
+                          <img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" border="0" /><span>([review_count])</span>
+                    </div>
+                    <!--END: product_review_average-->
+                    <!--END: product_review-->
+                    <div class="products-price">
+                      <!--START: ITEMPRICE-->[ITEMPRICE]<!--END: ITEMPRICE--> 
+                      <!--START: SALEPRICE-->[ITEMSALEPRICE]<!--END: SALEPRICE-->
+                    </div>
+                    <div class="clear"></div>
+                    <div class="action">
+                        <button onClick="window.location.href='product.asp?itemid=[catalogid]'" class="btn">More Details</button>
+                    </div>
+                    
+                    <div class="top-sellers-star">[ranking]</div>
+                </div>
+              <!--END: topsellers_topitem-->
+              <!--START: topsellers_item-->
+                <div class="Tsellers-section">
+                    <div class="image-container">
+                        <div><a href="product.asp?itemid=[catalogid]"><img src="[thumbnail]" alt="[name]" /></a></div>
+                    </div>
+                    <div class="products-info"><a href="product.asp?itemid=[catalogid]">[name]</a></div>
+                    <!--START: product_review-->
+                    <!--START: product_review_average-->
+                    <div class="products-review">            
+                          <img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" border="0" /><span>([review_count])</span>
+                    </div>
+                    <!--END: product_review_average-->
+                    <!--END: product_review-->
+                    <div class="products-price">
+                      <!--START: ITEMPRICE-->[ITEMPRICE]<!--END: ITEMPRICE--> 
+                      <!--START: SALEPRICE-->[ITEMSALEPRICE]<!--END: SALEPRICE-->
+                    </div>
+                    <div class="clear"></div>   
+                    <div class="top-sellers-star">[ranking]</div>         
+                </div>
+              <!--END: topsellers_item-->
+              <!--END: topsellers-->
+              </div>
+        </div>
+    </div>
+    
+
+	<script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
+    <div class="hide">
+    	<script language=Javascript src="https://www.legendaryusa.com/3dlivechat/twlhtrack.asp?105077"></script>
+        <script language=JavaScript src="https://www.legendaryusa.com/3dlivechat/twlh.asp"></script>
+    </div>
+    <!--START: quicksearch-->
+    <script type="text/javascript" src="assets/templates/common/quicksearch/jquery.quicksearch.js"></script>
+    <script type="text/javascript">
+    jQuery(function() {
+                    jQuery('#searchlight').searchlight('/search_quick.asp');
+                });
+    </script>
+    <!--END: quicksearch-->
+    <!-- 3dstats container-->
+    <div class="hide">
+        <!--START: 3dcart stats--> 
+        <script type="text/javascript">
+        //<![CDATA[
+        var file='/stats/count.asp';
+        
+        var stats_d=new Date();
+        var stats_s=stats_d.getSeconds();
+        var stats_m=stats_d.getMinutes();
+        var stats_x=stats_s*stats_m;
+        var prdID = '[catalogid]';
+        var catID = '[catid]';
+        
+        stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
+        if (navigator.appName=='Netscape'){stats_b='NS';}
+        if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
+        if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
+        stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
+        stats_v=navigator.appName;
+        stats_fs = window.screen.fontSmoothingEnabled;
+        if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
+        else {stats_c=screen.pixelDepth;}
+        stats_j=navigator.javaEnabled();
+        info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
+        document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
+        //]]>
+        </script>
+        <noscript>
+        <img src="/stats/count.asp" width="90" height="30" alt="" />
+        </noscript>
+        <!--END: 3dcart stats-->
+    </div>
+    <!-- end of 3dstats container-->
+</body>
+</html>

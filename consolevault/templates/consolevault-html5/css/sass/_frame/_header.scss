@@ -1,0 +1,148 @@
+header {
+	height: auto;
+	background: #f2f2f3;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	
+	@media(max-width: 1023px) {
+		border-bottom: 1px solid #d5d5d5;
+		
+		.m-container {
+			padding: 0;
+		}
+	}
+}
+.header-left {
+	height: 90px;
+	max-height: 100%;
+	@include mob-block;
+
+	.logo {
+		position: relative;
+		height: 100%;
+		min-width: 351px;
+		max-width: 100%;
+		overflow: hidden;
+		line-height: 1.2;
+	
+		img {
+			position: absolute;
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+	}
+	@media(max-width: 767px) {
+		height: auto;
+		
+		.logo {	
+			text-align: center;	
+			padding-top: 10px;
+			padding-bottom: 10px;
+			
+			img {
+				position: static;
+				right: 0;
+			}
+		}
+	}
+	
+	@media(max-width: 415px) {
+		.logo {
+			max-width: 100%;
+			min-width: inherit;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			text-align: center;
+			width: 100%;
+			img {
+				position: static;
+				right: 0;
+				width: 90%;
+			}
+		}
+	}
+}
+.header-right {
+	padding: 33px 0 0;
+	width: 60%;
+	/*@include hidden-mob;*/
+	
+	.search-cart {
+		display: inline-block;
+		float: left;
+		margin: 0 100px 0 0;
+		width: 60%;
+	}
+	
+	.cart-area {
+		float: right;
+		font-size: 14px;
+		line-height: 34px;
+		padding-left: 10px;
+		/*@include hidden-mob;*/
+		
+		a {
+			color: #000;
+			display: inline-block;
+			font-size: 15px;
+			font-weight: 600;
+			line-height: normal;
+			text-transform: capitalize;
+			
+			img {
+				position: relative;
+				top: 4px;
+				margin: 0 6px 0 0;
+			}
+		}
+	}
+	
+	@media (max-width: 1100px) {
+		.search-cart {
+			margin: 0;
+		}
+	}
+	
+	@media(max-width: 1023px) {
+		width: 100%;
+		position: relative;
+		padding: 11px 0;
+		background: #fff;
+		
+		.search-cart {
+			display: inline-block;
+			float: none;
+			margin: 0;
+			text-align: center;
+			width: 100%;
+		}
+		
+		.cart-area {
+			float: right;
+			font-size: 14px;
+			line-height: 34px;
+			padding-left: 0;
+			position: absolute;
+			right: 7px;
+			top: 12px;
+	
+			a {
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	@media(max-width: 767px) {
+		.search-cart {
+			padding: 0 60px;
+		}
+	}
+}

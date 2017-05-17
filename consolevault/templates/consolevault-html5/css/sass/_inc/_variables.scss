@@ -1,0 +1,55 @@
+$scheme: "light";
+
+$template-width: 1100px;
+
+$default-color: #000;
+$body_bg: #fff;
+
+$primary-color: #2559a3;
+$secondary-color: #e8e8e8;
+
+$default-font-size: 14px;
+$default-line-height: 1.25em;
+$default-font-weight: normal;
+
+$primary-font: 'Exo', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+$third-font: 'Oswald', sans-serif;
+
+$theme-font1: $primary-font;
+$theme-font2: $secondary-font;
+
+
+
+$normal-font: $default-font-size;
+$small-font: 0.85em;
+$larger-font: 1.3em;
+$large-font: 1.8em;
+
+
+$font-color1: $default-color;
+$font-color2: $primary-color;
+$font-color3: $secondary-color;
+
+
+//Borders
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: #ccc;
+
+$textarea-font-color: lighten($default-color, 0.4);
+$textarea-border-color: #cdcdcd;
+$textarea-background-color: #fefefe;
+
+//Color Scheme
+
+@if $scheme == "dark" {
+	$default-color: #ffffff;
+	$body_bg: #000000;
+	
+	$border-color: #fff;
+	
+	$primary-color: #155b90;
+	$secondary-color: #952725;
+}

@@ -1,0 +1,264 @@
+/*
+category menu
+-------------------*/
+
+$cat-font-color: #000000;
+$cat-font-size: 15px;
+$cat-font-weight: bold;
+$cat-hover-font-color: $primary-color;
+
+
+$subcat-font-color: #000000;
+$subcat-font-size: 13px;
+$subcat-font-weight: normal;
+$subcat-hover-font-color: $primary-color;
+
+.cat-menu {
+	@include hidden-mob;
+	
+	.cat-list {
+		@include list-unstyled;
+		
+		& > li {
+			margin-bottom: 15px;
+			
+			span {
+				color: #ff0000;
+				font-size: 17px;
+			}
+			
+			& > a {
+				color: $cat-font-color;
+				font-size: $cat-font-size;
+				font-weight: $cat-font-weight;
+				text-decoration: none;
+				margin-bottom: 17px;
+				margin-top: 5px;
+				text-transform: uppercase;
+				display: block;
+				
+				&:hover {
+					color: $cat-hover-font-color; 
+				}
+			}
+			
+			& > .subMenu {
+				@include list-unstyled;
+				padding-left: 15px;
+				
+				& > li {
+					margin-bottom: 5px;
+					
+					& > a {
+						
+						color: $subcat-font-color;
+						font-size: $subcat-font-size;
+						font-weight: $subcat-font-weight;
+						text-decoration: none;
+						
+						&:hover {
+							color: $subcat-hover-font-color; 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*
+links menu
+-------------------*/
+$links-font-color: $default-color;
+$links-font-size: 14px;
+$links-font-weight: bold;
+
+$links-hover-font-color: $primary-color;
+
+.link-menu {
+	background: $secondary-color;
+	@include hidden-tab;
+	
+	.links-list {
+		@include list-inline;
+		text-align: left;
+		margin-bottom: 0px;
+		float: left;
+		
+		& > li {
+			& > a {
+				color: $links-font-color;
+				font-size: $links-font-size;
+				font-weight: $links-font-weight;
+				display: inline-block;
+				margin-right: 10px;
+				text-decoration: none;
+				text-transform: uppercase;
+				line-height: 40px;
+				
+				&:hover {
+					color: $links-hover-font-color;
+				}
+			}
+		}
+	}
+	
+	.welcome-msg {
+		margin-top: 0px;
+		color: #000000;
+		text-align: right;
+		float: right;
+		line-height: 40px;
+		font-weight: 600;
+		font-size: 15px;
+		
+		a {
+			color: $primary-color;
+			text-decoration: none;
+			font-weight: 600;
+			@include transition(opacity, 200ms, ease);
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}
+/*
+Mobile menu
+----------------*/
+.hidden-mobile-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 21;
+}
+//Tablet Ham
+.tab-micon-container {
+	margin-bottom: 0px;
+	text-align: right;
+	position: absolute;
+	left: 7px;
+	top: 17px;
+	@include clearfix;
+	@include visible-tab;
+	/*@include hidden-mob;*/
+	
+	.tab-micon {
+		color: $primary-color;
+		padding: 0px;
+		font-size: 24px;
+		background: none;
+		display: inline-block;
+		cursor: pointer;
+		
+		&:hover {
+			opacity: 0.8;
+			background: $secondary-color;
+		}
+	}
+	
+	@media(max-width: 1023px) {
+	}
+}
+//Mobile Menu
+.mob-menu {
+	@include visible-tab;
+	@include transition(right, 300ms, ease-out);
+	position: fixed;
+	top: 0;
+	right: -250px;
+	background: $primary-color;
+	width: 250px;
+	height: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 1000;
+	
+	&.open {
+		right: 0;
+	}
+	
+	.mob-menu-close {
+		color: #fff;
+		font-size: 24px;
+		line-height: 1;
+		text-align: right;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin: 10px auto;
+		
+		i {
+			cursor: pointer;
+		}
+	}
+	
+	.mob-menu-mod {
+		color: #fff;
+		margin-bottom: 25px;
+		
+		.mob-mod-heading {
+			padding-left: 15px;
+			padding-right: 15px;
+			font-size: 16px;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	}
+	ul {
+		@include list-unstyled;
+		li {
+			a {
+				color: #fff;
+				padding-left: 15px;
+				padding-right: 15px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				line-height: 1;
+				display: block;
+				text-decoration: none;
+				
+				&:hover {
+					color: $primary-color;
+					background: $secondary-color;
+				}
+			}
+		}
+	}
+	
+	.welcome-msg {
+		padding-left: 15px;
+		padding-right: 15px;
+		a {
+			color: #fff;
+			text-decoration: underline;
+			@include transition(opacity, 200ms, ease);
+			&:hover {
+			}
+		}
+	}
+}
+
+/*
+Mob menu bar 
+------------------*/
+.mob-menu-bar {
+	@include visible-mob;
+	@include border-bottom;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	
+	& > div {
+		display: inline-block;
+		margin-left: 8px;
+		margin-right: 8px;
+		font-size: 24px;
+		cursor: pointer;
+	}
+}
