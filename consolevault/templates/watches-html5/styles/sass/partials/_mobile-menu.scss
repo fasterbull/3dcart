@@ -1,0 +1,23 @@
+.mobile-nav-container {
+  position: fixed;
+  top: $top-bar-height - 1px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: darken($primary-yellow, 10%);
+  z-index: 999;
+  display: none;
+  .mobile-nav-menu {
+    padding: 1rem;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    .multi-dropdown-menu-container {
+      position: relative;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+    }
+  }
+}
