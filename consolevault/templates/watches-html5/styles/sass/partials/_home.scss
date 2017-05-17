@@ -26,5 +26,8 @@
     display: flex;
     justify-content: center;
     padding: 4rem 0;
+    @include breakpoint(small down) {
+      padding: 4rem 2rem;
+    }
   }
 }

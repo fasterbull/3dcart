@@ -37,83 +37,159 @@
 </head>
 <body>
 <div id="mainContainer">
-  <div class="site-wrapper row">
-    <div class="site-top-bar columns small-12">
-      <div class="row top-bar-content">
-        <div class="top-bar-content-left columns small-6 large-8">
-          <ul class="row">
-            <li>Free shipping with FEDEX Ground</li>
-            <li><a href="tel:[store_phone]">[store_phone]</a></li>
-            <li><a href="#">Hours of operation</a></li>
-          </ul>
-        </div>
-        <div class="top-bar-content-right columns small-6 large-4">
-          <div class="row">
-            <div class="columns small-8">
-              <div id="searchBox" class="search-inner">
-                <form method="get" name="searchForm" action="search.asp">
-                  <input type="text" id="searchlight" class="mob-s-bar" name="keyword" value="" placeholder="[frame_search]" />
-                  <input type="submit" name="search" value="" class="mob-s-bar-btn"/>
-                </form>
+  <div class="site-top-bar">
+    <div class="row site-top-bar-wrapper">
+      <div class="columns small-12 top-bar-content">
+        <div class="row" style="height:100%">
+          <div class="top-bar-content-left columns small-4 large-7">
+            <div class="mobile-nav-trigger hide-for-large">
+              <div class="mobile-hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
-            <div class="columns right-user-links">
-              <!--START: login-->
-              <a href="myaccount.asp" class="link">My Account</a>
-              <!--END: login-->
-              <a class="cart-link" href="/view_cart.asp"><img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" /></a>
+            <div class="logo-mark-container">
+              <a href="[store_url]">
+                <img src="assets/templates/[template]/images/logo_icon_dark.png" alt="Logo Mark" />
+              </a>
+            </div>
+            <ul>
+              <li>Free shipping with FEDEX Ground</li>
+              <li><a href="#">Hours of operation</a></li>
+            </ul>
+          </div>
+          <div class="top-bar-content-right columns small-8 large-5">
+            <div class="row align-right desktop-nav">
+              <div class="columns small-6" style="padding-right: 0">
+                <div id="searchBox" class="search-inner">
+                  <form method="get" name="searchForm" action="search.asp">
+                    <input type="text" id="searchlight" class="mob-s-bar" name="keyword" value="" placeholder="[frame_search]" />
+                    <input type="submit" name="search" value="" class="mob-s-bar-btn"/>
+                  </form>
+                </div>
+              </div>
+              <div class="columns small-4 right-user-links shrink" style="padding-left: 1.75rem">
+                <!--START: login-->
+                <a href="myaccount.asp" class="link">My Account</a>
+                <!--END: login-->
+                <a style="padding-left: 1.75rem" class="cart-link" href="/view_cart.asp"><img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" /></a>
+              </div>
+            </div>
+            <div class="row mobile-top-links hide-for-large align-right">
+              <div class="columns small-8 medium-6 mobile-links-left">
+                <div class="mobile-search-trigger">
+                  <img class="search-icon-mobile" src="assets/templates/[template]/images/search-icon-top.png" alt="Search" />
+                </div>
+                <!--START: login-->
+                <a href="myaccount.asp" class="link"><img src="assets/templates/[template]/images/account-icon.png" alt="My Account" /></a>
+                <!--END: login-->
+                <a class="cart-link-mobile" href="/view_cart.asp"><img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" /></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <header class="row navigation-header">
-    <div class="columns small-12 navigation-header-logo-container">
-      <a href="http://sofaplace-preview-com.3dcartstores.com/">
-        <!--START: global_header-->
-        <h1 class="store-name">[storename]</h1>
-        <h3 class="store-slogan">[storeslogan]</h3>
-        <!--END: global_header-->
-      </a>
+  <div class="mobile-search-container hide-for-large">
+    <div class="mobile-search-inner">
+      <form method="get" name="searchForm" action="search.asp">
+        <input type="text" class="mob-s-bar" name="keyword" value="" placeholder="[frame_search]">
+        <input type="submit" name="search" value="" class="mob-s-bar-btn">
+      </form>
     </div>
-    <div class="columns small-12 navigation-header-menu-container">
-      <ul class="header-nav-menu">
-        <li class="multi-dropdown-menu-container">
-          <ul class="multi-dropdown-menu">
-            <li>
-              <a href="#" id="drill-down">SHOP BY VEHICLE</a>
-              <nav class="nav-drill hidden">
-                <div class="module cat-links">
-                  <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
-                  <span class="close-btn" id="close"><i class="icon-cancel-circled"></i></span>
-                </div>
-              </nav>
-            </li>
-          </ul>
-        </li>
-        <li id="catNavMenu">
-          <ul id="desktopMenu">
-              <!--START: FRAME_CATEGORY-->
-              <!--START: CATEGORIES-->
-              <li>
-              <!--START: CATEGORY_FORMAT-->
-              <a href="view_category.asp?cat=CATID" class="cat">CATEGORY</a>
-              <!--END: CATEGORY_FORMAT-->
-              <ul class="subMenu">
-              <!--START: SUB_CATEGORY_FORMAT-->
-              <li><a href="view_category.asp?cat=CATID" class="subcat">CATEGORY</a></li>
-              <!--END: SUB_CATEGORY_FORMAT-->
+  </div>
+  <!-- <div class="mobile-nav-container">
+    <ul class="mobile-nav-menu">
+      <li class="multi-dropdown-menu-container">
+        <ul class="multi-dropdown-menu">
+          <li>
+            <a id="drill-down-mobile">SHOP BY VEHICLE</a>
+            <nav class="nav-drill-mobile hidden">
+              <div class="module cat-links">
+                <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
+                <span class="close-btn" id="close"><i class="icon-cancel-circled"></i></span>
+              </div>
+            </nav>
+          </li>
+        </ul>
+      </li>
+      <li id="catNavMenuMobile">
+        <ul id="mobileMenu">
+            START: FRAME_CATEGORY-->
+            <!--START: CATEGORIES-->
+            <!-- <li> -->
+            <!--START: CATEGORY_FORMAT-->
+            <!-- <a href="view_category.asp?cat=CATID" class="cat">CATEGORY</a> -->
+            <!--END: CATEGORY_FORMAT-->
+            <!-- <ul class="subMenu"> -->
+            <!--START: SUB_CATEGORY_FORMAT-->
+            <!-- <li><a href="view_category.asp?cat=CATID" class="subcat">CATEGORY</a></li> -->
+            <!--END: SUB_CATEGORY_FORMAT-->
+            <!-- </ul>
+            </li> -->
+            <!--END: CATEGORIES-->
+            <!--END: FRAME_CATEGORY-->
+        </ul>
+      </li>
+      <li><a href="#">Customers</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div> -->
+  <header class="navigation-header">
+    <div class="nav-header-content row">
+      <div class="columns small-12 navigation-header-logo-container">
+        <a href="http://sofaplace-preview-com.3dcartstores.com/">
+          <!--START: global_header-->
+          <h1 class="store-name">[storename]</h1>
+          <h3 class="store-slogan">[storeslogan]</h3>
+          <!--END: global_header-->
+        </a>
+      </div>
+    </div>
+    <div class="navigation-menu-container-wrapper">
+      <div class="row">
+        <div class="columns small-12 navigation-header-menu-container">
+          <ul class="header-nav-menu">
+            <li class="multi-dropdown-menu-container">
+              <ul class="multi-dropdown-menu">
+                <li>
+                  <a id="drill-down">SHOP BY VEHICLE</a>
+                  <nav class="nav-drill hidden">
+                    <div class="module cat-links">
+                      <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
+                      <span class="close-btn" id="close"><i class="icon-cancel-circled"></i></span>
+                    </div>
+                  </nav>
+                </li>
               </ul>
-              </li>
-              <!--END: CATEGORIES-->
-              <!--END: FRAME_CATEGORY-->
+            </li>
+            <li id="catNavMenu">
+              <ul id="desktopMenu">
+                  <!--START: FRAME_CATEGORY-->
+                  <!--START: CATEGORIES-->
+                  <li>
+                  <!--START: CATEGORY_FORMAT-->
+                  <a href="view_category.asp?cat=CATID" class="cat">CATEGORY</a>
+                  <!--END: CATEGORY_FORMAT-->
+                  <ul class="subMenu">
+                  <!--START: SUB_CATEGORY_FORMAT-->
+                  <li><a href="view_category.asp?cat=CATID" class="subcat">CATEGORY</a></li>
+                  <!--END: SUB_CATEGORY_FORMAT-->
+                  </ul>
+                  </li>
+                  <!--END: CATEGORIES-->
+                  <!--END: FRAME_CATEGORY-->
+              </ul>
+            </li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
-        </li>
-        <li><a href="#">Customers</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+        </div>
+      </div>
     </div>
   </header>
   <div class="row slide-wrap-container">
@@ -296,6 +372,14 @@ jQuery(function() {
 <script>
 jQuery(document).ready(function(e) {
 
+  jQuery('.search-icon-mobile').click(function() {
+    jQuery('.mobile-search-container').toggleClass('shown');
+  });
+
+  jQuery('#drill-down-mobile').click(function() {
+    jQuery('.nav-drill-mobile').toggleClass('hidden');
+  })
+
   jQuery('#drill-down, #close').click(function() {
     jQuery('.nav-drill').toggleClass('hidden');
   });
@@ -311,52 +395,21 @@ jQuery(document).ready(function(e) {
     jQuery('.drilldown-cats .cat-drilldown').wrapAll('<div class="cat-drilldown-container"></div>');
   }
 
-  // Get IE or Edge browser version
-var version = detectIE();
-
-if (version && version < 12) {
-  fixHeaderForIE();
-}
-
-/**
- * detect IE
- * returns version of IE or false, if browser is not Internet Explorer
- */
-function detectIE() {
-  var ua = window.navigator.userAgent;
-  var msie = ua.indexOf('MSIE ');
-  if (msie > 0) {
-    // IE 10 or older => return version number
-    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-  }
-
-  var trident = ua.indexOf('Trident/');
-  if (trident > 0) {
-    // IE 11 => return version number
-    var rv = ua.indexOf('rv:');
-    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-  }
-
-  var edge = ua.indexOf('Edge/');
-  if (edge > 0) {
-    // Edge (IE 12+) => return version number
-    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-  }
-
-  // other browser
-  return false;
-}
-
-function fixHeaderForIE() {
-  var imgHeight = jQuery('.navigation-header-logo-container img').height();
-  jQuery('.navigation-header-logo-container').css('height', imgHeight);
-
-  var bottomMargin = parseInt(jQuery('body').css('font-size'));
-  var menuHeight = jQuery('.navigation-header-menu-container .header-nav-menu').outerHeight();
-  jQuery('.navigation-header-menu-container').css({height: menuHeight, 'margin-bottom': bottomMargin});
-}
-
+	createSticky(jQuery('.navigation-menu-container-wrapper'));
 });
+
+function createSticky(sticky) {
+
+	if (typeof sticky !== 'undefined') {
+
+		var	pos = sticky.offset().top,
+				win = jQuery(window);
+
+		win.on('scroll', function() {
+    	win.scrollTop() >= pos - 54 ? sticky.addClass('fixed') : sticky.removeClass('fixed');
+		});
+	}
+}
 </script>
 </body>
 </html>

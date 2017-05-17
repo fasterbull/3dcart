@@ -1,6 +1,7 @@
 body {
   background: $body-bg-color;
   font-family: $body-font;
+  padding-top: $top-bar-height;
 }
 
 .text-center {
