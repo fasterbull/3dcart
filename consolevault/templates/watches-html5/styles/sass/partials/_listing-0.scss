@@ -1,0 +1,100 @@
+.product-page-top {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $primary-yellow;
+}
+
+.product-interaction-container {
+  .price-spread {
+    margin-top: 0.5rem;
+  }
+}
+
+.product-gallery-container {
+  .product-gallery-thumbs {
+    margin: 0;
+    padding-left: 0;
+    margin-top: 1.5rem;
+    list-style-type: none;
+    .photo-thumb, .video-thumb {
+      padding-left: 0;
+    }
+  }
+}
+
+.txtBoxStyle {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  color: white;
+  background-color: $dark;
+  padding: 0.5rem;
+  width: auto;
+  font-weight: bold;
+  background: $dark url('../images/arrow-icon.png') no-repeat right center;
+}
+
+#divOptionsBlock {
+  border-bottom: none;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.opt-regular {
+  display: flex;
+  flex-direction: column;
+  .opt-field {
+    margin-top: 0.5rem;
+  }
+}
+
+.product-favorite {
+  margin: 0 1rem;
+  padding: 0.25rem;
+  color: white;
+  background: $dark;
+  border-radius: 50%;
+  a {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+}
+
+.product-extended-description-container {
+  &.listing-0 {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.related-products {
+  border-top: 1px solid $primary-yellow;
+  h3 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  ul {
+    flex: 1;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    .related-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .image-placeholder {
+        width: 240px;
+        height: 172px;
+        background-color: lighten($dark, 50%);
+      }
+      span {
+        font-style: italic;
+        font-size: 1.2rem;
+        padding-top: 1rem;
+      }
+    }
+  }
+}

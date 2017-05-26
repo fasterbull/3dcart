@@ -2,27 +2,12 @@ a#drill-down {
   cursor: pointer;
 }
 
+.multi-dropdown-menu-container {
+  position: relative;
+}
 .nav-drill {
-  display: block;
-  position: absolute;
-  top: 100%;
-  background:$primary-yellow;
-  z-index: 99 !important;
   color: white;
   width: 640px;
-  padding: 1rem;
-  box-shadow: 0 0 3px rgba($header-bg-color, 0.4);
-  &.hidden {
-    display: none;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    top: -0.75rem;
-    border-left: 0.75rem solid transparent;
-    border-right: 0.75rem solid transparent;
-    border-bottom: 0.75rem solid $primary-yellow;
-  }
   h1 {
     font-weight: 800;
   }

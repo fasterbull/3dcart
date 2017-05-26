@@ -7,3 +7,31 @@ body {
 .text-center {
   text-align: center;
 }
+
+#extrapage-header {
+  height: 180px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: none;
+}
+
+#extrapage {
+  background: white;
+  margin: 0;
+  padding: 2rem 3rem;
+  padding-bottom: 4rem;
+  .breadcrumbs {
+    display: none;
+  }
+}
+
+#mainContent {
+  background: white;
+}
+
+#mainContentContent {
+  padding: 2rem 3rem;
+  padding-bottom: 4rem;
+}

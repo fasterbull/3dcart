@@ -20,6 +20,13 @@
     height: 100%;
     align-items: center;
     display: flex;
+    @include breakpoint(medium down) {
+      padding-left: 0;
+      .mobile-nav-trigger {
+        padding-left: 0.625rem;
+        cursor: pointer;
+      }
+    }
     .logo-mark-container {
       text-align: center;
       display: flex;

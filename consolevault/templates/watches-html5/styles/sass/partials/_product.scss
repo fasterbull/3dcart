@@ -1,0 +1,78 @@
+.product-page-wrapper {
+  background: white;
+  padding-top: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 4rem;
+  .colored {
+    color: $primary-yellow;
+  }
+  .large {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  .product-title {
+    margin: 0;
+    font-size: 1.75rem;
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+  }
+  .product-short-desc {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin: 0;
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+  }
+  .product-price-container {
+    padding-top: 1.5rem;
+    .price-label {
+      padding-right: 1rem;
+    }
+  }
+  .product-add-to-cart {
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    input[type="text"] {
+      padding: 0.5rem;
+      line-height: 1;
+      border: 1px solid $primary-yellow;
+    }
+    button {
+      margin-left: 0.5rem;
+    }
+    @include breakpoint(small down) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .product-photo-container {
+    padding-top: 3rem;
+    ul {
+      list-style-type: none;
+      .photo-thumb {
+        padding-left: 0;
+        padding-bottom: 1.5rem;
+        @include breakpoint(small down) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  @include breakpoint(small down) {
+    .price-spread {
+      display: flex;
+      justify-content: center;
+      tr, td {
+        display: flex;
+      }
+    }
+  }
+  .social-print-container {
+    padding-top: 1.5rem;
+  }
+}
