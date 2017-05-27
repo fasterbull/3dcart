@@ -1,0 +1,8 @@
+2017-05-09 23:14:37: On File Change Monitoring started on file:///Users/Chris/Sites/3dcart/consolevault/templates/watches-html5
+2017-05-09 23:14:38: File Monitoring not available on: ftps://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5
+2017-05-09 23:14:39: -- Analysis Started by On File Change First Full Analyze Upon File Monitoring Start
+2017-05-09 23:14:42: Changes: 34, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 42
+2017-05-09 23:14:42: Left to Right: Copy File: 34 
+2017-05-09 23:14:43: == Sync Started by On File Change First Full Analyze Upon File Monitoring Start
+2017-05-09 23:14:43: 80% (34 / 42) files have changed (excluding renames), more than a threshold of 50%. So the job will not synchronize automatically.
+2017-05-09 23:14:43: 

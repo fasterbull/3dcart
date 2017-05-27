@@ -1,0 +1,208 @@
+<div id="mainContentContent">
+  <div class="product-page-wrapper columns small-12">
+    <div class="product-page-top row">
+      <div class="product-gallery-container columns small-12 large-6">
+        <div class="row">
+          <div class="columns small-12">
+            <a href="[image1]" class="main-image" id="listing_main_image_link">
+              <img itemprop="image" src="thumbnail.asp?file=[image1]&maxx=490&maxy=0" alt="[name]" />
+            </a>
+          </div>
+          <div class="columns small-12">
+            <ul class="row product-gallery-thumbs">
+              <!--START: image1-->
+              <li class="photo-thumb columns small-3"><img src="thumbnail.asp?file=[image1]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image1-->
+              <!--START: image2-->
+              <li class="photo-thumb columns small-3"><img src="thumbnail.asp?file=[image2]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image2-->
+              <!--START: image3-->
+              <li class="photo-thumb columns smale-3"><img src="thumbnail.asp?file=[image3]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image3-->
+              <!--START: image4-->
+              <li class="photo-thumb columns small-3"><img src="thumbnail.asp?file=[image4]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image4-->
+              <!--START: image5-->
+              <li class="photo-thumb columns small-3"><img src="thumbnail.asp?file=[image5]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image5-->
+              <!--START: image6-->
+              <li class="photo-thumb columns small-3"><img src="thumbnail.asp?file=[image6]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image6-->
+              <li class="video-thumb columns small-3">
+                <button class="product-video-button">
+                  <i class="icon-play"></i>
+                  <span>VIDEO</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="product-interaction-container columns small-12 large-6">
+        <h1 class="product-title">[name]</h1>
+        <table class="price-spread">
+          <tr class="colored large">
+            <td class="price-label">[product_yourprice]   </td>
+            <td>[price]</td>
+          </tr>
+          <tr>
+            <td class="price-label">[product_retailprice]   </td>
+            <td>[price2]</td>
+          </tr>
+          <tr>
+            <td class="price-label">[product_savings]   </td>
+            <td>[savings] ([savings_percentage]%)</td>
+          </tr>
+        </table>
+        <!--START: PRODUCT_OPTIONS_BLOCK-->
+  			<div id="divOptionsBlock">
+  				<!--START: divOptionsBlock-->
+  				<div class="container">
+  					<!--START: optionstemplate-->
+  					<!--START: textarea-format-->
+  					<label for="textarea[oname]">[value]: [oprice]</label>
+  					<textarea cols="30" rows="5" name="textarea[oname]" id="textarea[oname]" maxlength="[option_textlimit]" [option_textarealimit_validation] class="txtAreaStyle"></textarea>
+  					<!--START: textlimit_display_validation[oname]-->
+  					<div class="textlimit-textarea"><span id="charcount[oname]">[option_textlimit]</span> [product_charsleft]</div>
+  					<!--END: textlimit_display_validation[oname]-->
+  					<div class="clear"></div>
+  					<!--END: textarea-format-->
+  					<!--START: text-format-->
+  					<label for="text[oname]">[value]: [oprice]</label>
+  					<input type="text" size="30" name="text[oname]" id="text[oname]" maxlength="[option_textlimit]" [option_textlimit_validation] class="txtBoxStyle" />
+  					<!--START: textlimit_display_validation[oname]-->
+  					<div class="textlimit-text"><span id="charcount[oname]">[option_textlimit]</span> [product_charsleft]</div>
+  					<!--END: textlimit_display_validation[oname]-->
+  					<div class="clear"></div>
+  					<!--END: text-format-->
+  					<!--START: qty-format-->
+  					<label for="text[oname]">[value] [oprice]</label>
+  					<input type="text" size="3" name="text[oname]" value="0" />
+  					<!--END: qty-format-->
+  					<!--START: file-format-->
+  					<label for="file[oname]">[value]: [oprice]</label>
+  					<input type="file" name="file[oname]" />
+  					<div class="clear"></div>
+  					<!--END: file-format-->
+  					<!--START: title-format-->
+  					<div class="title-format">[feature]</div>
+  					<!--END: title-format-->
+  					<!--START: checkbox-format-->
+  					<div class="checkbox-format">
+  						<input type="checkbox" name="cb[oname]" value="[value]" onclick="validateValues(document.add,1);" data-optionset="[optionsetid]" [selected] />
+  						[feature] [oprice]
+  					</div>
+  					<!--END: checkbox-format-->
+  					<!--START: radio-format-->
+  					<div class="radio-format">
+  						<input type="radio" name="[oname]" id="radio-[value]" value="[value]" [selected] />
+  						<div class="radio-option" data-group="[oname]" title="[feature]" id="[value]" onclick="document.getElementById('radio-[value]').checked=true;validateValues(document.add,1);selectOption(document.getElementById('radio-[value]'));">
+  							<!--START: radio_imagepath-->
+  							<img name="img_[oname]" src="[radio_imagepath]" />
+  							<!--END: radio_imagepath-->
+  							<span>[feature] [oprice]</span>
+  						</div>
+  						<div class="clear"></div>
+  					</div>
+  					<!--END: radio-format-->
+  					<!--START: dropdown-format-->
+  					<div class="dropdown-format">
+  						<select name="[oname]" class="txtBoxStyle">
+  							<!--START: option-->
+  							<option value="[value]" [selected]>[feature] [oprice]</option>
+  							<!--END: option-->
+  						</select>
+  					</div>
+  					<!--END: dropdown-format-->
+  					<!--START: dropdownimage-format-->
+  					<div class="dropdownimage-format">
+  						<select name="[oname]" onchange="validateValues(document.add,1);selectOption(this);" class="txtBoxStyle">
+  							<!--START: option-->
+  							<option value="[value]" [selected]>[feature] [oprice]</option>
+  							<!--END: option-->
+  						</select>
+  						<div class="dropdown-image"><img name="img_[oname]" width="50" src="assets/templates/common-html5/images/spacer.gif" /></div>
+  					</div>
+  					<!--END: dropdownimage-format-->
+  					<!--END: optionstemplate-->
+  					<!--START: options-->
+  					<!--START: opt-title-->
+  					<div class="opt-title">
+  						<span class="label">[OPTIONLABEL]</span>
+  					</div>
+  					<!--END: opt-title-->
+  					<!--START: opt-regular-->
+  					<div class="opt-regular">
+  						<span class="label">[OPTIONLABEL]</span>
+  			  		<div class="opt-field">[OPTIONFIELD]</div>
+  					</div>
+  					<!--END: opt-regular-->
+  					<!--END: options-->
+  				</div>
+  				<!--END: divOptionsBlock-->
+  			</div>
+  			<!--END: PRODUCT_OPTIONS_BLOCK-->
+        <div class="product-action-container row">
+          <div class="product-action-form columns small-12">
+            <form class="product-add-to-cart">
+              <!--START: qtybox-->
+              <div class="input-group">
+                <input id="qtyBox" type="text" size="3" name="qty-0" value="1" onchange="" />
+                <label for="qtyBox">[product_quantity]</label>
+              </div>
+              <!--END: qtybox-->
+              <button type="button" class="btn" onclick="">[product_addtocart]</button>
+              <div class="product-favorite">
+                <a href="#"><i class="icon-heart"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="social-print-container row">
+          <div class="columns small-12">
+            <ul class="product-social-share-container">
+              <li><a class="sharing-button-icon" href="#"><i class="icon-mail"></i></a></li>
+              <li><a class="sharing-button-icon" href="#"><i class="icon-facebook"></i></a></li>
+              <li><a class="sharing-button-icon" href="#"><i class="icon-twitter"></i></a></li>
+              <li><a class="sharing-button-icon" href="#"><i class="icon-instagramm"></i></a></li>
+            </ul>
+            <div class="print-action-container">
+              <a class="colored" href="#">Print Page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-extended-description-container listing-0 row">
+      <div class="columns small-12">
+        <!--START: extended_description-->
+          [extended_description]
+        <!--END: extended_description-->
+      </div>
+    </div>
+    <!-- hard code !! -->
+    <div class="related-products-container row align-center">
+      <div class="related-products columns small-12 large-10">
+        <h3 class="text-center">Related Items</h3>
+        <div class="row align-center">
+          <div class="columns small-12 large-10">
+            <ul class="row align-center">
+              <li class="columns small-12 large-4 related-item">
+                <div class="image-placeholder"></div>
+                <span>Wall Vault</span>
+              </li>
+              <li class="columns small-12 large-4 related-item">
+                <div class="image-placeholder"></div>
+                <span>Security Briefcase</span>
+              </li>
+              <li class="columns small-12 large-4 related-item">
+                <div class="image-placeholder"></div>
+                <span>Transporter</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

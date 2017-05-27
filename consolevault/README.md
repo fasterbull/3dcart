@@ -1,4 +1,8 @@
-Files updated for Shop By Vehichle drill down:
-frame.html
-drilldown-styles.html
-css/default.css
+# Console Vault
+
+To run styles
+
+Edit .scss files and run
+`npm run watch-css`
+
+push changes via FTP.

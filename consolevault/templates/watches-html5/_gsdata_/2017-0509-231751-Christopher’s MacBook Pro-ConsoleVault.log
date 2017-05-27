@@ -1,0 +1,7 @@
+2017-05-09 23:17:53: -- Analysis Started by On File Change Incremental
+2017-05-09 23:17:54: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 42
+2017-05-09 23:17:54: Left to Right: Copy File: 1 
+2017-05-09 23:17:54: == Sync Started by On File Change Incremental
+2017-05-09 23:17:56: Copy Over '/Users/Chris/Sites/3dcart/consolevault/templates/watches-html5/frame.html' -> 'ftp://3dcarttest123-com.3dcartstores.com:990/web/assets/templates/watches-html5/frame.html'
+2017-05-09 23:17:57: == Sync Complete. Time: 00:00:03, Speed: 10.0 KB/s, OK: 1, Errors: 0
+2017-05-09 23:17:57: 
