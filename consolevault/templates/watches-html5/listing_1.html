@@ -116,28 +116,18 @@
   </form> 
 </div>
 <script type="text/javascript">
+var reqOptionBar = new MessageBar();
+reqOptionBar.initialize();
 function check_and_add(formx)
 {
     var reqOption = validateReqOption(formx);
     if (reqOption != null) {
-        //alert("Please select all required options.");
         reqOptionBar.alert('Please select all required options.');
         varx1 = '[name="' + reqOption.name + '"]';
         jQuery(varx1).closest('.opt-regular').addClass('option-required');
         return;
     }
-
-    if (document.add.std_price==null)
-    {
-        document.add.submit();
-    }
-    else
-    {
-       var readytoadd=validateValues(formx,1)
-       if (readytoadd==true)
-       {
-            document.add.submit();
-       }
-    }
+    document.add.submit();
+    
 }
 </script>

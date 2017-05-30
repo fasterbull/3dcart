@@ -251,6 +251,9 @@
 </div>
 
 <script type="text/javascript">
+var reqOptionBar = new MessageBar();
+reqOptionBar.initialize();
+
 //Thumbnail script
 var image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,selectedimage;
 var imagemaxwidth, imagemaxheight
@@ -335,25 +338,11 @@ function check_and_add(formx)
 {
     var reqOption = validateReqOption(formx);
     if (reqOption != null) {
-        //alert("Please select all required options.");
-        console.log('we are here');
         reqOptionBar.alert('Please select all required options.');
         varx1 = '[name="' + reqOption.name + '"]';
         jQuery(varx1).closest('.opt-regular').addClass('option-required');
         return;
     }
-
-    if (!document.add.std_price)
-    {
-        document.add.submit();
-    }
-    else
-    {
-       //var readytoadd=validateValues(formx,1)
-       //if (readytoadd==true)
-       //{
-            document.add.submit();
-       //}
-    }
+    document.add.submit();
 }
 </script>
