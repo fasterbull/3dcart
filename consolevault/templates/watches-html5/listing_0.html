@@ -345,17 +345,15 @@ function check_and_add(formx)
 
     if (!document.add.std_price)
     {
-        console.log('just submit');
         document.add.submit();
     }
     else
     {
-       console.log('validate');
-       var readytoadd=validateValues(formx,1)
-       if (readytoadd==true)
-       {
+       //var readytoadd=validateValues(formx,1)
+       //if (readytoadd==true)
+       //{
             document.add.submit();
-       }
+       //}
     }
 }
 </script>
