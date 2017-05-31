@@ -1,37 +1,50 @@
 body {
-  background: $body-bg-color;
-  font-family: $body-font;
-  padding-top: $top-bar-height;
+    background: $body-bg-color;
+    font-family: $body-font;
+    padding-top: $top-bar-height;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 #extrapage-header {
-  height: 180px;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: none;
+    height: 180px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: none;
 }
 
 #extrapage {
-  background: white;
-  margin: 0;
-  padding: 2rem 3rem;
-  padding-bottom: 4rem;
-  .breadcrumbs {
-    display: none;
-  }
+    background: white;
+    margin: 0;
+    padding: 2rem 3rem;
+    padding-bottom: 4rem;
+    .breadcrumbs {
+        display: none;
+    }
 }
 
 #mainContent {
-  background: white;
+    background: white;
 }
 
 #mainContentContent {
-  padding: 2rem 3rem;
-  padding-bottom: 4rem;
+    padding: 2rem 3rem;
+    padding-bottom: 4rem;
 }
+
+.crmForm {
+    .crmField {
+        margin: 20px 0 0;
+        .txtBoxStyle {
+            background-color: #fff;
+            border: 2px solid #F0B527;
+            color: #000;
+            font-weight: normal;
+        }
+    }
+}
+
