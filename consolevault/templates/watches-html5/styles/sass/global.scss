@@ -36,8 +36,9 @@ body {
     padding-bottom: 4rem;
 }
 
-.crmForm {
-    .crmField {
+#frmForm {
+    .crmField,
+    .loginField {
         margin: 20px 0 0;
         .txtBoxStyle {
             background-color: #fff;
@@ -47,4 +48,3 @@ body {
         }
     }
 }
-
