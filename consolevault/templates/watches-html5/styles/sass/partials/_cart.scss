@@ -1,0 +1,71 @@
+#viewCart {
+    padding: 2rem 3rem;
+    .chk-buttons {
+        margin-bottom: 50px;
+    }
+    .chk-buttons a {
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .chk-buttons button {
+        background-color: #0363a6;
+    }
+    .chk-buttons button:hover {
+        background-color: #035085;
+    }
+    .titles2 {
+        color: #bab9b9;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .product-name-options a {
+        line-height: 55px;
+        color: #000;
+        text-decoration: none;
+    }
+    .shoppingCartItems .row {
+        background: none !important;
+        border-bottom: 1px solid $primary-yellow;
+        padding: 20px 0 20px 5px;
+    }
+    .update-qty {
+        color: #000;
+        text-decoration: none;
+    }
+    .item-remove i {
+        background-color: $primary-yellow;
+    }
+    .item-remove i {
+        color: #fff;
+        background-color: $primary-yellow;
+    }
+    .header {
+        border-bottom: none;
+    }
+    .btn {
+        padding: 0rem 1.25rem;
+        height: 39px;
+        background: $primary-yellow;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        border: 0;
+        border-radius: 0;
+    }
+    .btn_over {
+        padding: 0rem 1.25rem;
+        height: 39px;
+        background: #a6780b;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        border: 0;
+        border-radius: 0;
+    }
+}
