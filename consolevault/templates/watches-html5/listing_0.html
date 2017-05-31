@@ -47,11 +47,11 @@
 
             <div id="mainImage" class="columns small-12" id="imagecaptiont">
               <a href="[image1]" class="[3dzoom_class] main-image" id="listing_main_image_link">
-                <img itemprop="image" src="thumbnail.asp?file=[image1]&maxx=490&maxy=0" alt="[name]" />
+                <img itemprop="image" src="thumbnail.asp?file=[image1]&maxx=[image_medium_w]&maxy=0" alt="[name]" />
               </a>
             </div>
-            <div id="realmediaBlock">
-              <iframe id="realmedia" src="[realmedia]" frameborder="0" allowfullscreen></iframe>
+            <div id="realmediaBlock" class="columns small-12">
+              <iframe id="realmedia" src="[realmedia]" style="width:[image_medium_w]px" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="columns small-12">
               <ul class="row product-gallery-thumbs">
@@ -102,7 +102,7 @@
               </tr>
             </table>
           <!--START: PRODUCT_OPTIONS_BLOCK-->
-          <div id="divOptionsBlock">
+          <div id="divOptionsBlock" class="row">
             <!--START: divOptionsBlock-->
             <div class="container">
                 <!--START: optionstemplate-->
@@ -159,6 +159,7 @@
                     <option value="[value]" [selected]>[feature] [oprice]</option>
                     <!--END: option-->
                   </select>
+                  <a class="lock-link" target="_blank" href="/Lock-Types_ep_42-1.html">[CLICK HERE to view our different lock types]</a>
                 </div>
                 <!--END: dropdown-format-->
                 <!--START: dropdownimage-format-->

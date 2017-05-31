@@ -10,84 +10,86 @@
     <input type="hidden" name="itemid" value="[id]" id="itemid" />
     <input type="hidden" name="category_id" value="[catid]" />
     <div class="product-page-wrapper columns small-12">
-      <div class="product-page-header row">
-        <div class="columns small-12">
-          <h1 class="product-title">[name]</h1>
-          <h2 class="product-short-desc colored">[description]</h2>
+      <div class="product-content-container">
+        <div class="product-page-header row">
+          <div class="columns small-12">
+            <h1 class="product-title">[name]</h1>
+            <h2 class="product-short-desc colored">[description]</h2>
+          </div>
         </div>
-      </div>
-      <div class="product-price-container row">
-        <div class="columns small-12">
-          <table class="price-spread">
-            <tr class="colored large">
-              <td class="price-label">[product_yourprice]   </td>
-              <td>[price]</td>
-            </tr>
-            <tr>
-              <td class="price-label">[product_retailprice]   </td>
-              <td>[price2]</td>
-            </tr>
-            <tr>
-              <td class="price-label">[product_savings]   </td>
-              <td>[savings] ([savings_percentage]%)</td>
-            </tr>
-          </table>
+        <div class="product-price-container row">
+          <div class="columns small-12">
+            <table class="price-spread">
+              <tr class="colored large">
+                <td class="price-label">[product_yourprice]   </td>
+                <td>[price]</td>
+              </tr>
+              <tr>
+                <td class="price-label">[product_retailprice]   </td>
+                <td>[price2]</td>
+              </tr>
+              <tr>
+                <td class="price-label">[product_savings]   </td>
+                <td>[savings] ([savings_percentage]%)</td>
+              </tr>
+            </table>
+          </div>
         </div>
-      </div>
-      <div class="product-action-container row">
-        <div class="product-action-form columns small-12">
-          <form class="product-add-to-cart">
-            <!--START: qtybox-->
-            <div class="input-group">
-              <input id="qtyBox" type="text" size="3" name="qty-0" value="1" onchange="validateValues(document.add,1);" />
-              <label for="qtyBox">[product_quantity]</label>
+        <div class="product-action-container row">
+          <div class="product-action-form columns small-12">
+            <form class="product-add-to-cart">
+              <!--START: qtybox-->
+              <div class="input-group">
+                <input id="qtyBox" type="text" size="3" name="qty-0" value="1" onchange="validateValues(document.add,1);" />
+                <label for="qtyBox">[product_quantity]</label>
+              </div>
+              <!--END: qtybox-->
+              <button type="button" class="btn" onclick="check_and_add(document.add);">[product_addtocart]</button>
+            </form>
+          </div>
+        </div>
+        <div class="product-photo-container row">
+          <div class="columns small-12">
+            <ul class="product-images row">
+              <!--START: image1-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image1]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image1-->
+              <!--START: image2-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image2]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image2-->
+              <!--START: image3-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image3]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image3-->
+              <!--START: image4-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image4]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image4-->
+              <!--START: image5-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image5]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image5-->
+              <!--START: image6-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image6]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image6-->
+            </ul>
+          </div>
+        </div>
+        <div class="product-extended-description-container row">
+          <div class="columns small-12">
+            <!--START: extended_description-->
+              [extended_description]
+            <!--END: extended_description-->
+          </div>
+        </div>
+        <div class="social-print-container row">
+          <div class="columns small-12">
+            <ul class="product-social-share-container">
+              <li><a class="sharing-button-icon" href="#"><i class="icon-mail"></i></a></li>
+              <li><a class="sharing-button-icon" href="#"><i class="icon-facebook"></i></a></li>
+              <li><a class="sharing-button-icon" href="#"><i class="icon-twitter"></i></a></li>
+              <li><a class="sharing-button-icon" href="#"><i class="icon-instagramm"></i></a></li>
+            </ul>
+            <div class="print-action-container">
+              <a class="colored" href="#">Print Page</a>
             </div>
-            <!--END: qtybox-->
-            <button type="button" class="btn" onclick="check_and_add(document.add);">[product_addtocart]</button>
-          </form>
-        </div>
-      </div>
-      <div class="product-photo-container row">
-        <div class="columns small-12">
-          <ul class="product-images row">
-            <!--START: image1-->
-            <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image1]&maxx=[image_medium_w]&maxy=0"/></li>
-            <!--END: image1-->
-            <!--START: image2-->
-            <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image2]&maxx=[image_medium_w]&maxy=0"/></li>
-            <!--END: image2-->
-            <!--START: image3-->
-            <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image3]&maxx=[image_medium_w]&maxy=0"/></li>
-            <!--END: image3-->
-            <!--START: image4-->
-            <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image4]&maxx=[image_medium_w]&maxy=0"/></li>
-            <!--END: image4-->
-            <!--START: image5-->
-            <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image5]&maxx=[image_medium_w]&maxy=0"/></li>
-            <!--END: image5-->
-            <!--START: image6-->
-            <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image6]&maxx=[image_medium_w]&maxy=0"/></li>
-            <!--END: image6-->
-          </ul>
-        </div>
-      </div>
-      <div class="product-extended-description-container row">
-        <div class="columns small-12">
-          <!--START: extended_description-->
-            [extended_description]
-          <!--END: extended_description-->
-        </div>
-      </div>
-      <div class="social-print-container row">
-        <div class="columns small-12">
-          <ul class="product-social-share-container">
-            <li><a class="sharing-button-icon" href="#"><i class="icon-mail"></i></a></li>
-            <li><a class="sharing-button-icon" href="#"><i class="icon-facebook"></i></a></li>
-            <li><a class="sharing-button-icon" href="#"><i class="icon-twitter"></i></a></li>
-            <li><a class="sharing-button-icon" href="#"><i class="icon-instagramm"></i></a></li>
-          </ul>
-          <div class="print-action-container">
-            <a class="colored" href="#">Print Page</a>
           </div>
         </div>
       </div>
@@ -99,7 +101,7 @@
               <div class="columns small-12 large-10">
                 <ul class="row align-center">
                   <!--START: related_items0-->
-                  <li class="columns small-12 large-4 related-item">
+                  <li class="columns small-12 large-6 related-item">
                     <a href="product.asp?itemid=[catalogid]">
                       <img src="[THUMBNAIL]" alt="[name]" id="qv_[catalogid]" />
                     </a>
@@ -113,7 +115,7 @@
         </div>
         <!--END: related_0-->
     </div>
-  </form> 
+  </form>
 </div>
 <script type="text/javascript">
 var reqOptionBar = new MessageBar();
@@ -128,6 +130,6 @@ function check_and_add(formx)
         return;
     }
     document.add.submit();
-    
+
 }
 </script>

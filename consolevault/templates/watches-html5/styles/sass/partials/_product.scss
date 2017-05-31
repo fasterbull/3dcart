@@ -28,6 +28,9 @@
   }
   .product-price-container {
     padding-top: 1.5rem;
+    .price-spread {
+      margin-bottom: 1rem;
+    }
     .price-label {
       padding-right: 1rem;
     }
@@ -74,5 +77,25 @@
   }
   .social-print-container {
     padding-top: 1.5rem;
+  }
+}
+
+.product-content-container {
+  padding-bottom: 4rem;
+}
+
+.product-action-form {
+  display: flex;
+  align-items: flex-end;
+  @include breakpoint(small down) {
+    justify-content: center;
+  }
+  #qtyBox {
+    height: 36px;
+    width: 54px;
+    border: 2px solid $primary-yellow;
+  }
+  button {
+    margin-left: 1rem;
   }
 }
