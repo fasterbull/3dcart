@@ -13,13 +13,14 @@
   }
   .product-title {
     margin: 0;
+    margin-bottom: 0.67em;
     font-size: 1.75rem;
     @include breakpoint(small down) {
       text-align: center;
     }
   }
   .product-short-desc {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-style: italic;
     margin: 0;
     @include breakpoint(small down) {
