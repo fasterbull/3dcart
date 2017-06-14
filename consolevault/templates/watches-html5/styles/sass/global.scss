@@ -4,6 +4,12 @@ body {
     padding-top: $top-bar-height;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #f0b527;
+}
+
 .text-center {
     text-align: center;
 }
@@ -46,5 +52,12 @@ body {
             color: #000;
             font-weight: normal;
         }
+    }
+}
+
+#simplemodal-container {
+	border: 2px solid #f0b527 !important;
+    iframe {
+        margin-top: -200px;
     }
 }

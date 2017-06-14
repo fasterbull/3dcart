@@ -116,7 +116,6 @@
       <li><a href="/Partner-Network_ep_38-1.html">PARTNER NETWORK</a></li>
       <li><a href="/Customer-Referral-Program_ep_46-1.html">CUSTOMER REFERRAL PROGRAM</a></li>
       <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
-      
       <li><a href="/crm.asp?action=contactus">Contact</a></li>
       <li><a href="#">CONSOLE VAULT</a></li>
       <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
@@ -148,6 +147,8 @@
                       <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
+					<div class="clear"></div>
+					<div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
                   </nav>
                 </li>
               </ul>
@@ -232,8 +233,8 @@ jQuery(document).ready(function(e) {
     jQuery('.nav-drill-mobile').toggleClass('hidden');
   })
 
-  jQuery('#drill-down, #close').click(function() {
-    jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
+  jQuery('#drill-down, .nav-drill .close-btn').click(function() {
+    //jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
   });
 
