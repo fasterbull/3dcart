@@ -31,6 +31,9 @@ hr {
     .breadcrumbs {
         display: none;
     }
+    @media screen and (max-width: 550px) {
+        padding-left: 2rem;
+    }
 }
 
 #mainContent {
