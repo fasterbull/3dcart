@@ -4,6 +4,13 @@ body {
     padding-top: $top-bar-height;
 }
 
+p, h1, h2 {
+	-webkit-hyphens: manual !important;
+	-moz-hyphens: manual !important;
+	-ms-hyphens: manual !important;
+	hyphens: manual !important;
+}
+
 hr {
     border: 0;
     height: 1px;
