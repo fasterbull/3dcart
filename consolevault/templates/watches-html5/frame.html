@@ -114,20 +114,17 @@
           </li>
         </ul>
       </li>
+	  <li><a href="/Console-Vault_ep_50-1.html">CONSOLE VAULT</a></li>
+	  <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
+      <li><a href="/The-Security-Briefcase_p_13.html">SECURITY BRIEFCASE</a></li>
       <li><a href="/Ecommerce_ep_49-1.html">ECOMMERCE</a></li>
       <li><a href="/OEM_ep_45-1.html">OEM</a></li>
       <li><a href="/Partner-Network_ep_38-1.html">PARTNER NETWORK</a></li>
       <li><a href="/Customer-Referral-Program_ep_46-1.html">CUSTOMER REFERRAL PROGRAM</a></li>
       <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
-      <li><a href="/Our-Team_ep_48-1.html">OUR TEAM</a></li>
-      <li><a href="/Credentials_ep_47-1.html">CREDENTIALS</a></li>
-      <li><a href="/blog.asp">NEWS</a></li>
       <li><a href="/crm.asp?action=contactus">Contact</a></li>
-      <li><a href="#">CONSOLE VAULT</a></li>
-      <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
-      <li><a href="/The-Security-Briefcase_p_13.html">SECURITY BRIEFCASE</a></li>
-      <li><a href="/THE-TRANSPORTER_c_116.html">GUN TRANSPORTER</a></li>
     </ul>
+	<div class="clear"></div>
   </div>
   <header class="navigation-header">
     <div class="nav-header-content row">
@@ -153,6 +150,8 @@
                       <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
+					<div class="clear"></div>
+					<div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
                   </nav>
                 </li>
               </ul>
@@ -179,9 +178,6 @@
               <a class="nav-target">ABOUT</a>
               <ul class="nav-cat-dropdown nav-dropdown hidden">
                 <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
-                <li><a href="/Our-Team_ep_48-1.html">OUR TEAM</a></li>
-                <li><a href="/Credentials_ep_47-1.html">CREDENTIALS</a></li>
-                <li><a href="/blog.asp">NEWS</a></li>
               </ul>
             </li>
             <li><a href="/crm.asp?action=contactus">Contact</a></li>
@@ -368,11 +364,7 @@ jQuery(function() {
 <!--END: quicksearch-->
 <script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
 <script>
-var injectInterval = setInterval(tryInjectVideoShopByMenu, 200);
-var updateNextOptionInverval = null;
-
-jQuery(document).ready(function(e) {
-  jQuery('.nav-dropdown-container').click(function() {
+  jQuery('.nav-dropdown-container').hover(function() {
     jQuery('.nav-dropdown').not(jQuery(this).children('.nav-dropdown')).addClass('hidden');
     jQuery(this).children('.nav-dropdown').toggleClass('hidden');
   });
@@ -385,9 +377,13 @@ jQuery(document).ready(function(e) {
     jQuery('.nav-drill-mobile').toggleClass('hidden');
   })
 
-  jQuery('#drill-down, #close').click(function() {
+  jQuery('#drill-down').hover(function() {
     jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
+  });
+
+  jQuery('.nav-drill .close-btn').click(function() {
+    jQuery('.nav-drill').addClass('hidden');
   });
 
 	jQuery('#mob-search-trigger').click(function() {
@@ -410,57 +406,6 @@ jQuery(document).ready(function(e) {
   jQuery('#homeHeader').addClass('columns small-12');
 	createSticky(jQuery('.navigation-menu-container-wrapper'));
 });
-
-function injectShopByMenuInMobile($drilldowns) {
-  var $drilldownClone = $drilldowns.clone();
-  jQuery('#shopby-drill-mobile').html($drilldownClone);
-  initializeDrilldowns(jQuery('#shopby-drill-mobile'));
-
-}
-
-function initializeDrilldowns(elements) {
-  elements.children('select').each(function(id, el) {
-    jQuery(el)
-      .removeAttr('onchange')
-      .on('change', function() {
-        var $el = jQuery(el);
-        var $next = $el.next('select');
-
-        if ($el.length) {
-          triggerDesktopShopBy($el.attr('name'), $el.val());
-            updateNextOptionInverval = setInterval(function() {
-              populateMobileOptionGroup($next.attr('name'));
-            }, 200);
-          }
-      });
-  });
-}
-
-function populateMobileOptionGroup(selectName) {
-  var $master = jQuery('#master-shopby-dropdown select[name="' + selectName +'"]');
-  var $mobile = jQuery('#shopby-drill-mobile select[name="' + selectName +'"]');
-
-  $mobile.empty();
-  $master.children('option').each(function(index, masterEl) {
-    $mobile.append(jQuery(masterEl).clone());
-  });
-  $mobile.val($master.val());
-  clearInterval(updateNextOptionInverval);
-}
-
-function triggerDesktopShopBy(selectName, value) {
-  var $current = jQuery('#master-shopby-dropdown select[name="' + selectName +'"]');
-  $current.val(value).trigger('change');
-}
-
-function tryInjectVideoShopByMenu() {
-  var $drilldowns = jQuery('#master-shopby-dropdown .cat-drilldown-container select');
-
-  if ($drilldowns.length) {
-    injectShopByMenuInMobile($drilldowns);
-  }
-  clearInterval(injectInterval);
-}
 
 function createSticky(sticky) {
 

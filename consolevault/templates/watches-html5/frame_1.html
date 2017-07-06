@@ -106,24 +106,23 @@
         <ul>
           <li>
             <a id="drill-down-mobile">SHOP BY VEHICLE</a>
-            <nav id="nav-drill-mobile">
+            <nav id="shopby-drill-mobile">
+              <div class="mobile-drilldown-content module cat-links">
+                <span class="close-btn"><i class="icon-cancel-circled"></i></span>
+              </div>
             </nav>
           </li>
         </ul>
       </li>
+      <li><a href="/Console-Vault_ep_50-1.html">CONSOLE VAULT</a></li>
+	  <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
+      <li><a href="/The-Security-Briefcase_p_13.html">SECURITY BRIEFCASE</a></li>
       <li><a href="/Ecommerce_ep_49-1.html">ECOMMERCE</a></li>
       <li><a href="/OEM_ep_45-1.html">OEM</a></li>
       <li><a href="/Partner-Network_ep_38-1.html">PARTNER NETWORK</a></li>
       <li><a href="/Customer-Referral-Program_ep_46-1.html">CUSTOMER REFERRAL PROGRAM</a></li>
       <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
-      <li><a href="/Our-Team_ep_48-1.html">OUR TEAM</a></li>
-      <li><a href="/Credentials_ep_47-1.html">CREDENTIALS</a></li>
-      <li><a href="/blog.asp">NEWS</a></li>
       <li><a href="/crm.asp?action=contactus">Contact</a></li>
-      <li><a href="#">CONSOLE VAULT</a></li>
-      <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
-      <li><a href="/The-Security-Briefcase_p_13.html">SECURITY BRIEFCASE</a></li>
-      <li><a href="/THE-TRANSPORTER_c_116.html">GUN TRANSPORTER</a></li>
     </ul>
   </div>
   <header class="navigation-header">
@@ -150,6 +149,8 @@
                       <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
+					<div class="clear"></div>
+					<div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
                   </nav>
                 </li>
               </ul>
@@ -176,9 +177,7 @@
               <a class="nav-target">ABOUT</a>
               <ul class="nav-cat-dropdown nav-dropdown hidden">
                 <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
-                <li><a href="/Our-Team_ep_48-1.html">OUR TEAM</a></li>
-                <li><a href="/Credentials_ep_47-1.html">CREDENTIALS</a></li>
-                <li><a href="/blog.asp">NEWS</a></li>
+
               </ul>
             </li>
             <li><a href="/crm.asp?action=contactus">Contact</a></li>
@@ -223,7 +222,7 @@ jQuery(function() {
 <script>
 jQuery(document).ready(function(e) {
 
-  jQuery('.nav-dropdown-container').click(function() {
+  jQuery('.nav-dropdown-container').hover(function() {
     jQuery('.nav-dropdown').not(jQuery(this).children('.nav-dropdown')).addClass('hidden');
     jQuery(this).children('.nav-dropdown').toggleClass('hidden');
   });
@@ -236,9 +235,18 @@ jQuery(document).ready(function(e) {
     jQuery('.nav-drill-mobile').toggleClass('hidden');
   })
 
-  jQuery('#drill-down, #close').click(function() {
+  jQuery('#drill-down').hover(function() {
     jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
+  });
+
+  jQuery('button#shop-by-vehicle').click(function() {
+    jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
+    jQuery('.nav-drill').toggleClass('hidden');
+  });
+
+  jQuery('.nav-drill .close-btn').click(function() {
+    jQuery('.nav-drill').addClass('hidden');
   });
 
 	jQuery('#mob-search-trigger').click(function() {

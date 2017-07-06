@@ -4,6 +4,19 @@ body {
     padding-top: $top-bar-height;
 }
 
+p, h1, h2 {
+	-webkit-hyphens: manual !important;
+	-moz-hyphens: manual !important;
+	-ms-hyphens: manual !important;
+	hyphens: manual !important;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #f0b527;
+}
+
 .text-center {
     text-align: center;
 }
@@ -24,6 +37,9 @@ body {
     padding-bottom: 4rem;
     .breadcrumbs {
         display: none;
+    }
+    @media screen and (max-width: 550px) {
+        padding-left: 2rem;
     }
 }
 
@@ -46,6 +62,13 @@ body {
             color: #000;
             font-weight: normal;
         }
+    }
+}
+
+#simplemodal-container {
+	border: 2px solid #f0b527 !important;
+    iframe {
+        margin-top: -200px;
     }
 }
 

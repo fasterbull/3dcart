@@ -28,16 +28,3 @@
     margin-top: 0.5rem;
   }
 }
-
-.product-interaction-container {
-  .product-social-share-container {
-    color: darken($primary-yellow, 15%);
-    li {
-      padding: 0.25rem;
-      background: darken($primary-yellow, 15%);
-      &:hover {
-        background: darken($primary-yellow, 20%);
-      }
-    }
-  }
-}

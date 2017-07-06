@@ -21,16 +21,8 @@
           <div class="columns small-12">
             <table class="price-spread">
               <tr class="colored large">
-                <td class="price-label">[product_yourprice]   </td>
+                <td class="price-label">[product_yourprice]</td>
                 <td>[price]</td>
-              </tr>
-              <tr>
-                <td class="price-label">[product_retailprice]   </td>
-                <td>[price2]</td>
-              </tr>
-              <tr>
-                <td class="price-label">[product_savings]   </td>
-                <td>[savings] ([savings_percentage]%)</td>
               </tr>
             </table>
           </div>
@@ -45,6 +37,9 @@
               </div>
               <!--END: qtybox-->
               <button type="button" class="btn" onclick="check_and_add(document.add);">[product_addtocart]</button>
+			  <div class="product-favorite">
+                <a href="#"><i class="icon-heart"></i></a>
+              </div>
             </form>
           </div>
         </div>
@@ -82,14 +77,14 @@
         <div class="social-print-container row">
           <div class="columns small-12">
             <ul class="product-social-share-container">
-              <li><a class="sharing-button-icon" href="#"><i class="icon-mail"></i></a></li>
-              <li><a class="sharing-button-icon" href="#"><i class="icon-facebook"></i></a></li>
-              <li><a class="sharing-button-icon" href="#"><i class="icon-twitter"></i></a></li>
-              <li><a class="sharing-button-icon" href="#"><i class="icon-instagramm"></i></a></li>
+              <li><a class="sharing-button-icon" href="mailto:?subject=Console Vault&body=[store_url]/[friendurl]"><i class="icon-mail"></i></a></li>
+                <li><a class="sharing-button-icon" target="_blank" href="http://www.facebook.com/sharer.php?u=[store_url]/[friendurl]"><i class="icon-facebook"></i></a></li>
+                <li><a class="sharing-button-icon" target="_blank" href="https://twitter.com/share?url=[store_url]/[friendurl]"><i class="icon-twitter"></i></a></li>
+                <!--<li><a class="sharing-button-icon" target="_blank" href="#"><i class="icon-instagramm"></i></a></li>-->
             </ul>
-            <div class="print-action-container">
-              <a class="colored" href="#">Print Page</a>
-            </div>
+            <!--<div class="print-action-container">
+                <a class="colored" href="javascript:window.print();">Print Page</a>
+              </div>-->
           </div>
         </div>
       </div>

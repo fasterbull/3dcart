@@ -1,8 +1,7 @@
 .mobile-nav-container {
-  position: fixed;
+  position: absolute;
   top: $top-bar-height - 1px;
   left: 0;
-  bottom: 0;
   right: 0;
   background: darken($primary-yellow, 10%);
   z-index: 999;
