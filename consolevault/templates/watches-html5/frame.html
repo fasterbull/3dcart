@@ -100,13 +100,16 @@
       </form>
     </div>
   </div>
-  <div class="mobile-nav-container slide-hidden">
+  <div class="mobile-nav-container">
     <ul class="mobile-nav-menu">
       <li>
         <ul>
           <li>
             <a id="drill-down-mobile">SHOP BY VEHICLE</a>
-            <nav id="nav-drill-mobile">
+            <nav id="shopby-drill-mobile">
+              <div class="mobile-drilldown-content module cat-links">
+                <span class="close-btn"><i class="icon-cancel-circled"></i></span>
+              </div>
             </nav>
           </li>
         </ul>
@@ -146,7 +149,7 @@
                 <li class="nav-header-content">
                   <a id="drill-down">SHOP BY VEHICLE</a>
                   <nav class="nav-drill nav-dropdown hidden">
-                    <div class="module cat-links">
+                    <div id="master-shopby-dropdown" class="module cat-links">
                       <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
@@ -365,8 +368,10 @@ jQuery(function() {
 <!--END: quicksearch-->
 <script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
 <script>
-jQuery(document).ready(function(e) {
+var injectInterval = setInterval(tryInjectVideoShopByMenu, 200);
+var updateNextOptionInverval = null;
 
+jQuery(document).ready(function(e) {
   jQuery('.nav-dropdown-container').click(function() {
     jQuery('.nav-dropdown').not(jQuery(this).children('.nav-dropdown')).addClass('hidden');
     jQuery(this).children('.nav-dropdown').toggleClass('hidden');
@@ -394,7 +399,8 @@ jQuery(document).ready(function(e) {
 	});
 
   jQuery('.mobile-nav-trigger').click(function() {
-      jQuery('.mobile-nav-container').toggleClass('slide-hidden');
+      jQuery('.mobile-nav-container').toggleClass('slide-active');
+      jQuery('body').toggleClass('no-scroll');
   });
 
   if (jQuery('.drilldown-cats .cat-drilldown').length) {
@@ -404,6 +410,57 @@ jQuery(document).ready(function(e) {
   jQuery('#homeHeader').addClass('columns small-12');
 	createSticky(jQuery('.navigation-menu-container-wrapper'));
 });
+
+function injectShopByMenuInMobile($drilldowns) {
+  var $drilldownClone = $drilldowns.clone();
+  jQuery('#shopby-drill-mobile').html($drilldownClone);
+  initializeDrilldowns(jQuery('#shopby-drill-mobile'));
+
+}
+
+function initializeDrilldowns(elements) {
+  elements.children('select').each(function(id, el) {
+    jQuery(el)
+      .removeAttr('onchange')
+      .on('change', function() {
+        var $el = jQuery(el);
+        var $next = $el.next('select');
+
+        if ($el.length) {
+          triggerDesktopShopBy($el.attr('name'), $el.val());
+            updateNextOptionInverval = setInterval(function() {
+              populateMobileOptionGroup($next.attr('name'));
+            }, 200);
+          }
+      });
+  });
+}
+
+function populateMobileOptionGroup(selectName) {
+  var $master = jQuery('#master-shopby-dropdown select[name="' + selectName +'"]');
+  var $mobile = jQuery('#shopby-drill-mobile select[name="' + selectName +'"]');
+
+  $mobile.empty();
+  $master.children('option').each(function(index, masterEl) {
+    $mobile.append(jQuery(masterEl).clone());
+  });
+  $mobile.val($master.val());
+  clearInterval(updateNextOptionInverval);
+}
+
+function triggerDesktopShopBy(selectName, value) {
+  var $current = jQuery('#master-shopby-dropdown select[name="' + selectName +'"]');
+  $current.val(value).trigger('change');
+}
+
+function tryInjectVideoShopByMenu() {
+  var $drilldowns = jQuery('#master-shopby-dropdown .cat-drilldown-container select');
+
+  if ($drilldowns.length) {
+    injectShopByMenuInMobile($drilldowns);
+  }
+  clearInterval(injectInterval);
+}
 
 function createSticky(sticky) {
 
