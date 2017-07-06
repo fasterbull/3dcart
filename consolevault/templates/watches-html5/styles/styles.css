@@ -1191,6 +1191,17 @@ body {
   font-family: "Merriweather Sans", sans-serif;
   padding-top: 54px; }
 
+p, h1, h2 {
+  -webkit-hyphens: manual !important;
+  -moz-hyphens: manual !important;
+  -ms-hyphens: manual !important;
+  hyphens: manual !important; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #f0b527; }
+
 .text-center {
   text-align: center; }
 
@@ -1209,6 +1220,9 @@ body {
   padding-bottom: 4rem; }
   #extrapage .breadcrumbs {
     display: none; }
+  @media screen and (max-width: 550px) {
+    #extrapage {
+      padding-left: 2rem; } }
 
 #mainContent {
   background: white; }
@@ -1226,6 +1240,11 @@ body {
     border: 2px solid #F0B527;
     color: #000;
     font-weight: normal; }
+
+#simplemodal-container {
+  border: 2px solid #f0b527 !important; }
+  #simplemodal-container iframe {
+    margin-top: -200px; }
 
 .no-scroll {
   overflow: hidden; }
@@ -1249,6 +1268,7 @@ body {
       color: black; }
   .site-top-bar .top-bar-content {
     height: 100%;
+    width: 100%;
     font-size: 14px; }
   .site-top-bar .top-bar-content-left {
     height: 100%;
@@ -1284,6 +1304,8 @@ body {
           border-right: 1px solid #272727; }
   .site-top-bar .top-bar-content-right {
     height: 100%;
+    width: 66.66667%;
+    line-height: 45px;
     align-items: center; }
     .site-top-bar .top-bar-content-right .desktop-nav {
       height: 100%;
@@ -1332,6 +1354,8 @@ body {
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
     cursor: pointer; }
     .mobile-links-left a img, .mobile-links-left .mobile-search-trigger img {
       height: 28px; }
@@ -1489,10 +1513,9 @@ body {
   height: 100%; }
 
 .mobile-nav-container {
-  position: fixed;
+  position: absolute;
   top: 53px;
   left: 0;
-  bottom: 0;
   right: 0;
   background: #d59b0f;
   z-index: 999;
@@ -1579,6 +1602,11 @@ a#drill-down {
     font-size: 1.3rem;
     padding: 0.5rem;
     cursor: pointer; }
+  .nav-drill .contact-us {
+    font-size: 12px;
+    margin-top: 10px; }
+    .nav-drill .contact-us a {
+      font-size: 12px; }
   .nav-drill .cat-drilldown-container {
     padding-top: 1rem;
     display: flex;
@@ -1652,14 +1680,6 @@ a#drill-down {
   font-size: 0.8rem;
   margin-top: 0.5rem; }
 
-.product-interaction-container .product-social-share-container {
-  color: #bd8a0d; }
-  .product-interaction-container .product-social-share-container li {
-    padding: 0.25rem;
-    background: #bd8a0d; }
-    .product-interaction-container .product-social-share-container li:hover {
-      background: #a6780b; }
-
 .slide-wrap-container #slidewrap {
   width: 100%; }
 
@@ -1698,9 +1718,9 @@ a#drill-down {
         text-align: center; } }
   .product-page-wrapper .product-price-container {
     padding-top: 1.5rem; }
-    .product-page-wrapper .product-price-container .price-spread {
-      margin-bottom: 1rem; }
-    .product-page-wrapper .product-price-container .price-label {
+  .product-page-wrapper .price-spread {
+    margin-bottom: 1rem; }
+    .product-page-wrapper .price-spread .price-label {
       padding-right: 1rem; }
   .product-page-wrapper .product-add-to-cart {
     padding-top: 1.5rem;
@@ -1810,14 +1830,14 @@ a#drill-down {
   align-items: center;
   justify-content: center;
   color: white;
-  background: #272727;
+  background: #bd2929;
   width: 32px;
   height: 32px;
   margin-bottom: 2px;
   border-radius: 50%; }
   .product-favorite a {
-    width: 24px;
-    height: 24px;
+    width: 23px;
+    height: 21px;
     color: white; }
 
 .product-extended-description-container.listing-0 {

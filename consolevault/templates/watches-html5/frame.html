@@ -364,6 +364,8 @@ jQuery(function() {
 <!--END: quicksearch-->
 <script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
 <script>
+jQuery(document).ready(function(e) {
+
   jQuery('.nav-dropdown-container').hover(function() {
     jQuery('.nav-dropdown').not(jQuery(this).children('.nav-dropdown')).addClass('hidden');
     jQuery(this).children('.nav-dropdown').toggleClass('hidden');
@@ -393,15 +395,6 @@ jQuery(function() {
 	jQuery('#close_search_btn').click(function() {
 		jQuery('#mob-search').fadeOut(300);
 	});
-
-  jQuery('.mobile-nav-trigger').click(function() {
-      jQuery('.mobile-nav-container').toggleClass('slide-active');
-      jQuery('body').toggleClass('no-scroll');
-  });
-
-  if (jQuery('.drilldown-cats .cat-drilldown').length) {
-    jQuery('.drilldown-cats .cat-drilldown').wrapAll('<div class="cat-drilldown-container"></div>');
-  }
 
   jQuery('#homeHeader').addClass('columns small-12');
 	createSticky(jQuery('.navigation-menu-container-wrapper'));
