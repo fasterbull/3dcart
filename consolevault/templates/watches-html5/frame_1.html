@@ -106,7 +106,10 @@
         <ul>
           <li>
             <a id="drill-down-mobile">SHOP BY VEHICLE</a>
-            <nav id="nav-drill-mobile">
+            <nav id="shopby-drill-mobile">
+              <div class="mobile-drilldown-content module cat-links">
+                <span class="close-btn"><i class="icon-cancel-circled"></i></span>
+              </div>
             </nav>
           </li>
         </ul>
@@ -142,7 +145,7 @@
                 <li class="nav-header-content">
                   <a id="drill-down">SHOP BY VEHICLE</a>
                   <nav class="nav-drill nav-dropdown hidden">
-                    <div class="module cat-links">
+                    <div  id="master-shopby-dropdown" class="module cat-links">
                       <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
@@ -174,7 +177,7 @@
               <a class="nav-target">ABOUT</a>
               <ul class="nav-cat-dropdown nav-dropdown hidden">
                 <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
-                
+
               </ul>
             </li>
             <li><a href="/crm.asp?action=contactus">Contact</a></li>
@@ -228,20 +231,16 @@ jQuery(document).ready(function(e) {
     jQuery('.mobile-search-container').toggleClass('shown');
   });
 
-  jQuery('#drill-down-mobile').click(function() {
-    jQuery('.nav-drill-mobile').toggleClass('hidden');
-  })
-
   jQuery('#drill-down').hover(function() {
     jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
   });
-  
+
   jQuery('button#shop-by-vehicle').click(function() {
     jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
   });
-  
+
   jQuery('.nav-drill .close-btn').click(function() {
     jQuery('.nav-drill').addClass('hidden');
   });

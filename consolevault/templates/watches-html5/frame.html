@@ -100,13 +100,16 @@
       </form>
     </div>
   </div>
-  <div class="mobile-nav-container slide-hidden">
+  <div class="mobile-nav-container">
     <ul class="mobile-nav-menu">
       <li>
         <ul>
           <li>
             <a id="drill-down-mobile">SHOP BY VEHICLE</a>
-            <nav id="nav-drill-mobile">
+            <nav id="shopby-drill-mobile">
+              <div class="mobile-drilldown-content module cat-links">
+                <span class="close-btn"><i class="icon-cancel-circled"></i></span>
+              </div>
             </nav>
           </li>
         </ul>
@@ -143,7 +146,7 @@
                 <li class="nav-header-content">
                   <a id="drill-down">SHOP BY VEHICLE</a>
                   <nav class="nav-drill nav-dropdown hidden">
-                    <div class="module cat-links">
+                    <div id="master-shopby-dropdown" class="module cat-links">
                       <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
@@ -380,7 +383,7 @@ jQuery(document).ready(function(e) {
     jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
   });
-  
+
   jQuery('.nav-drill .close-btn').click(function() {
     jQuery('.nav-drill').addClass('hidden');
   });
@@ -392,10 +395,6 @@ jQuery(document).ready(function(e) {
 	jQuery('#close_search_btn').click(function() {
 		jQuery('#mob-search').fadeOut(300);
 	});
-
-  jQuery('.mobile-nav-trigger').click(function() {
-      jQuery('.mobile-nav-container').toggleClass('slide-hidden');
-  });
 
   if (jQuery('.drilldown-cats .cat-drilldown').length) {
     jQuery('.drilldown-cats .cat-drilldown').wrapAll('<div class="cat-drilldown-container"></div>');
