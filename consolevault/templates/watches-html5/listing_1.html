@@ -37,8 +37,15 @@
               </div>
               <!--END: qtybox-->
               <button type="button" class="btn" onclick="check_and_add(document.add);">[product_addtocart]</button>
-			  <div class="product-favorite">
-                <a href="#"><i class="icon-heart"></i></a>
+              <!--START: addWishlist-->
+                <div class="addWishlist product-favorite">
+                  <!-- <span class="add_wishlist-label">[product_addtowishlist]</span> -->
+                  <i class="icon-heart"></i>
+                  <input type="hidden" name="wishListCustomType" id="wishListCustomType" value="" />
+                  <input type="hidden" name="wishListCustomId" id="wishListCustomId" value="" />
+                  <input type="hidden" name="wishListCustomname" id="wishListCustomname" value="" />
+                </div>
+                <!--END: addWishlist-->
               </div>
             </form>
           </div>
@@ -126,5 +133,48 @@ function check_and_add(formx)
     }
     document.add.submit();
 
+}
+
+jQuery(document).ready(function() {
+  jQuery('.product-favorite').click(function() {
+    add_wishlist();
+  })
+});
+
+function add_wishlist() {
+
+    if ("[Enabled_Multiple_WishList]" == "1") {
+
+        //window.open('[link_addtolist]','popup','height=300,width=550,location=no,scrollbars=no,menubars=no,toolbars=no,resizable=yes');
+
+        var src = "[link_addtolist]";
+        var intHeight, intWidth;
+        intHeight = 480;
+        intWidth = 495;
+
+        if (document.body.clientWidth < 767) {
+            intHeight = 460;
+            intWidth = 300;
+        }
+        jQuery.modal('<iframe src="' + src + '" height="' + intHeight + '" width="' + intWidth + '" style="border:0">', {
+            closeClass: 'modalCloseImg',
+            closeHTML: '<a href="#">Close</a>',
+            containerCss:{
+                backgroundColor:"#fff",
+                borderColor:"#fff",
+                height:intHeight,
+                padding:0,
+                width:(intWidth+5)
+            },
+            overlayClose:true,
+            onShow: function(dialog){
+                dialog.wrap.css('overflow','hidden');
+            }
+        });
+    }
+    else {
+        document.add.action = "add_cart.asp?action=addWishList";
+        document.add.submit();
+    }
 }
 </script>
