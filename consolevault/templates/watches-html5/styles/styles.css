@@ -1,6 +1,6 @@
 /**
  * Foundation for Sites by ZURB
- * Version 6.4.1
+ * Version 6.3.1
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
@@ -483,13 +483,6 @@ button {
 pre {
   overflow: auto; }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; }
-
 .is-visible {
   display: block !important; }
 
@@ -518,9 +511,6 @@ textarea {
       margin-left: 0; }
   .row.expanded {
     max-width: none; }
-    .row.expanded .row {
-      margin-right: auto;
-      margin-left: auto; }
   .row:not(.expanded) .row {
     max-width: none; }
   .row.collapse > .column, .row.collapse > .columns {
@@ -536,7 +526,7 @@ textarea {
   flex: 1 1 0px;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  min-width: 0; }
+  min-width: initial; }
   @media print, screen and (min-width: 40em) {
     .column, .columns {
       padding-right: 0.9375rem;
@@ -551,6 +541,30 @@ textarea {
   margin-left: 0;
   padding-right: 0;
   padding-left: 0; }
+
+.flex-container {
+  display: flex; }
+
+.flex-child-auto {
+  flex: 1 1 auto; }
+
+.flex-child-grow {
+  flex: 1 0 auto; }
+
+.flex-child-shrink {
+  flex: 0 1 auto; }
+
+.flex-dir-row {
+  flex-direction: row; }
+
+.flex-dir-row-reverse {
+  flex-direction: row-reverse; }
+
+.flex-dir-column {
+  flex-direction: column; }
+
+.flex-dir-column-reverse {
+  flex-direction: column-reverse; }
 
 .small-1 {
   flex: 0 0 8.33333%;
@@ -635,6 +649,24 @@ textarea {
 
 .small-offset-11 {
   margin-left: 91.66667%; }
+
+.small-order-1 {
+  order: 1; }
+
+.small-order-2 {
+  order: 2; }
+
+.small-order-3 {
+  order: 3; }
+
+.small-order-4 {
+  order: 4; }
+
+.small-order-5 {
+  order: 5; }
+
+.small-order-6 {
+  order: 6; }
 
 .small-up-1 {
   flex-wrap: wrap; }
@@ -753,6 +785,18 @@ textarea {
     max-width: 100%; }
   .medium-offset-11 {
     margin-left: 91.66667%; }
+  .medium-order-1 {
+    order: 1; }
+  .medium-order-2 {
+    order: 2; }
+  .medium-order-3 {
+    order: 3; }
+  .medium-order-4 {
+    order: 4; }
+  .medium-order-5 {
+    order: 5; }
+  .medium-order-6 {
+    order: 6; }
   .medium-up-1 {
     flex-wrap: wrap; }
     .medium-up-1 > .column, .medium-up-1 > .columns {
@@ -798,17 +842,35 @@ textarea {
   .medium-expand {
     flex: 1 1 0px; } }
 
-.row.small-unstack > .column, .row.small-unstack > .columns {
-  flex: 0 0 100%;
-  flex: 1 1 0px; }
+@media print, screen and (min-width: 40em) {
+  .medium-flex-dir-row {
+    flex-direction: row; }
+  .medium-flex-dir-row-reverse {
+    flex-direction: row-reverse; }
+  .medium-flex-dir-column {
+    flex-direction: column; }
+  .medium-flex-dir-column-reverse {
+    flex-direction: column-reverse; }
+  .medium-flex-child-auto {
+    flex: 1 1 auto; }
+  .medium-flex-child-grow {
+    flex: 1 0 auto; }
+  .medium-flex-child-shrink {
+    flex: 0 1 auto; } }
+
+.row.medium-unstack > .column, .row.medium-unstack > .columns {
+  flex: 0 0 100%; }
+  @media print, screen and (min-width: 40em) {
+    .row.medium-unstack > .column, .row.medium-unstack > .columns {
+      flex: 1 1 0px; } }
 
 @media print, screen and (min-width: 40em) {
-  .small-collapse > .column, .small-collapse > .columns {
+  .medium-collapse > .column, .medium-collapse > .columns {
     padding-right: 0;
     padding-left: 0; }
-  .small-uncollapse > .column, .small-uncollapse > .columns {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem; } }
+  .medium-uncollapse > .column, .medium-uncollapse > .columns {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem; } }
 
 @media print, screen and (min-width: 64em) {
   .large-1 {
@@ -871,6 +933,18 @@ textarea {
     max-width: 100%; }
   .large-offset-11 {
     margin-left: 91.66667%; }
+  .large-order-1 {
+    order: 1; }
+  .large-order-2 {
+    order: 2; }
+  .large-order-3 {
+    order: 3; }
+  .large-order-4 {
+    order: 4; }
+  .large-order-5 {
+    order: 5; }
+  .large-order-6 {
+    order: 6; }
   .large-up-1 {
     flex-wrap: wrap; }
     .large-up-1 > .column, .large-up-1 > .columns {
@@ -916,17 +990,35 @@ textarea {
   .large-expand {
     flex: 1 1 0px; } }
 
-.row.small-unstack > .column, .row.small-unstack > .columns {
-  flex: 0 0 100%;
-  flex: 1 1 0px; }
+@media print, screen and (min-width: 64em) {
+  .large-flex-dir-row {
+    flex-direction: row; }
+  .large-flex-dir-row-reverse {
+    flex-direction: row-reverse; }
+  .large-flex-dir-column {
+    flex-direction: column; }
+  .large-flex-dir-column-reverse {
+    flex-direction: column-reverse; }
+  .large-flex-child-auto {
+    flex: 1 1 auto; }
+  .large-flex-child-grow {
+    flex: 1 0 auto; }
+  .large-flex-child-shrink {
+    flex: 0 1 auto; } }
+
+.row.large-unstack > .column, .row.large-unstack > .columns {
+  flex: 0 0 100%; }
+  @media print, screen and (min-width: 64em) {
+    .row.large-unstack > .column, .row.large-unstack > .columns {
+      flex: 1 1 0px; } }
 
 @media print, screen and (min-width: 64em) {
-  .small-collapse > .column, .small-collapse > .columns {
+  .large-collapse > .column, .large-collapse > .columns {
     padding-right: 0;
     padding-left: 0; }
-  .small-uncollapse > .column, .small-uncollapse > .columns {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem; } }
+  .large-uncollapse > .column, .large-uncollapse > .columns {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem; } }
 
 .shrink {
   flex: 0 0 auto;
@@ -993,21 +1085,15 @@ textarea {
   position: absolute !important;
   width: 1px;
   height: 1px;
-  padding: 0;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  clip-path: inset(50%);
-  border: 0; }
+  clip: rect(0, 0, 0, 0); }
 
 .show-on-focus:active, .show-on-focus:focus {
   position: static !important;
   width: auto;
   height: auto;
   overflow: visible;
-  clip: auto;
-  white-space: normal;
-  clip-path: none; }
+  clip: auto; }
 
 .show-for-landscape,
 .hide-for-portrait {
@@ -1045,12 +1131,6 @@ textarea {
 .align-spaced {
   justify-content: space-around; }
 
-.align-right.vertical.menu > li > a {
-  justify-content: flex-end; }
-
-.align-center.vertical.menu > li > a {
-  justify-content: center; }
-
 .align-top {
   align-items: flex-start; }
 
@@ -1074,11 +1154,6 @@ textarea {
 
 .align-self-stretch {
   align-self: stretch; }
-
-.align-center-middle {
-  justify-content: center;
-  align-items: center;
-  align-content: center; }
 
 .small-order-1 {
   order: 1; }
@@ -1125,66 +1200,6 @@ textarea {
     order: 5; }
   .large-order-6 {
     order: 6; } }
-
-.flex-container {
-  display: flex; }
-
-.flex-child-auto {
-  flex: 1 1 auto; }
-
-.flex-child-grow {
-  flex: 1 0 auto; }
-
-.flex-child-shrink {
-  flex: 0 1 auto; }
-
-.flex-dir-row {
-  flex-direction: row; }
-
-.flex-dir-row-reverse {
-  flex-direction: row-reverse; }
-
-.flex-dir-column {
-  flex-direction: column; }
-
-.flex-dir-column-reverse {
-  flex-direction: column-reverse; }
-
-@media print, screen and (min-width: 40em) {
-  .medium-flex-container {
-    display: flex; }
-  .medium-flex-child-auto {
-    flex: 1 1 auto; }
-  .medium-flex-child-grow {
-    flex: 1 0 auto; }
-  .medium-flex-child-shrink {
-    flex: 0 1 auto; }
-  .medium-flex-dir-row {
-    flex-direction: row; }
-  .medium-flex-dir-row-reverse {
-    flex-direction: row-reverse; }
-  .medium-flex-dir-column {
-    flex-direction: column; }
-  .medium-flex-dir-column-reverse {
-    flex-direction: column-reverse; } }
-
-@media print, screen and (min-width: 64em) {
-  .large-flex-container {
-    display: flex; }
-  .large-flex-child-auto {
-    flex: 1 1 auto; }
-  .large-flex-child-grow {
-    flex: 1 0 auto; }
-  .large-flex-child-shrink {
-    flex: 0 1 auto; }
-  .large-flex-dir-row {
-    flex-direction: row; }
-  .large-flex-dir-row-reverse {
-    flex-direction: row-reverse; }
-  .large-flex-dir-column {
-    flex-direction: column; }
-  .large-flex-dir-column-reverse {
-    flex-direction: column-reverse; } }
 
 body {
   background: #c1c1c1;
