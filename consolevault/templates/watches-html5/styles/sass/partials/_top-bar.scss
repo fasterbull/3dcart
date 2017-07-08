@@ -156,7 +156,7 @@
       }
       input[type="submit"] {
         position: absolute;
-        top: 0;
+        top: calc(50% - 16px);
         right: 0;
         opacity: 0.4;
         padding: 0;
