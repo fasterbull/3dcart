@@ -100,3 +100,25 @@
     margin-left: 1rem;
   }
 }
+
+.product-favorite {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #bd2929;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background: darken(#bd2929, 20%);
+  }
+  a {
+    width: 23px;
+    height: 21px;
+    color: white;
+  }
+}

@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prebuild:css": "node-sass --include-path scss styles/sass/base.scss styles/styles.css",
-    "build:css": "postcss --use autoprefixer -b 'last 2 versions' < styles/styles.css | postcss > styles/default.css",
-    "watch-css": "nodemon -e scss -x \"npm run build:css\"",
+    "watch-styles": "gulp sass && gulp styles:watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "foundation-sites": "6.3.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "node-sass": "^4.5.2",
     "nodemon": "^1.11.0"
   },
