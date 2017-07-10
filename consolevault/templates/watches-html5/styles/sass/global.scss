@@ -56,13 +56,20 @@ hr {
     .crmField,
     .loginField {
         margin: 20px 0 0;
-        .txtBoxStyle {
-            background-color: #fff;
-            border: 2px solid #F0B527;
-            color: #000;
-            font-weight: normal;
-        }
     }
+}
+
+.txtBoxStyle {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid $primary-yellow;
+  color: #000;
+  background-color: #fff;
+  padding: 0.5rem;
+  width: auto;
+  font-weight: normal;
 }
 
 #simplemodal-container {
