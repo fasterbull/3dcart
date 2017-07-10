@@ -75,3 +75,13 @@ hr {
 .no-scroll {
   overflow: hidden;
 }
+
+.align-middle {
+  display: flex;
+  align-items: middle;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
