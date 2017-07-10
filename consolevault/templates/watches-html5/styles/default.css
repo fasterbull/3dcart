@@ -1940,15 +1940,17 @@ input {
   -ms-flex-order: 1;
   order: 1; }
 
-button {
+button, input[type="button"] {
   padding: 0rem 1.25rem;
   height: 36px;
   background: #f0b527;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
-  cursor: pointer; }
-  button:hover {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none; }
+  button:hover, input[type="button"]:hover {
     background: #a6780b; }
 
 #homeHeader, #home {
@@ -2278,6 +2280,47 @@ a#drill-down {
     padding: 0.25rem 0; }
   .my-account-container .my-account-table-container {
     padding-bottom: 3rem !important; }
+
+#orderHistory,
+#orderHistoryView,
+#viewWishlist,
+#crmRequest,
+#addresses,
+#addAddresses,
+#wishlistPrelogin {
+  padding: 2rem 3rem; }
+
+.back-to-account-sub-my-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 63.9375em) {
+    .back-to-account-sub-my-account {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; } }
+
+.message {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.wl-quantity .txtBoxStyle {
+  display: inline; }
+
+.wl-row {
+  padding: 0.5rem 0; }
 
 .nav-header-content {
   background: #272727; }

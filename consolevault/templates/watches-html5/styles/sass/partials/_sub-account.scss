@@ -1,0 +1,36 @@
+#orderHistory,
+#orderHistoryView,
+#viewWishlist,
+#crmRequest,
+#addresses,
+#addAddresses,
+#wishlistPrelogin {
+  padding: $page-padding;
+}
+
+.back-to-account-sub-my-account {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include breakpoint(medium down) {
+    order: -1;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.message {
+  box-shadow: none !important;
+}
+
+// Wishlist
+.wl-quantity {
+  .txtBoxStyle {
+    display: inline;
+  }
+}
+
+.wl-row {
+  padding: 0.5rem 0;
+}
