@@ -4,3 +4,51 @@
         display: none;
     }
 }
+
+.my-account-container {
+  padding: $page-padding;
+  &>.row:not(.my-account-page-header) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  @include yellow-anchors;
+  .my-account-logout-container {
+    @include breakpoint(medium down) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  .my-account-addresses {
+    .address2 {
+      display: block;
+    }
+  }
+  .my-account-subheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $primary-yellow;
+    padding-bottom: 0.5rem;
+    .my-account-header-name-action {
+      color: $primary-yellow;
+      font-size: 1rem;
+    }
+  }
+  .my-account-table-header {
+    font-weight: bold;
+    td {
+      padding: 0.5rem 0;
+    }
+  }
+  .my-account-table-item-row {
+    td {
+      padding: 0.25rem 0;
+    }
+  }
+  .my-account-table-container {
+    padding-bottom: 3rem !important;
+  }
+}

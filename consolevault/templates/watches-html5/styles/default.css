@@ -1584,6 +1584,22 @@ hr {
 .no-scroll {
   overflow: hidden; }
 
+.align-middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: middle;
+  -ms-flex-align: middle;
+  align-items: middle; }
+
+.align-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
 .about-tagline {
   color: #f0b527;
   font-style: italic;
@@ -1924,15 +1940,17 @@ input {
   -ms-flex-order: 1;
   order: 1; }
 
-button {
+button, input[type="button"] {
   padding: 0rem 1.25rem;
   height: 36px;
   background: #f0b527;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
-  cursor: pointer; }
-  button:hover {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none; }
+  button:hover, input[type="button"]:hover {
     background: #a6780b; }
 
 #homeHeader, #home {
@@ -1992,7 +2010,7 @@ button {
   padding: 0.5rem;
   width: auto;
   font-weight: bold;
-  background: #272727 url("../images/arrow-icon.png") no-repeat right center; }
+  background: #272727; }
 
 #divOptionsBlock {
   border-bottom: none;
@@ -2211,6 +2229,98 @@ a#drill-down {
   padding: 2rem 3rem; }
   #loginAccount .breadcrumbs {
     display: none; }
+
+.my-account-container {
+  padding: 2rem 3rem; }
+  .my-account-container > .row:not(.my-account-page-header) {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .my-account-container a {
+    color: #f0b527;
+    text-decoration: none; }
+    .my-account-container a:visited {
+      color: #f0b527; }
+    .my-account-container a:hover {
+      color: #a6780b; }
+  @media screen and (max-width: 63.9375em) {
+    .my-account-container .my-account-logout-container {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
+  .my-account-container .my-account-addresses .address2 {
+    display: block; }
+  .my-account-container .my-account-subheader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0b527;
+    padding-bottom: 0.5rem; }
+    .my-account-container .my-account-subheader .my-account-header-name-action {
+      color: #f0b527;
+      font-size: 1rem; }
+  .my-account-container .my-account-table-header {
+    font-weight: bold; }
+    .my-account-container .my-account-table-header td {
+      padding: 0.5rem 0; }
+  .my-account-container .my-account-table-item-row td {
+    padding: 0.25rem 0; }
+  .my-account-container .my-account-table-container {
+    padding-bottom: 3rem !important; }
+
+#orderHistory,
+#orderHistoryView,
+#viewWishlist,
+#crmRequest,
+#addresses,
+#addAddresses,
+#wishlistPrelogin {
+  padding: 2rem 3rem; }
+
+.back-to-account-sub-my-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 63.9375em) {
+    .back-to-account-sub-my-account {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; } }
+
+.message {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.wl-quantity .txtBoxStyle {
+  display: inline; }
+
+.wl-row {
+  padding: 0.5rem 0; }
 
 .nav-header-content {
   background: #272727; }

@@ -1,0 +1,496 @@
+<div class="columns small-12 my-account-container">
+	<div class="row my-account-page-header">
+		<div class="columns small-12 large-10">
+			<h1>[account_header-myaccount]</h1>
+				<!--START: username-->
+				<h3>[account_welcome] [username]</h3>
+				<p>If you're not [username], <a href="logout.asp"><span class="item">click here</span></a></p>
+				<!--END: username-->
+		</div>
+		<div class="columns small-12 large-2 my-account-logout-container align-middle align-right">
+			<button type="button" class="btn" onclick="window.location='logout.asp';">
+				<i class="icon-logout"></i>
+				Logout
+			</button>
+		</div>
+	</div>
+	<div class="row my-account-addresses">
+		<div class="columns small-12 large-6 billing-address">
+			<h2>[account_billing-info]</h2>
+			<p>
+				[billing_firstname] [billing_lastname]<br>
+				[billing_address]<br>
+				<span class="address2">[billing_address2]</span>
+				[billing_city], [billing_state] [billing_zip] [billing_country]
+			</p>
+			<p>[billing_phone]</p>
+			<p><a href="myaccount.asp?action=updacc">Update Billing Address</a></p>
+		</div>
+		<div class="columns small-12 large-6 shipping-address">
+			<h2>[account_shipping-info]</h2>
+			<p>[shipping_firstname] [shipping_lastname]<br>
+				[shipping_address]<br>
+				<span class="address2">[shipping_address2]</span>
+				[shipping_city], [shipping_state] [shipping_zip] [shipping_country]
+			</p>
+			<p>[shipping_phone] <!--START: addressType-->([addressTypeText])<!--END: addressType--></p>
+			<p><a href="myaccount.asp?action=updacc">Update Shipping Address</a></p>
+		</div>
+	</div>
+	<div class="row my-account-recent-orders my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_viewaccount.png" border="0" align="absbottom">&nbsp;
+					[account_recent-orders]
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="ordertracking.asp">view all</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[orderhistory_date]</td>
+						<td>[orderhistory_ordernum]</td>
+						<td>[orderhistory_amount]</td>
+						<td>[orderhistory_status]</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<!--START: ordertemplate-->
+					<tr class="my-account-table-item-row">
+						<td>[odate]</td>
+						<td>[invoicenum_prefix][invoicenum]&nbsp;(<a href="ordertracking.asp?action=view&amp;id=[orderid]">[account_view-details]</a>)</td>
+						<td>[orderamount]</td>
+						<td>[orderstatus]</td>
+						<!--START: reorder-->
+						<td><a href="ordertracking.asp?action=repeat&id=[orderid]">reorder</a></td>
+						<!--END: reorder-->
+					</tr>
+					<!--END: ordertemplate-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row my-account-address-book my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_edit.png" border="0" align="absbottom">&nbsp;
+					[account_addressbook]
+				</div>
+				<div class="my-account-header-name-action">
+					&nbsp;<i class="icon-plus"></i>&nbsp;<a href="myaccount.asp?action=addresses">Add New Address</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[account_addressbook-header-alias]</td>
+						<td>[account_addressbook-header-details]</td>
+					</tr>
+				</thead>
+				<tbody>
+					<!--START: address_book-->
+					<tr class="my-account-table-item-row">
+						<td>[address_alias]</td>
+						<td>[shipping_address] [shipping_city], [shipping_state] </td>
+					</tr>
+					<!--END: address_book-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--START: CRM-->
+	<div class="row my-account-last-requests my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/question.png" border="0" align="absbottom">&nbsp;
+					[account_crm-requests]
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="crm.asp?action=add">[account_crm-add-request]</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[account_crm-requests-header-id]</td>
+						<td>[account_crm-requests-header-dept]</td>
+						<td>[account_crm-requests-header-date]</td>
+						<td>[account_crm-requests-header-subject]</td>
+						<td>[account_crm-requests-header-lastact]</td>
+					</tr>
+				</thead>
+				<tbody>
+					<!--START: crmMessagesDetailNoReq-->
+					<tr class="my-account-table-item-row">
+						<td colspan="5" align="center">[account_crm-requests-norequest]</td>
+					</tr>
+					<!--END: crmMessagesDetailNoReq-->
+					<!--START: crmMessagesDetail-->
+					<tr class="my-account-table-item-row">
+						<td><a href="crm.asp?mk=[mkey]">[crmId]</a></td>
+						<td>[dpt]</td>
+						<td>[date]</td>
+						<td>[subject]</td>
+						<td>[lastaction]</td>
+					</tr>
+					<!--END: crmMessagesDetail-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: CRM-->
+	<!--START: savedorders-->
+	<div class="row my-account-saved-orders my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_viewaccount.png" border="0" align="absbottom">&nbsp;
+					[orderhistory_savedcarts-header]
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="myaccount.asp?action=save_cart">[orderhistory_savedcarts-current]</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[orderhistory_date]</td>
+						<td>[orderhistory_amount]</td>
+						<td>Actions</td>
+					</tr>
+				</thead>
+				<tbody>
+					<!--START: savedordertemplate-->
+					<tr class="my-account-table-item-row">
+						<td>[odate]</td>
+						<td>[orderamount]</td>
+						<td><a href="ordertracking.asp?action=removecart&amp;id=[orderid]">[orderhistory_savedcarts-delete]</a>&nbsp;&nbsp;<a href="ordertracking.asp?action=viewcart&amp;id=[orderid]">[account_view-details]</a>&nbsp;&nbsp;<a href="continue_order.asp?orderkey=[orderkey][orderid]">[orderhistory_savedcarts-continue]</a></td>
+					</tr>
+					<!--END: savedordertemplate-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: savedorders-->
+	<!--START: recurringOrders-->
+	<div class="row my-account-reccuring-orders my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_viewaccount.png" border="0" align="absbottom">&nbsp;
+					[recurringorders_recurringorders-header]
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[orderhistory_date]</td>
+						<td>[orderhistory_ordernum]</td>
+						<td>[orderhistory_amount]</td>
+						<td>[orderhistory_status]</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<!--START: recurringordertemplate-->
+					<tr class="my-account-table-item-row">
+						<td>[odate]</td>
+						<td>[invoicenum_prefix][invoicenum]&nbsp;(<a href="ordertracking.asp?action=view&amp;id=[orderid]">[account_view-details]</a>)</td>
+						<td>[orderamount]</td>
+						<td>[orderstatus]</td>
+						<td></td>
+					</tr>
+					<!--END: recurringordertemplate-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: recurringOrders-->
+	<!--START: authNetCIM-->
+	<div class="row my-account-saved-cc my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_edit.png" border="0" align="absbottom">&nbsp;
+					[account_my-saved-creditcards]
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[checkout3_creditcard-last-digits]</td>
+						<td>[CustomerInfo_creditexpiration]</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<!--START: ccItem-->
+					<tr class="my-account-table-item-row">
+						<td>[ccLastDigits]</td>
+						<td>[ccExpiration]</td>
+						<td><a href="managemycc.asp?pp=[strCustomerPaymentProfileId]&cp_orderid=[cp_orderid]">[account_view-details]</a> </td>
+					</tr>
+					<!--END: ccItem-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: authNetCIM-->
+	<!--START: RMA-->
+	<div class="row my-account-rma my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/rma.png" border="0" align="absbottom">&nbsp;
+					[account_rma-header]
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[rma_header-rmanum]</td>
+						<td>[rma_header-rmadate]</td>
+						<td>[rma_header-rmaorder]</td>
+						<td>[rma_header-rmastatus]</td>
+					</tr>
+				</thead>
+				<tbody>
+					<!--START: RmaItems-->
+					<tr class="my-account-table-item-row">
+						<td><a href="my_rma.asp?oid=[OrderId]&amp;r=[idRma]" class="small">[idRma]</a></td>
+						<td>[Date]</td>
+						<td>[OrderNum]</td>
+						<td>[RMAStatus]</td>
+					</tr>
+					<!--END: RmaItems-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: RMA-->
+	<!--START: affiliateStatistics-->
+	<div class="row my-account-affiliate-stats my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/affiliate.png" align="absbottom">&nbsp;
+					[account_affiliate-statistics]
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="affiliate.asp">[account_view-details]</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[affiliate_summary-header-membersince]</td>
+						<td>[affiliate_summary-header-orders]</td>
+						<td>[affiliate_summary-header-amount]</td>
+						<td>[affiliate_summary-header-commission]</td>
+						<td>[affiliate_summary-header-paid]</td>
+						<td>[affiliate_summary-header-balance]</td>
+					</tr>
+				</thead>
+				<tbody>
+					<!--START: affiliateStatisticsNoOrders-->
+					<tr class="my-account-table-item-row">
+						<tdcolspan="6" align="center">[affiliate_no-history-to-display]</td>
+					</tr>
+					<!--END: affiliateStatisticsNoOrders-->
+					<!--START: affiliateStatisticsDetail-->
+					<tr class="my-account-table-item-row">
+						<td>[memberSince]</td>
+						<td>[orders]</td>
+						<td>[amount]</td>
+						<td>[totalCommission]</td>
+						<td>[paid]</td>
+						<td>[balance]</td>
+					</tr>
+					<!--END: affiliateStatisticsDetail-->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: affiliateStatistics-->
+	<!--START: giftRegistry-->
+	<div class="row my-account-gift-registry my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_add.png" border="0" align="absbottom">&nbsp;
+					[account_giftRegistry]
+				</div>
+			</h3>
+			<table width="100%">
+				<thead>
+					<tr class="my-account-table-header">
+						<td>[giftregistry_header-name]</td>
+						<td>[giftregistry_header-eventdate]</td>
+						<td>[giftregistry_header-expiration]</td>
+						<td>[giftregistry_header-productsdesired]</td>
+						<td>[giftregistry_header-productspurchased]</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="my-account-table-item-row">
+						<td>[regName] &nbsp; <a href="giftregistry_edit.asp?action=view">[account_view-details]</a></td>
+						<td>[regEvent]</td>
+						<td>[regExpiration]</td>
+						<td>[regProductsDesired]</td>
+						<td>[regProductsPurchased]</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: giftRegistry-->
+	<!--START: points-->
+	<div class="row my-account-points my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/rewards.png" border="0" align="absbottom">&nbsp;
+					[account_rewards]
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="reward_detail.asp">[account_view-details]</a>&nbsp;&nbsp;<a href="redeem.asp">Redeem</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<tr class="my-account-table-item-row">
+					<td>[account_rewards-header-points]:[points_balance]</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--END: points-->
+	<!--START: BlockStoreCredits-->
+	<div class="row my-account-block-store-credits my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_certificate.png" align="absbottom">&nbsp;
+					[account_storecredits]
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="store_credits_detail.asp">[account_view-details]</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<tbody>
+					<tr class="my-account-table-item-row">
+						<td>[account_storecredits-header-points]: [credits_balance]</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: BlockStoreCredits-->
+	<!--START: wishList-->
+	<div class="row my-account-wishlist my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_view.png" border="0" align="absbottom">&nbsp;
+					<!--START: BLK_ACCOUNT_WISHLIST_SINGLE--> [account_wishlist]  <!--END: BLK_ACCOUNT_WISHLIST_SINGLE-->
+					<!--START: BLK_ACCOUNT_WISHLIST_MULTIPLE--> [account_wishlist-multiple]  <!--END: BLK_ACCOUNT_WISHLIST_MULTIPLE-->
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="view_wishlist.asp">[account_view-details]</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<tbody>
+					<tr class="my-account-table-item-row">
+						<td> [account_wishlist-header-products]: [wishListTotalItems]<br>
+							<!--START: wishList_TotalLists-->[account_wishlist-header-lists]: [wishListTotalLists]<br><!--END: wishList_TotalLists-->
+							[account_wishlist-header-lastmod]: [wishListLasMod]
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: wishList-->
+	<!--START: reminders-->
+	<div class="row my-account-reminders my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/reminders.png" border="0" align="absbottom">&nbsp;
+					[account_reminders]
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="view_reminders.asp">[account_view-details]</a>
+				</div>
+			</h3>
+			<table width="100%">
+				<tbody>
+					<tr class="my-account-table">
+						<td> [account_reminders-header-reminders]: [total_reminders]</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--END: reminders-->
+	<!--START: giftcertificates-->
+	<div class="row my-account-gift-certificates my-account-table-container">
+		<div class="columns small-12">
+			<h3 class="my-account-subheader">
+				<div class="my-account-header-name-group">
+					<img src="assets/templates/common/images/gift_certificate.png" border="0" align="absbottom">&nbsp;
+					[account_gift-certificate]
+				</div>
+				<div class="my-account-header-name-action">
+					<a href="view_reminders.asp">[account_view-details]</a>
+				</div>
+			</h3>
+			<form action="gc_balance.asp" method="post" name="frmGC" id="frmGC">
+			<table width="100%">
+				<tbody>
+					<tr>
+						<td colspan="2">
+							[account_gift-certificate-total-purchased]: [total_gc],
+							[account_gift-certificate-total-amount]: [total_gcamount]
+							&nbsp;<a href="gc_view.asp">[account_view-details]</a>
+							<hr>
+						</td>
+					</tr>
+					<tr>
+						<td>[account_gift-certificate-check-balance]:</td>
+						<td><input type="text" size="20" name="gc" value="" maxlength="30" class="txtBoxStyle"></td>
+					</tr>
+					<tr>
+						<td>[registration_verification]:</td>
+						<td style="padding: 0.25rem 0;">
+									<!--START: captcha-->
+									<img src="admin/image_pw.asp?cache=[now]&sessionname=randomWordGC" border="0" width="148"> <br>
+			[registration_verification_message]<br>
+			<input type="text" name="randomWord" id="randomWord" value="" size="20" maxlength="30" class="txtBoxStyle">
+									<!--END: captcha-->
+					<!--START: recaptcha-->
+									<script type="text/javascript">var RecaptchaOptions = { theme: '[recaptcha_theme]' };</script>
+									<script type="text/javascript" src="//www.google.com/recaptcha/api/challenge?k=[recaptcha_key]"></script>
+									<noscript>
+									<iframe src="//www.google.com/recaptcha/api/noscript?k=[recaptcha_key]" height="300" width="500" frameborder="0"></iframe><br>
+									<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+									<input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+									</noscript>
+					<!--END: recaptcha-->
+							<button name="logout" type="button" class="btn" onclick="this.form.submit();">[account_gift-certificate-check-balance-go]</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</form>
+		</div>
+	</div>
+	<!--END: giftcertificates-->
+</div>
