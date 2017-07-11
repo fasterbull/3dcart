@@ -1569,12 +1569,18 @@ hr {
 #frmForm .crmField,
 #frmForm .loginField {
   margin: 20px 0 0; }
-  #frmForm .crmField .txtBoxStyle,
-  #frmForm .loginField .txtBoxStyle {
-    background-color: #fff;
-    border: 2px solid #F0B527;
-    color: #000;
-    font-weight: normal; }
+
+.txtBoxStyle {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #f0b527;
+  color: #000;
+  background-color: #fff;
+  padding: 0.5rem;
+  width: auto;
+  font-weight: normal; }
 
 #simplemodal-container {
   border: 2px solid #f0b527 !important; }
@@ -1998,19 +2004,6 @@ button, input[type="button"] {
   list-style-type: none; }
   .product-gallery-container .product-gallery-thumbs .photo-thumb, .product-gallery-container .product-gallery-thumbs .video-thumb {
     padding-left: 0; }
-
-.txtBoxStyle {
-  display: block;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  color: white;
-  background-color: #272727;
-  padding: 0.5rem;
-  width: auto;
-  font-weight: bold;
-  background: #272727; }
 
 #divOptionsBlock {
   border-bottom: none;
