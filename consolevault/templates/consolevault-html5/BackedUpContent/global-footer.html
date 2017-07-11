@@ -1,0 +1,50 @@
+<script type="text/javascript" src="assets/templates/consolevault-html5/js/functions.js?vcart=7.6.0"></script>
+    <div class="hide">
+    	<script language=Javascript src="https://www.legendaryusa.com/3dlivechat/twlhtrack.asp?105077"></script>
+        <script language=JavaScript src="https://www.legendaryusa.com/3dlivechat/twlh.asp"></script>
+    </div>
+    <!--START: quicksearch-->
+    <script type="text/javascript" src="assets/templates/common/quicksearch/jquery.quicksearch.js?vcart=7.6.0"></script>
+    <script type="text/javascript">
+    jQuery(function() {
+                    jQuery('#searchlight').searchlight('/search_quick.asp');
+                });
+    </script>
+    <!--END: quicksearch-->
+    <!-- 3dstats container-->
+    <div class="hide">
+        <!--START: 3dcart stats--> 
+        <script type="text/javascript">
+        //<![CDATA[
+        var file='/stats/count.asp';
+        
+        var stats_d=new Date();
+        var stats_s=stats_d.getSeconds();
+        var stats_m=stats_d.getMinutes();
+        var stats_x=stats_s*stats_m;
+        var prdID = '[catalogid]';
+        var catID = '[catid]';
+        
+        stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
+        if (navigator.appName=='Netscape'){stats_b='NS';}
+        if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
+        if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
+        stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
+        stats_v=navigator.appName;
+        stats_fs = window.screen.fontSmoothingEnabled;
+        if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
+        else {stats_c=screen.pixelDepth;}
+        stats_j=navigator.javaEnabled();
+        info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
+        document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
+        //]]>
+        </script>
+        <noscript>
+        <img src="/stats/count.asp" width="90" height="30" alt="" />
+        </noscript>
+        <!--END: 3dcart stats-->
+    </div>
+    <!-- end of 3dstats container-->
+<div id="qv_buttontitle" style="display:none;">Quick View</div>
+<script>(new Image()).src = 'http://www.consolevault.com/3dvisit.asp'</script></body>
+</html>
