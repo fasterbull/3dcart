@@ -62,7 +62,7 @@ function redirectToVaultPage(element) {
     for(var x = 0; x < shopByVehicles.length; x++) {
         var items = shopByVehicles[x].split('/');
         if (items[0] === make.value && items[1] === year.value && items[2] === model.value) {
-            window.location.href = 'http://consolevault.com/' + items[3];
+            window.location.href = '/' + items[3];
             break;
         }
     }
