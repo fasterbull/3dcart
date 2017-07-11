@@ -1,0 +1,11 @@
+Go live issues:
+
+1. Where is assets/images/logs/console-logo.jpg coming from in header.  It is showing up but should not.
+2. How to remove Feature Products from below header image?
+3. Shop by vehicle on console vault page not launching pop-up
+4. How to remove the Sale Items from home page.
+6. Link below Vault Lock type on product page not showing up.
+7. Images on home page not showing up: <imgsrc="assets templates="" consolevaultv2-html5="" images="" cta_wall_vault.jpg"=""></imgsrc="assets>
+8. Product menu options redirecting to weird pages (wall vault, security briefcase, gun transporter)
+9. Reverting template caused left nav to go missing.  Had to go to Titles & Content -> Home, Category and Listing pages and 
+   uncheck Hide Left Bar/Hide Right Bar
