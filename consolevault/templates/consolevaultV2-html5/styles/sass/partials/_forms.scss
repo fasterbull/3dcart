@@ -1,0 +1,29 @@
+.input-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  order: 0;
+  font-size: 0.8rem;
+}
+
+input {
+  order: 1;
+}
+
+button, input[type="button"]{
+  padding: 0rem 1.25rem;
+  height: 36px;
+  background: $primary-yellow;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  &:hover {
+    background: darken($primary-yellow, 20%);
+  }
+}

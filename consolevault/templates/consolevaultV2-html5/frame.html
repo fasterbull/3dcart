@@ -1,0 +1,481 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>[TITLE]</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+[META]
+<script type="text/javascript" src="assets/templates/common-html5/js/modernizr.min.js"></script>
+<script type="text/javascript" src="assets/templates/common-html5/js/utilities.js"></script>
+<link rel="stylesheet" href="assets/templates/common-html5/quicksearch/quicksearch.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/templates/common-html5/css/layout.css" type="text/css" media="all" />
+<link rel="stylesheet" href="assets/templates/common-html5/css/responsive.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/templates/[template]/styles/[stylesheet]" type="text/css" media="screen" />
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="assets/templates/common-html5/css/fontello.css" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="assets/templates/common-html5/css/fontello-ie7.css" />
+<![endif]-->
+<!--START: FRAME_RSSFEEDS -->
+<link rel="alternate" type="application/rss+xml" title="Featured Items (RSS 2.0)" href="[store_url]/rss.asp?type=home" />
+<link rel="alternate" type="application/rss+xml" title="Products On Sale (RSS 2.0)" href="[store_url]/rss.asp?type=onsale" />
+<link rel="alternate" type="application/rss+xml" title="New Releases (RSS 2.0)" href="[store_url]/rss.asp?type=newreleases" />
+<link rel="alternate" type="application/rss+xml" title="Best Sellers (RSS 2.0)" href="[store_url]/rss.asp?type=bestsellers" />
+<link rel="alternate" type="application/rss+xml" title="Latest Blog Posts (RSS 2.0)" href="[store_url]/rss.asp?type=blog" />
+<script src="https://use.typekit.net/ufk1kuw.js"></script>
+<!--END: FRAME_RSSFEEDS -->
+<script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write("<script type=\"text/javascript\" src=\"/assets/templates/common-html5/js/jquery.min.js\"></" + "script>");
+    }
+</script>
+</head>
+<body>
+<div id="mainContainer">
+  <div class="site-top-bar">
+    <div class="row site-top-bar-wrapper">
+      <div class="columns small-12 top-bar-content">
+        <div class="row" style="height:100%">
+          <div class="top-bar-content-left columns small-4 large-7">
+            <div class="mobile-nav-trigger hide-for-large">
+              <div class="mobile-hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="logo-mark-container">
+              <a href="[store_url]">
+                <img src="assets/templates/[template]/images/logo_icon_dark.png" alt="Logo Mark" />
+              </a>
+            </div>
+            <ul>
+              <li>Free shipping with FEDEX Ground</li>
+              <li><a href="/crm.asp?action=contactus">Hours of operation</a></li>
+            </ul>
+          </div>
+          <div class="top-bar-content-right columns small-8 large-5">
+            <div class="row align-right desktop-nav">
+              <div class="columns small-6" style="padding-right: 0">
+                <div id="searchBox" class="search-inner">
+                  <form method="get" name="searchForm" action="search.asp">
+                    <input type="text" id="searchlight" class="mob-s-bar" name="keyword" value="" placeholder="[frame_search]" />
+                    <input type="submit" name="search" value="" class="mob-s-bar-btn"/>
+                  </form>
+                </div>
+              </div>
+              <div class="columns small-4 right-user-links shrink" style="padding-left: 1.75rem">
+                <a href="myaccount.asp" class="link">My Account</a>
+                <a style="padding-left: 1.75rem" class="cart-link" href="/view_cart.asp"><img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" /></a>
+              </div>
+            </div>
+            <div class="row mobile-top-links hide-for-large align-right">
+              <div class="columns small-8 medium-6 mobile-links-left">
+                <div class="mobile-search-trigger">
+                  <img class="search-icon-mobile" src="assets/templates/[template]/images/search-icon-top.png" alt="Search" />
+                </div>
+                <a href="myaccount.asp" class="link"><img src="assets/templates/[template]/images/account-icon.png" alt="My Account" /></a>
+                <a class="cart-link-mobile" href="/view_cart.asp"><img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-search-container hide-for-large">
+    <div class="mobile-search-inner">
+      <form method="get" name="searchForm" action="search.asp">
+        <input type="text" class="mob-s-bar" name="keyword" value="" placeholder="[frame_search]">
+        <input type="submit" name="search" value="" class="mob-s-bar-btn">
+      </form>
+    </div>
+  </div>
+  <div class="mobile-nav-container">
+    <ul class="mobile-nav-menu">
+      <li>
+        <ul>
+          <li>
+            <a id="drill-down-mobile">SHOP BY VEHICLE</a>
+            <nav id="shopby-drill-mobile">
+              <div class="mobile-drilldown-content module cat-links">
+                <div class="drilldown-inner">
+                  <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                      <option value="0">Select</option>
+                      <option value="Cadillac">Cadillac</option>
+                      <option value="Chevrolet">Chevrolet</option>
+                      <option value="Dodge">Dodge</option>
+                      <option value="Ford">Ford</option>
+                      <option value="GMC">GMC</option>
+                      <option value="Hummer">Hummer</option>
+                      <option value="Jeep">Jeep</option>
+                      <option value="Lincoln">Lincoln</option>
+                      <option value="Nissan">Nissan</option>
+                      <option value="Subaru">Subaru</option>
+                      <option value="Toyota">Toyota</option>
+                  </select>
+                </div>
+                <div class="drilldown-inner">
+                  <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
+                     <option value="0">Select</option>
+                 </select>
+                </div>
+                <div class="drilldown-inner">
+                   <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
+                      <option value="0">Select</option>
+                  </select>
+                </div>
+              </div>
+            </nav>
+          </li>
+        </ul>
+      </li>
+	  <li><a href="/console-vault.html">CONSOLE VAULT</a></li>
+	  <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
+      <li><a href="/The-Security-Briefcase_p_13.html">SECURITY BRIEFCASE</a></li>
+      <li><a href="/ecommerce.html">ECOMMERCE</a></li>
+      <li><a href="/oem-customers.html">OEM</a></li>
+      <li><a href="/partner-network.html">PARTNER NETWORK</a></li>
+      <li><a href="/customer-referral-program.html">CUSTOMER REFERRAL PROGRAM</a></li>
+      <li><a href="/our-mission-and-vision.html">ABOUT US</a></li>
+      <li><a href="/crm.asp?action=contactus">Contact</a></li>
+    </ul>
+	<div class="clear"></div>
+  </div>
+  <header class="navigation-header">
+    <div class="nav-header-content row">
+      <div class="columns small-12 navigation-header-logo-container">
+        <a href="http://sofaplace-preview-com.3dcartstores.com/">
+          <!--START: global_header-->
+          <h1 class="store-name">[storename]</h1>
+          <h3 class="store-slogan">[storeslogan]</h3>
+          <!--END: global_header-->
+        </a>
+      </div>
+    </div>
+    <div class="navigation-menu-container-wrapper">
+      <div class="row">
+        <div class="columns small-12 navigation-header-menu-container">
+          <ul class="header-nav-menu">
+            <li class="multi-dropdown-menu-container">
+              <ul class="multi-dropdown-menu">
+                <li class="nav-header-content">
+                  <a id="drill-down">SHOP BY VEHICLE</a>
+                  <nav class="nav-drill nav-dropdown hidden">
+                    <div id="master-shopby-dropdown" class="module cat-links">
+                      <div class="drilldown-cats">
+                        <div class="header-bg">
+                          <h1>SHOP BY VEHICLE</h1>
+                          <h4>ENTER YOUR VEHICLE INFO SO WE CAN RECOMMEND THE RIGHT PRODUCTS FOR YOU</h4>
+                        </div>
+                      </div>
+                      <div class="cat-drilldown-container">
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="Cadillac">Cadillac</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ford">Ford</option>
+                                <option value="GMC">GMC</option>
+                                <option value="Hummer">Hummer</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Lincoln">Lincoln</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Toyota">Toyota</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
+                               <option value="0" disabled selected>Select</option>
+                           </select>
+                          </div>
+                        </div>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
+                               <option value="0" disabled selected>Select</option>
+                           </select>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="close-btn"><i class="icon-cancel-circled"></i></span>
+                    </div>
+					<div class="clear"></div>
+					<div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
+                  </nav>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-dropdown-container products-dropdown">
+              <a class="nav-target">PRODUCTS</a>
+              <ul class="nav-cat-dropdown nav-dropdown hidden">
+                <li><a href="/console-vault.html">CONSOLE VAULT</a></li>
+                <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
+                <li><a href="/The-Security-Briefcase_p_13.html">SECURITY BRIEFCASE</a></li>
+                <li><a href="/THE-TRANSPORTER_c_116.html">GUN TRANSPORTER</a></li>
+              </ul>
+            </li>
+            <li class="nav-dropdown-container customers-dropdown">
+              <a class="nav-target">CUSTOMERS</a>
+              <ul class="nav-cat-dropdown nav-dropdown hidden">
+                <li><a href="/ecommerce.html">ECOMMERCE</a></li>
+                <li><a href="/oem-customers.html">OEM</a></li>
+                <li><a href="/partner-network.html">PARTNER NETWORK</a></li>
+                <li><a href="/customer-referral-program.html">CUSTOMER REFERRAL PROGRAM</a></li>
+              </ul>
+            </li>
+            <li class="nav-dropdown-container about-dropdown">
+              <a class="nav-target">ABOUT</a>
+              <ul class="nav-cat-dropdown nav-dropdown hidden">
+                <li><a href="/our-mission-and-vision.html">ABOUT US</a></li>
+              </ul>
+            </li>
+            <li><a href="/crm.asp?action=contactus">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="row slide-wrap-container">
+    <div id="slidewrap"></div>
+  </div>
+  <div id="headingwrap"></div>
+  <div class="wrapper row">
+    <!--START: LEFT BAR-->
+    <aside id="leftBar" class="leftBar">
+      <div class="column" id="column1">
+        <!--START: LEFT_BAR_BLOCKS-->
+        <!--START: TOP_SELLERS_BLOCK-->
+        <div id="modTopSellers" class="module"> <span class="menu-headers">[frame_top-sellers]</span>
+          <div class="clear"></div>
+          <!--START: topsellers-->
+
+          <!--START: topsellers_topitem-->
+          <div class="topsellers_topitem">
+            <div class="top-sellers-star">[ranking]</div>
+            <div class="img"><a href="product.asp?itemid=[catalogid]" title="[name]"><img src="[thumbnail]" alt="[name]" /></a></div>
+            <div class="clear"></div>
+            <div class="info">
+              <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+              <div class="clear"></div>
+              <!--START: product_review-->
+              <!--START: product_review_average-->
+              <div class="stars"><img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" /></div>
+              <!--END: product_review_average-->
+              <!--END: product_review-->
+              <div class="price2"><!--START: ITEMPRICE-->
+                [ITEMPRICE]
+                <!--END: ITEMPRICE-->
+                <!--START: SALEPRICE-->
+                [ITEMSALEPRICE]
+                <!--END: SALEPRICE--></div>
+              <div class="clear"></div>
+              <div class="action"><a href="product.asp?itemid=[catalogid]">Learn More</a></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <!--END: topsellers_topitem-->
+
+          <!--START: topsellers_item-->
+          <div class="div"></div>
+          <div class="info">
+            <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+            <div class="clear"></div>
+            <!--START: product_review-->
+            <!--START: product_review_average-->
+            <div class="stars"><img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" /></div>
+            <!--END: product_review_average-->
+            <!--END: product_review-->
+            <div class="price2"><!--START: ITEMPRICE-->
+              [ITEMPRICE]
+              <!--END: ITEMPRICE-->
+              <!--START: SALEPRICE-->
+              [ITEMSALEPRICE]
+              <!--END: SALEPRICE--></div>
+          </div>
+          <div class="clear"></div>
+          <!--END: topsellers_item-->
+
+          <!--END: topsellers-->
+        </div>
+        <!--END: TOP_SELLERS_BLOCK-->
+        <!--START: NEW_RELEASES_BLOCK-->
+        <div id="modNewReleases" class="module"> <span class="menu-headers">[frame_new-releases]</span>
+          <div class="clear"></div>
+          <!--START: newreleases-->
+
+          <!--START: newreleases_topitem-->
+          <div class="info">
+            <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+            <div class="clear"></div>
+            <!--START: product_review-->
+            <!--START: product_review_average-->
+            <div class="stars"><img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" /></div>
+            <!--END: product_review_average-->
+            <!--END: product_review-->
+            <div class="price2"><!--START: ITEMPRICE-->
+              [ITEMPRICE]
+              <!--END: ITEMPRICE-->
+              <!--START: SALEPRICE-->
+              [ITEMSALEPRICE]
+              <!--END: SALEPRICE--></div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+          <!--END: newreleases_topitem-->
+
+          <!--START: newreleases_item-->
+          <div class="div"></div>
+          <div class="info">
+            <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+            <div class="clear"></div>
+            <!--START: product_review-->
+            <!--START: product_review_average-->
+            <div class="stars"><img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" /></div>
+            <!--END: product_review_average-->
+            <!--END: product_review-->
+            <div class="price2"><!--START: ITEMPRICE-->
+              [ITEMPRICE]
+              <!--END: ITEMPRICE-->
+              <!--START: SALEPRICE-->
+              [ITEMSALEPRICE]
+              <!--END: SALEPRICE--></div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+          <!--END: newreleases_item-->
+
+          <!--END: newreleases-->
+        </div>
+        <!--END: NEW_RELEASES_BLOCK-->
+        <!--START: FRAME_MANUFACTURER-->
+        <div id="modManf" class="module"> <span class="menu-headers">[frame_manufacturer]</span>
+            <ul>
+              <!--START: manufacturer_format-->
+              <li><a href="search_groups.asp?manf=[mfgid]" class="menu-bottom">[manufacturer]</a></li>
+              <!--END: manufacturer_format-->
+              <li><a href="manufacturer_index.asp" class="view-all-manf"><i class="icon-angle-right"></i> [frame_manufacturer-viewall]</a></li>
+            </ul>
+        </div>
+        <!--END: FRAME_MANUFACTURER-->
+        <!--START: FRAME_BYPRICE-->
+        <div id="modPrice" class="module"> <span class="menu-headers">[frame_byprice]</span>
+          <ul>
+            <!--START: byprice_format-->
+            <li><a href="search_groups.asp?keyword=[id]&byprice=[id]" class="cat">[title]</a></li>
+            <!--END: byprice_format-->
+          </ul>
+        </div>
+        <!--END: FRAME_BYPRICE-->
+        <!--START: LEFT_BANNER-->
+        <div id="leftBanner">[LEFT_BANNER]</div>
+        <!--END: LEFT_BANNER-->
+        <!--END: LEFT_BAR_BLOCKS-->
+      </div>
+    </aside>
+    <!--END: LEFT BAR-->
+  <div id="mainContent">MIDDLE</div>
+    <!--START: RIGHT BAR-->
+    <aside id="rightBar" class="rightBar">
+      <div class="column" id="column2">
+        <!--START: RIGHT_BAR_BLOCKS-->
+        <!--START: RIGHT_BANNER-->
+        <div id="rightBanner">[RIGHT_BANNER]</div>
+        <!--END: RIGHT_BANNER-->
+        <!--END: RIGHT_BAR_BLOCKS-->
+      </div>
+    </aside>
+    <!--END: RIGHT BAR-->
+  <div class="clear"></div>
+  </div>
+  <footer>
+      <div id="globalFooter" class="footer">[GLOBAL_FOOTER]</div>
+      <div class="bottomBar">
+      <div class="wrapper">
+        <div id="copyright" class="footer">
+          <div class="row copyright-wrapper">
+            <div class="copyright columns small-12">
+              [frame_copyright1]
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+</div>
+<!--START: quicksearch-->
+<script type="text/javascript" src="assets/templates/common-html5/quicksearch/jquery.quicksearch.js"></script>
+<script type="text/javascript">
+jQuery(function() {
+	jQuery('#searchlight').searchlight('/search_quick.asp');
+});
+</script>
+<!--END: quicksearch-->
+<script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
+<script>
+jQuery(document).ready(function(e) {
+
+  jQuery('.nav-dropdown-container').hover(function() {
+    jQuery('.nav-dropdown').not(jQuery(this).children('.nav-dropdown')).addClass('hidden');
+    jQuery(this).children('.nav-dropdown').toggleClass('hidden');
+  });
+
+  jQuery('.search-icon-mobile').click(function() {
+    jQuery('.mobile-search-container').toggleClass('shown');
+  });
+
+  jQuery('#drill-down-mobile').click(function() {
+    jQuery('.nav-drill-mobile').toggleClass('hidden');
+  })
+
+  jQuery('#drill-down').hover(function() {
+    jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
+    jQuery('.nav-drill').toggleClass('hidden');
+  });
+
+  jQuery('.nav-drill .close-btn').click(function() {
+    jQuery('.nav-drill').addClass('hidden');
+  });
+
+	jQuery('#mob-search-trigger').click(function() {
+		jQuery('#mob-search').fadeIn(300);
+	});
+
+	jQuery('#close_search_btn').click(function() {
+		jQuery('#mob-search').fadeOut(300);
+	});
+
+  if (jQuery('.drilldown-cats .cat-drilldown').length) {
+    jQuery('.drilldown-cats .cat-drilldown').wrapAll('<div class="cat-drilldown-container"></div>');
+  }
+
+  jQuery('#homeHeader').addClass('columns small-12');
+	createSticky(jQuery('.navigation-menu-container-wrapper'));
+});
+
+function createSticky(sticky) {
+
+	if (typeof sticky !== 'undefined') {
+
+		var	pos = sticky.offset().top,
+				win = jQuery(window);
+
+		win.on('scroll', function() {
+    	win.scrollTop() >= pos - 54 ? sticky.addClass('fixed') : sticky.removeClass('fixed');
+		});
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<div class="row">
+	<div class="columns small-12 fedex-shipping-blurb"><img alt="Free Fedex Shipping" src="assets/templates/[template]/images/fedex_shipping.png"></div>
+</div>
+<div class="row footer-container">
+	<div class="columns small-12 large-2 footer-logo-container"><img alt="Logo Mark" src="assets/templates/[template]/images/logo_mark.png"></div>
+	<div class="columns small-12 footer-links container large-8">
+		<div class="row">
+			<div class="columns small-12 footer-links large-6">
+				<ul>
+					<li>
+						<a href="/FAQ_ep_41.html">FAQS</a>
+					</li>
+					<li>
+						<a href="/Keyless-Combo-Instructions_ep_43-1.html">Keyless Combo Instructions</a>
+					</li>
+					<li>
+						<a href="/Lock-Types_ep_42-1.html">Lock Types</a>
+					</li>
+					<li>
+						<a href="/partner-network.html">Partner Network</a>
+					</li>
+				</ul>
+			</div>
+			<div class="columns small-12 footer-links large-6">
+				<ul>
+					<li>
+						<a href="/Return-Policy_ep_51-1.html">Return Policy</a>
+					</li>
+					<li>
+						<a href="/Limited-Lifetime-Warranty_ep_52-1.html">Limited Lifetime Warranty</a>
+					</li>
+					<li>
+						<a href="/Terms-and-Conditions_ep_2-1.html">Terms & Conditions</a>
+					</li>
+					<li>
+						<a href="/Privacy-Policy_ep_44-1.html">Privacy Policy</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="columns small-12 large-2 footer-search-and-social">
+		<div class="row">
+			<div class="columns small-12 footer-search-container">
+				<div class="row">
+					<div class="search-inner">
+						<form action="search.asp" id="searchForm" name="searchForm">
+							<input class="mob-s-bar" name="keyword" placeholder="[frame_search]"><input class="mob-s-bar-btn" name="search" type="submit">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="columns small-12">
+				<p class="text-center">Let's stay connected!</p>
+			</div>
+			<div class="columns small-12 social-icon-links">
+				<a class="facebook" href="[social_link_facebook_url]" target="_blank" title="Like Us on Facebook"><i class="icon-facebook"></i></a><a class="twitter" href="[social_link_twitter_url]" target="_blank" title="Follow Us on Twitter"><i class="icon-twitter"></i></a><a class="instagram" href="[social_link_instagram_url]" target="_blank" title="Follow Us on Instagram"><i class="icon-instagramm"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    //<![CDATA[var injectInterval = setInterval(tryInjectVideoShopByMenu, 200); var updateNextOptionInverval = null, popTimeout; function injectShopByMenuInMobile($drilldowns) { var $drilldownClone = $drilldowns.clone(); //Strip drilldown inner. var $strippedClone = $drilldownClone.map(function(index, el) { var $stripped = jQuery(this).html(jQuery(this).find('select')); return $stripped.get(0); }); jQuery('#shopby-drill-mobile').empty(); jQuery('#shopby-drill-mobile').append($strippedClone); initializeDrilldowns(jQuery('#shopby-drill-mobile')); } function initializeDrilldowns(elements) { elements.find('select').each(function(id, el) { jQuery(el) .removeAttr('onchange') .on('change', function() { var $el = jQuery(el); if ($el.length) { triggerDesktopShopBy($el.attr('name'), $el.val()); updateNextOptionInverval = setInterval(function() { populateNextDrilldown($el.attr('name')); }, 200); // Timeout popTimeout = setTimeout(function() { clearInterval(updateNextOptionInverval); }, 3000); } }); }); } function populateNextDrilldown(selectName) { var $master = jQuery('#master-shopby-dropdown select[name="' + selectName +'"]') .closest('.cat-drilldown') .next() .children('.drilldown-inner'); var $mobile = jQuery('#shopby-drill-mobile select[name="' + selectName +'"]') .closest('.drilldown-inner') .next(); if ($master.length) { $mobile.empty(); $mobile.append($master.find('select').clone()); $mobile.find('select').val($master.find('select').val()); initializeDrilldowns($mobile); clearTimeout(popTimeout); clearInterval(updateNextOptionInverval); } } function triggerDesktopShopBy(selectName, value) { var $current = jQuery('#master-shopby-dropdown select[name="' + selectName +'"]'); $current.val(value).trigger('change'); } function tryInjectVideoShopByMenu() { var $drilldowns = jQuery('#master-shopby-dropdown .cat-drilldown-container .drilldown-inner'); if ($drilldowns.length) { injectShopByMenuInMobile($drilldowns); } clearInterval(injectInterval); } jQuery(function() { jQuery('.mobile-nav-trigger').click(function() { jQuery('.mobile-nav-container').toggleClass('slide-active'); jQuery('body').toggleClass('no-scroll'); }); if (jQuery('.drilldown-cats .cat-drilldown').length) { jQuery('.drilldown-cats .cat-drilldown').wrapAll('<div class="cat-drilldown-container"><\/div>'); } });//]]>
+</script>

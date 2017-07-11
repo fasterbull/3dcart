@@ -1,0 +1,75 @@
+#checkoutSinglePagev2 {
+    padding: 2rem 3rem;
+    .alpha-col,
+    .beta-col,
+    .account_login1 .registered_account,
+    .leftCol,
+    .rightCol {
+        float: none;
+        width: auto;
+        margin-bottom: 60px;
+        max-width: 550px;
+    }
+    .header {
+        border-bottom: none;
+        margin-bottom: 30px;
+        padding-top: 50px;
+        border-top: 1px solid #f0b527;
+    }
+    h3 {
+        font-size: 100%;
+    }
+    h3 span {
+        display: none;
+    }
+    #divApplyCoupon {
+        display: none;
+    }
+    .alpha-col {
+        border: 1px solid #000;
+        padding: 0 40px;
+    }
+    .alpha-col .header {
+        border-top: none;
+    }
+    .alpha-col a {
+        text-decoration: none;
+        color: #000;
+    }
+    .alpha-col .product-info a {
+        line-height: 43px;
+    }
+    #divBalance {
+        border-bottom: none;
+    }
+    #divCheckoutComments a {
+        text-decoration: none;
+        color: #000;
+    }
+    .chkField {
+        margin: 0;
+    }
+    .chkField input,
+    .chkField select {
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #shipping_div a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.account_login1 .create_newaccount {
+    float: none;
+    width: auto;
+    margin-bottom: 60px;
+    max-width: 550px;
+}
+
+#checkoutStep4 {
+  .steps {
+    display: none;
+  }
+}

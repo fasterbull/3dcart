@@ -1,0 +1,124 @@
+.product-page-wrapper {
+  background: white;
+  padding-top: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 4rem;
+  .colored {
+    color: $primary-yellow;
+  }
+  .large {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  .product-title {
+    margin: 0;
+    margin-bottom: 0.67em;
+    font-size: 1.75rem;
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+  }
+  .product-short-desc {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+  }
+  .product-price-container {
+    padding-top: 1.5rem;
+  }
+  .price-spread {
+    margin-bottom: 1rem;
+    .price-label {
+      padding-right: 1rem;
+    }
+  }
+  .product-add-to-cart {
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    input[type="text"] {
+      padding: 0.5rem;
+      line-height: 1;
+      border: 1px solid $primary-yellow;
+    }
+    button {
+      margin-left: 0.5rem;
+    }
+    @include breakpoint(small down) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .product-photo-container {
+    padding-top: 3rem;
+    ul {
+      list-style-type: none;
+      .photo-thumb {
+        padding-left: 0;
+        padding-bottom: 1.5rem;
+        @include breakpoint(small down) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  @include breakpoint(small down) {
+    .price-spread {
+      display: flex;
+      justify-content: center;
+      tr, td {
+        display: flex;
+      }
+    }
+  }
+  .social-print-container {
+    padding-top: 1.5rem;
+  }
+}
+
+.product-content-container {
+  padding-bottom: 4rem;
+}
+
+.product-action-form {
+  display: flex;
+  align-items: flex-end;
+  @include breakpoint(small down) {
+    justify-content: center;
+  }
+  #qtyBox {
+    height: 36px;
+    width: 54px;
+    border: 2px solid $primary-yellow;
+  }
+  button {
+    margin-left: 1rem;
+  }
+}
+
+.product-favorite {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #bd2929;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background: darken(#bd2929, 20%);
+  }
+  a {
+    width: 23px;
+    height: 21px;
+    color: white;
+  }
+}
