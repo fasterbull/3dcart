@@ -35,6 +35,7 @@ a#drill-down {
     justify-content: space-between;
     .cat-drilldown {
       padding-right: 1rem;
+      flex: 1;
       .drilldown-inner {
         position: relative;
         &:after {

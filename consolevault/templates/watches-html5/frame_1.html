@@ -104,7 +104,31 @@
             <a id="drill-down-mobile">SHOP BY VEHICLE</a>
             <nav id="shopby-drill-mobile">
               <div class="mobile-drilldown-content module cat-links">
-                <span class="close-btn"><i class="icon-cancel-circled"></i></span>
+                <div class="drilldown-inner">
+                  <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                      <option value="0">Select</option>
+                      <option value="Chevrolet">Chevrolet</option>
+                      <option value="Dodge">Dodge</option>
+                      <option value="Ford">Ford</option>
+                      <option value="GMC">GMC</option>
+                      <option value="Hummer">Hummer</option>
+                      <option value="Jeep">Jeep</option>
+                      <option value="Lincoln">Lincoln</option>
+                      <option value="Nissan">Nissan</option>
+                      <option value="Subaru">Subaru</option>
+                      <option value="Toyota">Toyota</option>
+                  </select>
+                </div>
+                <div class="drilldown-inner">
+                  <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
+                     <option value="0">Select</option>
+                 </select>
+                </div>
+                <div class="drilldown-inner">
+                   <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
+                      <option value="0">Select</option>
+                  </select>
+                </div>
               </div>
             </nav>
           </li>
@@ -141,12 +165,50 @@
                 <li class="nav-header-content">
                   <a id="drill-down">SHOP BY VEHICLE</a>
                   <nav class="nav-drill nav-dropdown hidden">
-                    <div  id="master-shopby-dropdown" class="module cat-links">
-                      <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
+                    <div id="master-shopby-dropdown" class="module cat-links">
+                      <div class="drilldown-cats">
+                        <div class="header-bg">
+                          <h1>SHOP BY VEHICLE</h1>
+                          <h4>ENTER YOUR VEHICLE INFO SO WE CAN RECOMMEND THE RIGHT PRODUCTS FOR YOU</h4>
+                        </div>
+                      </div>
+                      <div class="cat-drilldown-container">
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ford">Ford</option>
+                                <option value="GMC">GMC</option>
+                                <option value="Hummer">Hummer</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Lincoln">Lincoln</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Toyota">Toyota</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
+                               <option value="0" disabled selected>Select</option>
+                           </select>
+                          </div>
+                        </div>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
+                               <option value="0" disabled selected>Select</option>
+                           </select>
+                          </div>
+                        </div>
+                      </div>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
-					<div class="clear"></div>
-					<div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
+					           <div class="clear"></div>
+					           <div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
                   </nav>
                 </li>
               </ul>
