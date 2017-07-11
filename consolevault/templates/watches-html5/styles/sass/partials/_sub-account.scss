@@ -4,6 +4,7 @@
 #crmRequest,
 #addresses,
 #addAddresses,
+#error
 #wishlistPrelogin {
   padding: $page-padding;
 }
@@ -33,4 +34,9 @@
 
 .wl-row {
   padding: 0.5rem 0;
+}
+
+// Error
+#error {
+  text-align: center;
 }
