@@ -298,8 +298,12 @@ jQuery(document).ready(function(e) {
   });
 
   jQuery('button#shop-by-vehicle').click(function() {
-    jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
-    jQuery('.nav-drill').toggleClass('hidden');
+    if (jQuery('.mobile-nav-trigger').css('display') !== 'none') {
+      jQuery('.mobile-nav-trigger').trigger('click');
+    } else {
+      jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
+      jQuery('.nav-drill').toggleClass('hidden');
+    }
   });
 
   jQuery('.nav-drill .close-btn').click(function() {
