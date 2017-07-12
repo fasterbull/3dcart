@@ -1,10 +1,8 @@
 @import 'settings';
 @import 'foundation';
-
 @import 'mixins';
 @import 'variables';
 @import 'global';
-
 // - Partials
 @import 'partials/about';
 @import 'partials/cart';
@@ -21,6 +19,7 @@
 @import 'partials/sub-account';
 @import 'partials/navigation-header';
 @import 'partials/product';
+@import 'partials/search';
 @import 'partials/search-box';
 @import 'partials/social-buttons';
 @import 'partials/top-bar';

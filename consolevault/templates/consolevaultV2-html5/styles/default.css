@@ -2563,6 +2563,11 @@ a#drill-down {
     height: 21px;
     color: white; }
 
+#search {
+  padding: 2rem 2rem; }
+  #search .breadcrumbs {
+    display: none; }
+
 .search-inner form {
   position: relative; }
 
