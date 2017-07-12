@@ -41,7 +41,7 @@
     <div class="row site-top-bar-wrapper">
       <div class="columns small-12 top-bar-content">
         <div class="row" style="height:100%">
-          <div class="top-bar-content-left columns small-4 large-7">
+          <div class="top-bar-content-left columns small-4 large-5">
             <div class="mobile-nav-trigger hide-for-large">
               <div class="mobile-hamburger-menu">
                 <span></span>
@@ -59,19 +59,37 @@
               <li><a href="/crm.asp?action=contactus">Hours of operation</a></li>
             </ul>
           </div>
-          <div class="top-bar-content-right columns small-8 large-5">
+          <div class="top-bar-content-right columns small-8 large-7">
             <div class="row align-right desktop-nav">
-              <div class="columns small-6" style="padding-right: 0">
-                <div id="searchBox" class="search-inner">
-                  <form method="get" name="searchForm" action="search.asp">
-                    <input type="text" id="searchlight" class="mob-s-bar" name="keyword" value="" placeholder="[frame_search]" />
-                    <input type="submit" name="search" value="" class="mob-s-bar-btn"/>
-                  </form>
+              <div class="columns small-8 right-user-links shrink" style="padding-right: 0;">
+                <div class="account-links">
+                  <!--START: login-->
+                  <!--END: login-->
+                  <!--START: username-->
+                  <span class="truncate"><span class="show-for-large">Hello, </span>[username]</span>
+                  <div class="spacer"></div>
+                  <a href="logout.asp" class="link">Log out</a>
+                  <div class="spacer"></div>
+                  <!--END: username-->
+                  <a href="myaccount.asp" class="link">My Account</a>
                 </div>
               </div>
-              <div class="columns small-4 right-user-links shrink" style="padding-left: 1.75rem">
-                <a href="myaccount.asp" class="link">My Account</a>
-                <a style="padding-left: 1.75rem" class="cart-link" href="/view_cart.asp"><img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" /></a>
+              <div class="columns small-4">
+                <div class="row">
+                  <div class="columns small-9">
+                    <div id="searchBox" class="search-inner">
+                      <form method="get" name="searchForm" action="search.asp">
+                        <input type="text" id="searchlight" class="mob-s-bar" name="keyword" value="" placeholder="[frame_search]" />
+                        <input type="submit" name="search" value="" class="mob-s-bar-btn"/>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="columns small-3">
+                    <a class="cart-link" href="/view_cart.asp">
+                      <img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row mobile-top-links hide-for-large align-right">

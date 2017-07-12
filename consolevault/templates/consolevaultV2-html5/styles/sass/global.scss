@@ -21,6 +21,12 @@ hr {
     text-align: center;
 }
 
+#mainContent {
+  &>#message {
+    text-align: center;
+  }
+}
+
 #extrapage-header {
     height: 180px;
     width: 100%;
@@ -91,4 +97,10 @@ hr {
 .align-right {
   display: flex;
   justify-content: flex-end;
+}
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

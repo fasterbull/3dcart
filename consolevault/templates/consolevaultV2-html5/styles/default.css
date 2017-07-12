@@ -1540,6 +1540,9 @@ hr {
 .text-center {
   text-align: center; }
 
+#mainContent > #message {
+  text-align: center; }
+
 #extrapage-header {
   height: 180px;
   width: 100%;
@@ -1605,6 +1608,11 @@ hr {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
 .about-tagline {
   color: #f0b527;
@@ -2086,7 +2094,7 @@ button, input[type="button"] {
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   overflow: auto;
-  height: calc(100% - (54px + 1px)); }
+  height: calc(100% - (53px)); }
   .mobile-nav-container.slide-active {
     -webkit-transform: translateX(0%);
     transform: translateX(0%); }
@@ -2693,6 +2701,35 @@ a#drill-down {
       @media screen and (max-width: 63.9375em) {
         .site-top-bar .top-bar-content-right .desktop-nav {
           display: none; } }
+    .site-top-bar .top-bar-content-right .account-links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .site-top-bar .top-bar-content-right .account-links span {
+        padding-right: 0.5rem;
+        position: relative; }
+        @media (min-width: 1024px) {
+          .site-top-bar .top-bar-content-right .account-links span {
+            max-width: 150px; } }
+        @media (min-width: 1200px) {
+          .site-top-bar .top-bar-content-right .account-links span {
+            max-width: 200px; } }
+        @media (min-width: 1400px) {
+          .site-top-bar .top-bar-content-right .account-links span {
+            max-width: 240px; } }
+        @media screen and (max-width: 63.9375em) {
+          .site-top-bar .top-bar-content-right .account-links span {
+            max-width: 280px; } }
+      .site-top-bar .top-bar-content-right .account-links .spacer {
+        width: 1px;
+        background-color: #a6780b;
+        height: 50%; }
+      .site-top-bar .top-bar-content-right .account-links .link {
+        padding: 0 0.5rem;
+        position: relative; }
     .site-top-bar .top-bar-content-right .right-user-links {
       display: -webkit-box;
       display: -ms-flexbox;
