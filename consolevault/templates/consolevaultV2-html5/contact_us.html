@@ -37,7 +37,7 @@
 	function addNew() {
 		var strMsg = "";
 		if (document.frmForm.customer.value.trim() == "")
-			strMsg += " - [crm_name] cannot be blank.\n";
+			// strMsg += " - [crm_name] cannot be blank.\n";
 		if (document.frmForm.custemail.value.trim() == "" || !isValidEmail(document.frmForm.custemail.value))
 			strMsg += " - [crm_email] cannot be blank and must be a valid email address.\n";
 		if (document.frmForm.subject.value.trim() == "")
