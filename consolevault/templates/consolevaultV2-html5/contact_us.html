@@ -37,7 +37,7 @@
 	function addNew() {
 		var strMsg = "";
 		if (document.frmForm.customer.value.trim() == "")
-			// strMsg += " - [crm_name] cannot be blank.\n";
+			strMsg += " - [crm_name] cannot be blank.\n";
 		if (document.frmForm.custemail.value.trim() == "" || !isValidEmail(document.frmForm.custemail.value))
 			strMsg += " - [crm_email] cannot be blank and must be a valid email address.\n";
 		if (document.frmForm.subject.value.trim() == "")
@@ -141,6 +141,7 @@
 				</select>
 				<div class="clear"></div>
 			</div>
+			<div></div>
 			<div class="crmField">
 				<label for="customer">[crm_name]:</label>
 				<input type="text" name="customer" value="[name]" size="40" maxlength="50" tabindex="2" class="txtBoxStyle" />
@@ -176,7 +177,7 @@
 					<i class="icon-plus"></i>
 					<span>Select files...</span>
 					<!-- The file input field used as target for the file upload widget -->
-					<input id="fileupload" type="file" name="files[]" multiple="" data-url="/filesaction.asp?action=upload&folder=temp&hid=[filehash]" onclick='fnCountReset();'">
+					<input id="fileupload" type="file" name="files[]" multiple="" data-url="/filesaction.asp?action=upload&folder=temp&hid=[filehash]" onclick='fnCountReset();'>
 				</span>
 			</div>
 			<script type="text/javascript" src="js/vendor/jquery.ui.widget.js"></script>
