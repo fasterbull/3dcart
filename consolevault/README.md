@@ -3,10 +3,10 @@
 ## Overview
 
 ### To run styles
-If first time running styles, run `npm install` inside `templates/watches-html5`
+If first time running styles, run `npm install` inside `templates/consolevaultV2-html5`
 You must need node version 4+ installed on your system.
 
-Edit .scss files and run inside of the `templates/watches-html5` folder
+Edit .scss files and run inside of the `templates/consolevaultV2-html5` folder
 `npm run watch-styles`
 
 push changes via FTP.
