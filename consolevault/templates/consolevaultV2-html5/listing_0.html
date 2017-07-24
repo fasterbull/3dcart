@@ -1,0 +1,192 @@
+<script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write("<script type=\"text/javascript\" src=\"assets/templates/common-html5/js/jquery.min.js\"></" + "script>");
+    }
+</script>
+
+<div id="mainContentContent">
+  <form enctype="multipart/form-data" method="post" action="add_cart.asp" name="add" id="add">
+    <input type="hidden" name="item_id" value="[catalogid]" />
+    <input type="hidden" name="itemid" value="[id]" id="itemid" />
+    <input type="hidden" name="category_id" value="[catid]" />
+    <div class="product-page-wrapper columns small-12">
+      <div class="product-content-container">
+        <div class="product-page-header row">
+          <div class="columns small-12">
+            <h1 class="product-title">[name]</h1>
+            <h2 class="product-short-desc colored">[description]</h2>
+          </div>
+        </div>
+        <div class="product-price-container row">
+          <div class="columns small-12">
+            <table class="price-spread">
+              <tr class="colored large">
+                <td class="price-label">[product_yourprice]</td>
+                <td>[price]</td>
+              </tr>
+              <!--START: SALEPRICE-->
+              <tr class="colored large">
+                <td class="price-label">[product_onsale]</td>
+                <td>[saleprice]</td>
+              </tr>
+              <!--END: SALEPRICE-->
+              <!--START: SAVINGS-->
+              <tr class="colored large">
+                <td class="price-label">[product_savings]</td>
+                <td><span>[savings]</span><span>([savings_percentage]%)</span></td>
+              </tr>
+              <!--END: SAVINGS-->
+            </table>
+          </div>
+        </div>
+        <div class="product-action-container row">
+          <div class="product-action-form columns small-12">
+            <form class="product-add-to-cart">
+              <!--START: qtybox-->
+              <div class="input-group">
+                <input id="qtyBox" type="text" size="3" name="qty-0" value="1" onchange="validateValues(document.add,1);" />
+                <label for="qtyBox">[product_quantity]</label>
+              </div>
+              <!--END: qtybox-->
+              <button type="button" class="btn" onclick="check_and_add(document.add);">[product_addtocart]</button>
+              <!--START: addWishlist-->
+                <div class="addWishlist product-favorite">
+                  <!-- <span class="add_wishlist-label">[product_addtowishlist]</span> -->
+                  <i class="icon-heart"></i>
+                  <input type="hidden" name="wishListCustomType" id="wishListCustomType" value="" />
+                  <input type="hidden" name="wishListCustomId" id="wishListCustomId" value="" />
+                  <input type="hidden" name="wishListCustomname" id="wishListCustomname" value="" />
+                </div>
+                <!--END: addWishlist-->
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="product-photo-container row">
+          <div class="columns small-12">
+            <ul class="product-images row">
+              <!--START: image1-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image1]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image1-->
+              <!--START: image2-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image2]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image2-->
+              <!--START: image3-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image3]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image3-->
+              <!--START: image4-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image4]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image4-->
+              <!--START: image5-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image5]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image5-->
+              <!--START: image6-->
+              <li class="photo-thumb columns small-12 medium-6 large-3"><img src="thumbnail.asp?file=[image6]&maxx=[image_medium_w]&maxy=0"/></li>
+              <!--END: image6-->
+            </ul>
+          </div>
+        </div>
+        <div class="product-extended-description-container row">
+          <div class="columns small-12">
+            <!--START: extended_description-->
+              [extended_description]
+            <!--END: extended_description-->
+          </div>
+        </div>
+        <div class="social-print-container row">
+          <div class="columns small-12">
+            <ul class="product-social-share-container">
+              <li><a class="sharing-button-icon" href="mailto:?subject=Console Vault&body=[store_url]/[friendurl]"><i class="icon-mail"></i></a></li>
+                <li><a class="sharing-button-icon" target="_blank" href="http://www.facebook.com/sharer.php?u=[store_url]/[friendurl]"><i class="icon-facebook"></i></a></li>
+                <li><a class="sharing-button-icon" target="_blank" href="https://twitter.com/share?url=[store_url]/[friendurl]"><i class="icon-twitter"></i></a></li>
+                <!--<li><a class="sharing-button-icon" target="_blank" href="#"><i class="icon-instagramm"></i></a></li>-->
+            </ul>
+            <!--<div class="print-action-container">
+                <a class="colored" href="javascript:window.print();">Print Page</a>
+              </div>-->
+          </div>
+        </div>
+      </div>
+      <!--START: related_0-->
+        <!--<div class="related-products-container row align-center">
+          <div class="related-products columns small-12 large-10">
+            <h3 class="text-center">[product_Header-relateditems]</h3>
+            <div class="row align-center">
+              <div class="columns small-12 large-10">
+                <ul class="row align-center">-->
+                  <!--START: related_items0-->
+                  <!--<li class="columns small-12 large-6 related-item">
+                    <a href="product.asp?itemid=[catalogid]">
+                      <img src="[THUMBNAIL]" alt="[name]" id="qv_[catalogid]" />
+                    </a>
+                    <span>[name]</span>
+                  </li>-->
+                  <!--END: related_items0-->
+                <!--</ul>
+              </div>
+            </div>
+          </div>
+        </div>-->
+        <!--END: related_0-->
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+var reqOptionBar = new MessageBar();
+reqOptionBar.initialize();
+function check_and_add(formx)
+{
+    var reqOption = validateReqOption(formx);
+    if (reqOption != null) {
+        reqOptionBar.alert('Please select all required options.');
+        varx1 = '[name="' + reqOption.name + '"]';
+        jQuery(varx1).closest('.opt-regular').addClass('option-required');
+        return;
+    }
+    document.add.submit();
+
+}
+
+jQuery(document).ready(function() {
+  jQuery('.product-favorite').click(function() {
+    add_wishlist();
+  })
+});
+
+function add_wishlist() {
+
+    if ("[Enabled_Multiple_WishList]" == "1") {
+
+        //window.open('[link_addtolist]','popup','height=300,width=550,location=no,scrollbars=no,menubars=no,toolbars=no,resizable=yes');
+
+        var src = "[link_addtolist]";
+        var intHeight, intWidth;
+        intHeight = 480;
+        intWidth = 495;
+
+        if (document.body.clientWidth < 767) {
+            intHeight = 460;
+            intWidth = 300;
+        }
+        jQuery.modal('<iframe src="' + src + '" height="' + intHeight + '" width="' + intWidth + '" style="border:0">', {
+            closeClass: 'modalCloseImg',
+            closeHTML: '<a href="#">Close</a>',
+            containerCss:{
+                backgroundColor:"#fff",
+                borderColor:"#fff",
+                height:intHeight,
+                padding:0,
+                width:(intWidth+5)
+            },
+            overlayClose:true,
+            onShow: function(dialog){
+                dialog.wrap.css('overflow','hidden');
+            }
+        });
+    }
+    else {
+        document.add.action = "add_cart.asp?action=addWishList";
+        document.add.submit();
+    }
+}
+</script>

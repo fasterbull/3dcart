@@ -22,12 +22,20 @@ a#drill-down {
     padding: 0.5rem;
     cursor: pointer;
   }
+  .contact-us {
+	font-size: 12px;
+	margin-top: 10px;
+      a {
+          font-size: 12px;
+      }
+  }
   .cat-drilldown-container {
     padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     .cat-drilldown {
       padding-right: 1rem;
+      flex: 1;
       .drilldown-inner {
         position: relative;
         &:after {

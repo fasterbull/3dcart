@@ -4,6 +4,19 @@ body {
     padding-top: $top-bar-height;
 }
 
+p, h1, h2 {
+	-webkit-hyphens: manual !important;
+	-moz-hyphens: manual !important;
+	-ms-hyphens: manual !important;
+	hyphens: manual !important;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #f0b527;
+}
+
 .text-center {
     text-align: center;
 }
@@ -25,6 +38,9 @@ body {
     .breadcrumbs {
         display: none;
     }
+    @media screen and (max-width: 550px) {
+        padding-left: 2rem;
+    }
 }
 
 #mainContent {
@@ -40,11 +56,39 @@ body {
     .crmField,
     .loginField {
         margin: 20px 0 0;
-        .txtBoxStyle {
-            background-color: #fff;
-            border: 2px solid #F0B527;
-            color: #000;
-            font-weight: normal;
-        }
     }
+}
+
+.txtBoxStyle {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid $primary-yellow;
+  color: #000;
+  background-color: #fff;
+  padding: 0.5rem;
+  width: auto;
+  font-weight: normal;
+}
+
+#simplemodal-container {
+	border: 2px solid #f0b527 !important;
+    iframe {
+        margin-top: -200px;
+    }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.align-middle {
+  display: flex;
+  align-items: middle;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
 }

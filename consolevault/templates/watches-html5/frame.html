@@ -70,9 +70,7 @@
                 </div>
               </div>
               <div class="columns small-4 right-user-links shrink" style="padding-left: 1.75rem">
-                <!--START: login-->
                 <a href="myaccount.asp" class="link">My Account</a>
-                <!--END: login-->
                 <a style="padding-left: 1.75rem" class="cart-link" href="/view_cart.asp"><img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" /></a>
               </div>
             </div>
@@ -81,9 +79,7 @@
                 <div class="mobile-search-trigger">
                   <img class="search-icon-mobile" src="assets/templates/[template]/images/search-icon-top.png" alt="Search" />
                 </div>
-                <!--START: login-->
                 <a href="myaccount.asp" class="link"><img src="assets/templates/[template]/images/account-icon.png" alt="My Account" /></a>
-                <!--END: login-->
                 <a class="cart-link-mobile" href="/view_cart.asp"><img src="assets/templates/[template]/images/cart.png" alt="Shopping Cart" /></a>
               </div>
             </div>
@@ -100,31 +96,56 @@
       </form>
     </div>
   </div>
-  <div class="mobile-nav-container slide-hidden">
+  <div class="mobile-nav-container">
     <ul class="mobile-nav-menu">
       <li>
         <ul>
           <li>
             <a id="drill-down-mobile">SHOP BY VEHICLE</a>
-            <nav id="nav-drill-mobile">
+            <nav id="shopby-drill-mobile">
+              <div class="mobile-drilldown-content module cat-links">
+                <div class="drilldown-inner">
+                  <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                      <option value="0">Select</option>
+                      <option value="Cadillac">Cadillac</option>
+                      <option value="Chevrolet">Chevrolet</option>
+                      <option value="Dodge">Dodge</option>
+                      <option value="Ford">Ford</option>
+                      <option value="GMC">GMC</option>
+                      <option value="Hummer">Hummer</option>
+                      <option value="Jeep">Jeep</option>
+                      <option value="Lincoln">Lincoln</option>
+                      <option value="Nissan">Nissan</option>
+                      <option value="Subaru">Subaru</option>
+                      <option value="Toyota">Toyota</option>
+                  </select>
+                </div>
+                <div class="drilldown-inner">
+                  <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
+                     <option value="0">Select</option>
+                 </select>
+                </div>
+                <div class="drilldown-inner">
+                   <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
+                      <option value="0">Select</option>
+                  </select>
+                </div>
+              </div>
             </nav>
           </li>
         </ul>
       </li>
-      <li><a href="/Ecommerce_ep_49-1.html">ECOMMERCE</a></li>
-      <li><a href="/OEM_ep_45-1.html">OEM</a></li>
-      <li><a href="/Partner-Network_ep_38-1.html">PARTNER NETWORK</a></li>
-      <li><a href="/Customer-Referral-Program_ep_46-1.html">CUSTOMER REFERRAL PROGRAM</a></li>
-      <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
-      <li><a href="/Our-Team_ep_48-1.html">OUR TEAM</a></li>
-      <li><a href="/Credentials_ep_47-1.html">CREDENTIALS</a></li>
-      <li><a href="/blog.asp">NEWS</a></li>
-      <li><a href="/crm.asp?action=contactus">Contact</a></li>
-      <li><a href="#">CONSOLE VAULT</a></li>
-      <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
+	  <li><a href="/console-vault.html">CONSOLE VAULT</a></li>
+	  <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
       <li><a href="/The-Security-Briefcase_p_13.html">SECURITY BRIEFCASE</a></li>
-      <li><a href="/THE-TRANSPORTER_c_116.html">GUN TRANSPORTER</a></li>
+      <li><a href="/ecommerce.html">ECOMMERCE</a></li>
+      <li><a href="/oem-customers.html">OEM</a></li>
+      <li><a href="/partner-network.html">PARTNER NETWORK</a></li>
+      <li><a href="/customer-referral-program.html">CUSTOMER REFERRAL PROGRAM</a></li>
+      <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
+      <li><a href="/crm.asp?action=contactus">Contact</a></li>
     </ul>
+	<div class="clear"></div>
   </div>
   <header class="navigation-header">
     <div class="nav-header-content row">
@@ -146,10 +167,51 @@
                 <li class="nav-header-content">
                   <a id="drill-down">SHOP BY VEHICLE</a>
                   <nav class="nav-drill nav-dropdown hidden">
-                    <div class="module cat-links">
-                      <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
+                    <div id="master-shopby-dropdown" class="module cat-links">
+                      <div class="drilldown-cats">
+                        <div class="header-bg">
+                          <h1>SHOP BY VEHICLE</h1>
+                          <h4>ENTER YOUR VEHICLE INFO SO WE CAN RECOMMEND THE RIGHT PRODUCTS FOR YOU</h4>
+                        </div>
+                      </div>
+                      <div class="cat-drilldown-container">
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="Cadillac">Cadillac</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ford">Ford</option>
+                                <option value="GMC">GMC</option>
+                                <option value="Hummer">Hummer</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Lincoln">Lincoln</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Toyota">Toyota</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
+                               <option value="0" disabled selected>Select</option>
+                           </select>
+                          </div>
+                        </div>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
+                               <option value="0" disabled selected>Select</option>
+                           </select>
+                          </div>
+                        </div>
+                      </div>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
+					<div class="clear"></div>
+					<div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
                   </nav>
                 </li>
               </ul>
@@ -157,7 +219,7 @@
             <li class="nav-dropdown-container products-dropdown">
               <a class="nav-target">PRODUCTS</a>
               <ul class="nav-cat-dropdown nav-dropdown hidden">
-                <li><a href="/Console-Vault_ep_50-1.html">CONSOLE VAULT</a></li>
+                <li><a href="/console-vault.html">CONSOLE VAULT</a></li>
                 <li><a href="/HOME-WALL-VAULTS_c_115.html">WALL VAULT</a></li>
                 <li><a href="/The-Security-Briefcase_p_13.html">SECURITY BRIEFCASE</a></li>
                 <li><a href="/THE-TRANSPORTER_c_116.html">GUN TRANSPORTER</a></li>
@@ -166,19 +228,16 @@
             <li class="nav-dropdown-container customers-dropdown">
               <a class="nav-target">CUSTOMERS</a>
               <ul class="nav-cat-dropdown nav-dropdown hidden">
-                <li><a href="/Ecommerce_ep_49-1.html">ECOMMERCE</a></li>
-                <li><a href="/OEM_ep_45-1.html">OEM</a></li>
-                <li><a href="/Partner-Network_ep_38-1.html">PARTNER NETWORK</a></li>
-                <li><a href="/Customer-Referral-Program_ep_46-1.html">CUSTOMER REFERRAL PROGRAM</a></li>
+                <li><a href="/ecommerce.html">ECOMMERCE</a></li>
+                <li><a href="/oem-customers.html">OEM</a></li>
+                <li><a href="/partner-network.html">PARTNER NETWORK</a></li>
+                <li><a href="/customer-referral-program.html">CUSTOMER REFERRAL PROGRAM</a></li>
               </ul>
             </li>
             <li class="nav-dropdown-container about-dropdown">
               <a class="nav-target">ABOUT</a>
               <ul class="nav-cat-dropdown nav-dropdown hidden">
                 <li><a href="/About-Us_ep_7.html">ABOUT US</a></li>
-                <li><a href="/Our-Team_ep_48-1.html">OUR TEAM</a></li>
-                <li><a href="/Credentials_ep_47-1.html">CREDENTIALS</a></li>
-                <li><a href="/blog.asp">NEWS</a></li>
               </ul>
             </li>
             <li><a href="/crm.asp?action=contactus">Contact</a></li>
@@ -367,7 +426,7 @@ jQuery(function() {
 <script>
 jQuery(document).ready(function(e) {
 
-  jQuery('.nav-dropdown-container').click(function() {
+  jQuery('.nav-dropdown-container').hover(function() {
     jQuery('.nav-dropdown').not(jQuery(this).children('.nav-dropdown')).addClass('hidden');
     jQuery(this).children('.nav-dropdown').toggleClass('hidden');
   });
@@ -380,9 +439,13 @@ jQuery(document).ready(function(e) {
     jQuery('.nav-drill-mobile').toggleClass('hidden');
   })
 
-  jQuery('#drill-down, #close').click(function() {
+  jQuery('#drill-down').hover(function() {
     jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
+  });
+
+  jQuery('.nav-drill .close-btn').click(function() {
+    jQuery('.nav-drill').addClass('hidden');
   });
 
 	jQuery('#mob-search-trigger').click(function() {
@@ -392,10 +455,6 @@ jQuery(document).ready(function(e) {
 	jQuery('#close_search_btn').click(function() {
 		jQuery('#mob-search').fadeOut(300);
 	});
-
-  jQuery('.mobile-nav-trigger').click(function() {
-      jQuery('.mobile-nav-container').toggleClass('slide-hidden');
-  });
 
   if (jQuery('.drilldown-cats .cat-drilldown').length) {
     jQuery('.drilldown-cats .cat-drilldown').wrapAll('<div class="cat-drilldown-container"></div>');

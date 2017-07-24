@@ -6,16 +6,21 @@
 @import 'global';
 
 // - Partials
-@import 'partials/top-bar';
-@import 'partials/search-box';
-@import 'partials/navigation-header';
-@import 'partials/mobile-menu';
-@import 'partials/multi-dropdown-menu';
-@import 'partials/social-buttons';
-@import 'partials/image-slider';
 @import 'partials/about';
-@import 'partials/product';
-@import 'partials/listing-0';
-@import 'partials/home';
+@import 'partials/cart';
+@import 'partials/checkout';
+@import 'partials/contact';
 @import 'partials/footer';
 @import 'partials/forms';
+@import 'partials/home';
+@import 'partials/image-slider';
+@import 'partials/listing-0';
+@import 'partials/mobile-menu';
+@import 'partials/multi-dropdown-menu';
+@import 'partials/my-account';
+@import 'partials/sub-account';
+@import 'partials/navigation-header';
+@import 'partials/product';
+@import 'partials/search-box';
+@import 'partials/social-buttons';
+@import 'partials/top-bar';

@@ -1,0 +1,24 @@
+#homeHeader, #home {
+  margin: 0;
+}
+.home-page-content-content {
+  .row {
+    background-color: white;
+  }
+  .home-page-blurb {
+    padding-bottom: 2rem;
+  }
+  .home-page-cta-promo {
+    .cta-promo {
+      text-align: center;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  .design-blurb {
+    padding-top: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
