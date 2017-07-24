@@ -13,8 +13,12 @@
   }
   .product-title {
     margin: 0;
-    margin-bottom: 0.67em;
     font-size: 1.75rem;
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+  }
+  .product-id {
     @include breakpoint(small down) {
       text-align: center;
     }

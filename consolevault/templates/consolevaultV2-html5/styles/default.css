@@ -2448,11 +2448,13 @@ a#drill-down {
     font-size: 1.25rem; }
   .product-page-wrapper .product-title {
     margin: 0;
-    margin-bottom: 0.67em;
     font-size: 1.75rem; }
     @media screen and (max-width: 39.9375em) {
       .product-page-wrapper .product-title {
         text-align: center; } }
+  @media screen and (max-width: 39.9375em) {
+    .product-page-wrapper .product-id {
+      text-align: center; } }
   .product-page-wrapper .product-short-desc {
     font-size: 1rem;
     font-style: italic;
