@@ -15,11 +15,11 @@ function populateYear(element) {
 
     var year = document.getElementById(container).getElementsByClassName('shopby-dropdown-select-year')[0];
         year.options.length = 0;
-        year.options[year.options.length] = new Option('Select', 'Select');
+        year.options[year.options.length] = new Option('Select Year', 0);
     var model = document.getElementById(container).getElementsByClassName('shopby-dropdown-select-model')[0];
         model.options.length = 0;
-        model.options[model.options.length] = new Option('Select', 'Select');
-    if (element.value !== 'Select') {
+        model.options[model.options.length] = new Option('Select a model', 0);
+    if (element.value !== 0) {
         var lastItemAdded;
         for(var x = 0; x < shopByVehicles.length; x++) {
           var items = shopByVehicles[x].split('/');
@@ -37,8 +37,8 @@ function populateModel(element) {
 
     var model = document.getElementById(container).getElementsByClassName('shopby-dropdown-select-model')[0];
         model.options.length = 0;
-        model.options[model.options.length] = new Option('Select', 'Select');
-    if (element.value !== 'Select') {
+        model.options[model.options.length] = new Option('Select a model', 0);
+    if (element.value !== 0) {
         var currentMake = document.getElementById(container).getElementsByClassName('shopby-dropdown-select-make')[0].value;
         var lastItemAdded;
         for(var x = 0; x < shopByVehicles.length; x++) {
@@ -397,6 +397,27 @@ var shopByVehicles = ['Cadillac/2003/Escalade/cadillac-escalade-2003-2006.html',
 'GMC/2017/Yukon/GMC-Yukon-Floor-Console-2015--2017_p_140.html',
 'GMC/2017/Yukon Denali/GMC-Yukon-Denali-Floor-Console-2015--2017_p_142.html',
 'GMC/2017/Yukon XL/GMC-Yukon-XL-Floor-Console-2015--2017_p_141.html',
+'Harley Davidson/1993/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/1994/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/1995/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/1996/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/1997/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/1998/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/1999/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2000/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2001/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2002/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2003/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2004/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2005/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2006/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2007/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2008/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2009/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2010/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2011/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2012/All/harley-davidson-bagger-vault.html',
+'Harley Davidson/2013/All/harley-davidson-bagger-vault.html',
 'Hummer/2001/H2/hummer-h2-2001-2007.html',
 'Hummer/2001/H2 SUT/hummer-h2-sut-2002-2007.html',
 'Hummer/2002/H2/hummer-h2-2001-2007.html',
