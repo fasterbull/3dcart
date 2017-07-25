@@ -2567,6 +2567,35 @@ a#drill-down {
     height: 21px;
     color: white; }
 
+#divOptionsBlock .opt-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+#divOptionsBlock .radio-format {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  #divOptionsBlock .radio-format input[type="radio"] {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+    display: block;
+    margin: 0;
+    float: none; }
+  #divOptionsBlock .radio-format .radio-option {
+    background-color: inherit;
+    border: 0;
+    margin: 0;
+    float: none; }
+
 #search {
   padding: 2rem 2rem; }
   #search .breadcrumbs {
