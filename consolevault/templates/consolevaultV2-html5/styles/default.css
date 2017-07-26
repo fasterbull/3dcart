@@ -1558,6 +1558,10 @@ hr {
   padding-bottom: 4rem; }
   #extrapage .breadcrumbs {
     display: none; }
+  #extrapage a button {
+    max-width: 300px;
+    height: auto;
+    padding: 0.6rem 1.25rem; }
   @media screen and (max-width: 550px) {
     #extrapage {
       padding-left: 2rem; } }
