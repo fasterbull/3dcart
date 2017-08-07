@@ -2029,6 +2029,16 @@ button, input[type="button"] {
   #divOptionsBlock .lock-link {
     margin-top: 0.25rem;
     display: block; }
+  @media screen and (max-width: 39.9375em) {
+    #divOptionsBlock {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      #divOptionsBlock .container {
+        text-align: center; } }
 
 .opt-regular {
   display: -webkit-box;
