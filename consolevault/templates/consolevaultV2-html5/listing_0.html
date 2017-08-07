@@ -43,6 +43,103 @@
             </table>
           </div>
         </div>
+        <!--START: PRODUCT_OPTIONS_BLOCK-->
+        <div id="divOptionsBlock" class="row">
+          <!--START: divOptionsBlock-->
+          <div class="container">
+              <!--START: optionstemplate-->
+              <!--START: textarea-format-->
+              <label for="textarea[oname]">[value]: [oprice]</label>
+              <textarea cols="30" rows="5" name="textarea[oname]" id="textarea[oname]" maxlength="[option_textlimit]" [option_textarealimit_validation] class="txtAreaStyle"></textarea>
+              <!--START: textlimit_display_validation[oname]-->
+              <div class="textlimit-textarea"><span id="charcount[oname]">[option_textlimit]</span> [product_charsleft]</div>
+              <!--END: textlimit_display_validation[oname]-->
+              <div class="clear"></div>
+              <!--END: textarea-format-->
+              <!--START: text-format-->
+              <label for="text[oname]">[value]: [oprice]</label>
+              <input type="text" size="30" name="text[oname]" id="text[oname]" maxlength="[option_textlimit]" [option_textlimit_validation] class="txtBoxStyle" />
+              <!--START: textlimit_display_validation[oname]-->
+              <div class="textlimit-text"><span id="charcount[oname]">[option_textlimit]</span> [product_charsleft]</div>
+              <!--END: textlimit_display_validation[oname]-->
+              <div class="clear"></div>
+              <!--END: text-format-->
+              <!--START: qty-format-->
+              <label for="text[oname]">[value] [oprice]</label>
+              <input type="text" size="3" name="text[oname]" value="0" />
+              <!--END: qty-format-->
+              <!--START: file-format-->
+              <label for="file[oname]">[value]: [oprice]</label>
+              <input type="file" name="file[oname]" />
+              <div class="clear"></div>
+              <!--END: file-format-->
+              <!--START: title-format-->
+              <div class="title-format">[feature]</div>
+              <!--END: title-format-->
+              <!--START: checkbox-format-->
+              <div class="checkbox-format">
+                <input type="checkbox" name="cb[oname]" value="[value]" onclick="validateValues(document.add,1);" data-optionset="[optionsetid]" [selected] />
+                [feature] [oprice]
+              </div>
+              <!--END: checkbox-format-->
+              <!--START: radio-format-->
+              <div class="radio-format">
+                <input type="radio" name="[oname]" id="radio-[value]" value="[value]" [selected] />
+                <div class="radio-option" data-group="[oname]" title="[feature]" id="[value]" onclick="document.getElementById('radio-[value]').checked=true;validateValues(document.add,1);selectOption(document.getElementById('radio-[value]'));">
+                  <!--START: radio_imagepath-->
+                  <img name="img_[oname]" src="[radio_imagepath]" />
+                  <!--END: radio_imagepath-->
+                  <span>[feature] [oprice]</span>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <!--END: radio-format-->
+              <!--START: dropdown-format-->
+              <div class="dropdown-format">
+                <select name="[oname]" class="txtBoxStyle">
+                  <!--START: option-->
+                  <option value="[value]" [selected]>[feature] [oprice]</option>
+                  <!--END: option-->
+                </select>
+                <a class="lock-link" target="_blank" href="/Lock-Types_ep_42-1.html">CLICK HERE to view our different lock types</a>
+              </div>
+              <!--END: dropdown-format-->
+              <!--START: dropdownimage-format-->
+               <div class="dropdown-format">
+                <select name="[oname]" class="txtBoxStyle">
+                  <!--START: option-->
+                  <option value="[value]" [selected]>[feature] [oprice]</option>
+                  <!--END: option-->
+                </select>
+                <a class="lock-link" target="_blank" href="[store_url]/Lock-Types_ep_42-1.html">CLICK HERE to view our different lock types</a>
+              </div>
+              <!--<div class="dropdownimage-format">
+                <select name="[oname]" onchange="validateValues(document.add,1);selectOption(this);" class="txtBoxStyle">-->
+                  <!--START: option-->
+                  <!--<option value="[value]" [selected]>[feature] [oprice]</option>-->
+                  <!--END: option-->
+                <!--</select>
+                <div class="dropdown-image"><img name="img_[oname]" width="50" src="assets/templates/common-html5/images/spacer.gif" /></div>
+              </div>-->
+              <!--END: dropdownimage-format-->
+              <!--END: optionstemplate-->
+              <!--START: options-->
+              <!--START: opt-title-->
+              <div class="opt-title">
+                <span class="label">[OPTIONLABEL]</span>
+              </div>
+              <!--END: opt-title-->
+              <!--START: opt-regular-->
+              <div class="opt-regular">
+                <span class="label">[OPTIONLABEL]</span>
+                <div class="opt-field">[OPTIONFIELD]</div>
+              </div>
+              <!--END: opt-regular-->
+              <!--END: options-->
+          </div>
+          <!--END: divOptionsBlock-->
+        </div>
+        <!--END: PRODUCT_OPTIONS_BLOCK-->
         <div class="product-action-container row">
           <div class="product-action-form columns small-12">
             <form class="product-add-to-cart">
