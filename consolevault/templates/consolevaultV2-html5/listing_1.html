@@ -6,9 +6,7 @@
     if (typeof jQuery == 'undefined') {
         document.write("<script type=\"text/javascript\" src=\"assets/templates/common-html5/js/jquery.min.js\"></" + "script>");
     }
-
     jQuery.getScript('assets/templates/common-html5/js/jquery.simplemodal.min.js');
-
     var sWidth = document.body.clientWidth;
     if (sWidth < 767) {
         //mobile only
@@ -29,7 +27,6 @@
             'hint': false
         }
     }
-
     function closeModal() {
         jQuery.modal.close();
     }
@@ -276,14 +273,11 @@
 <script type="text/javascript">
 var reqOptionBar = new MessageBar();
 reqOptionBar.initialize();
-
 //Thumbnail script
 var image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,selectedimage;
 var imagemaxwidth, imagemaxheight
-
 imagemaxwidth=[image_medium_w];
 imagemaxheight=0;
-
 image1="[image1]";
 image2="[image2]";
 image3="[image3]";
@@ -326,10 +320,8 @@ imagecaption19="[imagecaption19]";
 imagecaption20="[imagecaption20]";
 selectedimage='[image1]'; //pre-load image1
 zoom_enable=[3dzoom_enabled]; //0 = zoomify | 1 = magiczoom
-
 function image_click(clicks) {
     if (document.getElementById('listing_main_image_link')!=undefined) {
-
         if (zoom_enable==1) {
             selectedimage=eval('image'+clicks);
             MagicZoomPlus.update('listing_main_image_link', selectedimage, 'thumbnail.asp?file=' + selectedimage + '&maxx='+imagemaxwidth+'&maxy='+imagemaxheight, 'show-title: false');
@@ -347,33 +339,25 @@ function image_click(clicks) {
     jQuery('#realmediaBlock').hide();
     jQuery('#mediaBlock #mainImage').fadeIn();
 }
-
 function showVideo() {
     jQuery('#realmediaBlock').fadeIn();
     jQuery('#mediaBlock #mainImage').hide();
 }
-
 function zoomify_popup() {
     popupsimple('zoomify.asp?catalogid=[catalogid]&img=' + selectedimage ,500,500);
 }
-
 jQuery(document).ready(function() {
   jQuery('.product-favorite').click(function() {
     add_wishlist();
   })
 });
-
 function add_wishlist() {
-
     if ("[Enabled_Multiple_WishList]" == "1") {
-
         //window.open('[link_addtolist]','popup','height=300,width=550,location=no,scrollbars=no,menubars=no,toolbars=no,resizable=yes');
-
         var src = "[link_addtolist]";
         var intHeight, intWidth;
         intHeight = 480;
         intWidth = 495;
-
         if (document.body.clientWidth < 767) {
             intHeight = 460;
             intWidth = 300;
@@ -399,7 +383,6 @@ function add_wishlist() {
         document.add.submit();
     }
 }
-
 function check_and_add(formx)
 {
     var reqOption = validateReqOption(formx);
