@@ -54,6 +54,9 @@
    text-transform: uppercase;
    font-weight: bold;
    text-align: left;
+   &:disabled {
+     color: gray
+   }
  }
  .drilldown-inner {
    position: relative;

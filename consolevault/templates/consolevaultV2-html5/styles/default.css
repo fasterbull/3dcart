@@ -2154,6 +2154,8 @@ button, input[type="button"] {
     text-transform: uppercase;
     font-weight: bold;
     text-align: left; }
+    #shopby-drill-mobile select:disabled {
+      color: gray; }
   #shopby-drill-mobile .drilldown-inner {
     position: relative; }
     #shopby-drill-mobile .drilldown-inner:after {
