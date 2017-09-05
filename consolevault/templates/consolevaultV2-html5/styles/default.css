@@ -1579,9 +1579,9 @@ hr {
 
 .txtBoxStyle {
   display: block;
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none;*/
   border: 2px solid #f0b527;
   color: #000;
   background-color: #fff;
@@ -1772,6 +1772,9 @@ hr {
   #contactUs .button a {
     color: #fff;
     text-decoration: none; }
+
+#registration0 {
+  padding: 2rem 3rem; }
 
 .fedex-shipping-blurb {
   background: white;
@@ -2027,6 +2030,8 @@ button, input[type="button"] {
     #divOptionsBlock a:visited {
       color: #272727; }
   #divOptionsBlock .lock-link {
+      color: red;
+      font-style: italic;
     margin-top: 0.25rem;
     display: block; }
   @media screen and (max-width: 39.9375em) {
