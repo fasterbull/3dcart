@@ -122,25 +122,32 @@
             <a id="drill-down-mobile">SHOP BY VEHICLE</a>
             <nav id="shopby-drill-mobile">
               <div class="mobile-drilldown-content module cat-links">
-                <div class="cat-drilldown-container">
-                  <div class="cat-drilldown">
-                    <div class="drilldown-inner">
-                      <select name="section1s" class="mobile-cat-select">
-                      </select>
-                    </div>
-                  </div>
-                  <div class="cat-drilldown">
-                    <div class="drilldown-inner">
-                      <select name="section2s" class="mobile-cat-select">
-                      </select>
-                    </div>
-                  </div>
-                  <div class="cat-drilldown">
-                    <div class="drilldown-inner">
-                      <select name="section3bs" class="mobile-cat-select">
-                      </select>
-                    </div>
-                  </div>
+                <div class="drilldown-inner">
+                  <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                      <option value="0">Select Make</option>
+                      <option value="Cadillac">Cadillac</option>
+                      <option value="Chevrolet">Chevrolet</option>
+                      <option value="Dodge">Dodge</option>
+                      <option value="Ford">Ford</option>
+                      <option value="GMC">GMC</option>
+                      <option value="Harley Davidson">Harley Davidson</option>
+                      <option value="Hummer">Hummer</option>
+                      <option value="Jeep">Jeep</option>
+                      <option value="Lincoln">Lincoln</option>
+                      <option value="Nissan">Nissan</option>
+                      <option value="Subaru">Subaru</option>
+                      <option value="Toyota">Toyota</option>
+                  </select>
+                </div>
+                <div class="drilldown-inner">
+                  <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
+                     <option value="0">Select Year</option>
+                 </select>
+                </div>
+                <div class="drilldown-inner">
+                   <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
+                      <option value="0">Select a model</option>
+                  </select>
                 </div>
               </div>
             </nav>
@@ -181,13 +188,51 @@
                   <a id="drill-down">SHOP BY VEHICLE</a>
                   <nav class="nav-drill nav-dropdown hidden">
                     <div id="master-shopby-dropdown" class="module cat-links">
+                      <div class="drilldown-cats">
+                        <div class="header-bg">
+                          <h1>SHOP BY VEHICLE</h1>
+                          <h4>ENTER YOUR VEHICLE INFO SO WE CAN RECOMMEND THE RIGHT PRODUCTS FOR YOU</h4>
+                        </div>
+                      </div>
                       <div class="cat-drilldown-container">
-                        <script type=text/javascript src="drop_downs.asp?template=dropdowntemplate&parentid=0"></script>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                                <option value="0" disabled selected>Select Make</option>
+                                <option value="Cadillac">Cadillac</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ford">Ford</option>
+                                <option value="GMC">GMC</option>
+                                <option value="Harley Davidson">Harley Davidson</option>
+                                <option value="Hummer">Hummer</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Lincoln">Lincoln</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Toyota">Toyota</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
+                               <option value="0" disabled selected>Select Year</option>
+                           </select>
+                          </div>
+                        </div>
+                        <div class="cat-drilldown">
+                          <div class="drilldown-inner">
+                            <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
+                               <option value="0" disabled selected>Select a model</option>
+                           </select>
+                          </div>
+                        </div>
                       </div>
                       <span class="close-btn"><i class="icon-cancel-circled"></i></span>
                     </div>
-					             <div class="clear"></div>
-					             <div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
+					<div class="clear"></div>
+					<div class="contact-us">Can't find your vehicle? <a href="/crm.asp?action=contactus">Contact us</a></div>
                   </nav>
                 </li>
               </ul>
@@ -401,53 +446,40 @@ jQuery(function() {
 <script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
 <script>
 jQuery(document).ready(function(e) {
-
   jQuery('.nav-dropdown-container').hover(function() {
     jQuery('.nav-dropdown').not(jQuery(this).children('.nav-dropdown')).addClass('hidden');
     jQuery(this).children('.nav-dropdown').toggleClass('hidden');
   });
-
   jQuery('.search-icon-mobile').click(function() {
     jQuery('.mobile-search-container').toggleClass('shown');
   });
-
   jQuery('#drill-down-mobile').click(function() {
     jQuery('.nav-drill-mobile').toggleClass('hidden');
   })
-
   jQuery('#drill-down').hover(function() {
     jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
   });
-
-
+  
   jQuery('.nav-drill .close-btn').click(function() {
     jQuery('.nav-drill').addClass('hidden');
   });
-
 	jQuery('#mob-search-trigger').click(function() {
 		jQuery('#mob-search').fadeIn(300);
 	});
-
 	jQuery('#close_search_btn').click(function() {
 		jQuery('#mob-search').fadeOut(300);
 	});
-
   if (jQuery('.drilldown-cats .cat-drilldown').length) {
     jQuery('.drilldown-cats .cat-drilldown').wrapAll('<div class="cat-drilldown-container"></div>');
   }
-
   jQuery('#homeHeader').addClass('columns small-12');
 	createSticky(jQuery('.navigation-menu-container-wrapper'));
 });
-
 function createSticky(sticky) {
-
 	if (typeof sticky !== 'undefined') {
-
 		var	pos = sticky.offset().top,
 				win = jQuery(window);
-
 		win.on('scroll', function() {
     	win.scrollTop() >= pos - 54 ? sticky.addClass('fixed') : sticky.removeClass('fixed');
 		});
