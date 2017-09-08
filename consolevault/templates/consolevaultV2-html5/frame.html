@@ -158,7 +158,7 @@
 	  <li><a href="[store_url]/secret-safe.html">WALL VAULT</a></li>
       <li><a href="[store_url]/security-briefcase.html">SECURITY BRIEFCASE</a></li>
       <li><a href="[store_url]/gun-transporter.html">GUN TRANSPORTER</a></li>
-       <li><a href="[store_url]/Universal-Vault_p_41.html">UNIVERSAL VAULT</a></li>
+       <li><a href="[store_url]/Universal-Console-Vault-Safe_p_13.html">UNIVERSAL VAULT</a></li>
       <li><a href="[store_url]/ecommerce.html">ECOMMERCE</a></li>
       <li><a href="[store_url]/oem-customers.html">OEM</a></li>
       <li><a href="[store_url]/partner-network.html">PARTNER NETWORK</a></li>
@@ -244,7 +244,7 @@
                 <li><a href="[store_url]/secret-safe.html">WALL VAULT</a></li>
                 <li><a href="[store_url]/security-briefcase.html">SECURITY BRIEFCASE</a></li>
                 <li><a href="[store_url]/gun-transporter.html">GUN TRANSPORTER</a></li>
-                 <li><a href="[store_url]/Universal-Vault_p_41.html">UNIVERSAL VAULT</a></li>
+                 <li><a href="[store_url]/Universal-Console-Vault-Safe_p_13.html">UNIVERSAL VAULT</a></li>
               </ul>
             </li>
             <li class="nav-dropdown-container customers-dropdown">
@@ -446,40 +446,53 @@ jQuery(function() {
 <script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
 <script>
 jQuery(document).ready(function(e) {
+
   jQuery('.nav-dropdown-container').hover(function() {
     jQuery('.nav-dropdown').not(jQuery(this).children('.nav-dropdown')).addClass('hidden');
     jQuery(this).children('.nav-dropdown').toggleClass('hidden');
   });
+
   jQuery('.search-icon-mobile').click(function() {
     jQuery('.mobile-search-container').toggleClass('shown');
   });
+
   jQuery('#drill-down-mobile').click(function() {
     jQuery('.nav-drill-mobile').toggleClass('hidden');
   })
+
   jQuery('#drill-down').hover(function() {
     jQuery('.nav-dropdown').not(jQuery('#drilldown .nav-dropdown')).addClass('hidden');
     jQuery('.nav-drill').toggleClass('hidden');
   });
+
   
   jQuery('.nav-drill .close-btn').click(function() {
     jQuery('.nav-drill').addClass('hidden');
   });
+
 	jQuery('#mob-search-trigger').click(function() {
 		jQuery('#mob-search').fadeIn(300);
 	});
+
 	jQuery('#close_search_btn').click(function() {
 		jQuery('#mob-search').fadeOut(300);
 	});
+
   if (jQuery('.drilldown-cats .cat-drilldown').length) {
     jQuery('.drilldown-cats .cat-drilldown').wrapAll('<div class="cat-drilldown-container"></div>');
   }
+
   jQuery('#homeHeader').addClass('columns small-12');
 	createSticky(jQuery('.navigation-menu-container-wrapper'));
 });
+
 function createSticky(sticky) {
+
 	if (typeof sticky !== 'undefined') {
+
 		var	pos = sticky.offset().top,
 				win = jQuery(window);
+
 		win.on('scroll', function() {
     	win.scrollTop() >= pos - 54 ? sticky.addClass('fixed') : sticky.removeClass('fixed');
 		});
