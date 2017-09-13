@@ -28,9 +28,11 @@
 #divOptionsBlock {
   border-bottom: none;
   margin: 0;
-  margin-top: 2rem;
+  margin-top: 0;
   @include dark-anchors;
   .lock-link {
+    color: red;
+    font-style: italic;
     margin-top: 0.25rem;
     display: block;
   }
