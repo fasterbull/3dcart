@@ -1772,9 +1772,6 @@ hr {
   #contactUs .button a {
     color: #fff;
     text-decoration: none; }
-	
-#registration0 {
-  padding: 2rem 3rem; }
 
 .fedex-shipping-blurb {
   background: white;
@@ -2159,8 +2156,6 @@ button, input[type="button"] {
     text-transform: uppercase;
     font-weight: bold;
     text-align: left; }
-    #shopby-drill-mobile select:disabled {
-      color: gray; }
   #shopby-drill-mobile .drilldown-inner {
     position: relative; }
     #shopby-drill-mobile .drilldown-inner:after {
@@ -2616,6 +2611,9 @@ a#drill-down {
     border: 0;
     margin: 0;
     float: none; }
+
+#registration0 {
+  padding: 2rem 3rem; }
 
 #search {
   padding: 2rem 2rem; }

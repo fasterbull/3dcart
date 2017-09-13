@@ -54,9 +54,6 @@
    text-transform: uppercase;
    font-weight: bold;
    text-align: left;
-   &:disabled {
-     color: gray
-   }
  }
  .drilldown-inner {
    position: relative;
@@ -71,7 +68,7 @@
      margin-right: 10px;
      width: 30px;
      height: 100%;
-     pointer-events: none;
+     pointer-events:none;
    }
  }
 }
