@@ -1721,6 +1721,8 @@ button, input[type="button"] {
     font-style: italic;
     margin-top: 0.25rem;
     display: block; }
+    #divOptionsBlock .lock-link:visited {
+      color: red; }
   @media screen and (max-width: 39.9375em) {
     #divOptionsBlock {
       display: flex;
@@ -2464,5 +2466,3 @@ a#drill-down {
       text-shadow: 0 0 1px #765608;
       text-transform: uppercase;
       padding-bottom: 0; }
-
-/*# sourceMappingURL=default.css.map */
