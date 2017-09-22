@@ -18,7 +18,7 @@ function populateYear(element) {
         year.options[year.options.length] = new Option('Select Year', 0);
     var model = document.getElementById(container).getElementsByClassName('shopby-dropdown-select-model')[0];
         model.options.length = 0;
-        model.options[model.options.length] = new Option('Select a model', 0);
+        model.options[model.options.length] = new Option('Select model', 0);
     if (element.value !== 0) {
         var lastItemAdded;
         for(var x = 0; x < shopByVehicles.length; x++) {
@@ -37,7 +37,7 @@ function populateModel(element) {
 
     var model = document.getElementById(container).getElementsByClassName('shopby-dropdown-select-model')[0];
         model.options.length = 0;
-        model.options[model.options.length] = new Option('Select a model', 0);
+        model.options[model.options.length] = new Option('Select model', 0);
     if (element.value !== 0) {
         var currentMake = document.getElementById(container).getElementsByClassName('shopby-dropdown-select-make')[0].value;
         var lastItemAdded;
