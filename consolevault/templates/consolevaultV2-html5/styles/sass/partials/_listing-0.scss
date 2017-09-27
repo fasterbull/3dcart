@@ -35,6 +35,9 @@
     font-style: italic;
     margin-top: 0.25rem;
     display: block;
+    &:visited {
+      color: red;
+    }
   }
   @include breakpoint(small down) {
     display: flex;

@@ -168,9 +168,10 @@
                 <!--END: dropdown-format-->
                 <!--START: dropdownimage-format-->
                  <div class="dropdown-format">
-                  <select name="[oname]" class="txtBoxStyle">
+                  <select name="[oname]" class="txtBoxStyle" required>
+				    <option selected disabled value="">Select</option>
                     <!--START: option-->
-                    <option value="[value]" [selected]>[feature] [oprice]</option>
+                    <option value="[value]">[feature] [oprice]</option>
                     <!--END: option-->
                   </select>
                   <a class="lock-link" target="_blank" href="[store_url]/Lock-Types_ep_42-1.html">View our lock types</a>
@@ -210,7 +211,7 @@
                 <label for="qtyBox">[product_quantity]</label>
               </div>
               <!--END: qtybox-->
-              <button type="button" class="btn" onclick="check_and_add(document.divOptionsBlock);">[product_addtocart]</button>
+              <button type="button" class="btn" onclick="check_and_add(document.add);">[product_addtocart]</button>
 
               <!--START: addWishlist-->
               <div class="addWishlist product-favorite">
@@ -383,15 +384,32 @@ function add_wishlist() {
         document.add.submit();
     }
 }
-function check_and_add(formx)
-{
-    var reqOption = validateReqOption(formx);
+function check_and_add(formx) {
+	var isValid = true;
+    $("input[name=required_field]").each(function () {
+        if (!$("[name=" + $(this).val() + "]").val()) {
+            reqOptionBar.alert('Please select all required options.');
+            isValid = false;
+			return;
+        }
+    });
+
+	if (isValid) {
+		document.add.submit();
+	}
+	else {
+		return false;
+	}
+
+    /*var reqOption = validateReqOption(formx);
     if (reqOption != null) {
         reqOptionBar.alert('Please select all required options.');
         varx1 = '[name="' + reqOption.name + '"]';
         jQuery(varx1).closest('.opt-regular').addClass('option-required');
         return;
     }
-    document.add.submit();
+    document.add.submit();*/
+
 }
+
 </script>
