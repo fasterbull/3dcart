@@ -23,7 +23,7 @@ function populateYear(element) {
         var itemsAdded = [];
         for(var x = 0; x < shopByVehicles.length; x++) {
           var items = shopByVehicles[x].split('/');
-            if (items[1] === element.value && !itemsAdded.includes(items[2])) {
+            if (items[1] === element.value && itemsAdded.indexOf(items[2]) === -1) {
                 itemsAdded.push(items[2]);
                 year.options[year.options.length] = new Option(items[2], items[2]);
             }
@@ -47,7 +47,7 @@ function populateModel(element) {
         var itemsAdded = [];
         for(var x = 0; x < shopByVehicles.length; x++) {
           var items = shopByVehicles[x].split('/');
-          if (items[0] === currentMake && element.value == items[0] && !itemsAdded.includes(items[1])) {
+          if (items[0] === currentMake && element.value == items[0] && itemsAdded.indexOf(items[1]) === -1) {
             itemsAdded.push(items[1]);
             model.options[model.options.length] = new Option(items[1], items[1]);
           }
