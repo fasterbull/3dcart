@@ -35,12 +35,15 @@
     }
 </script>
 </head>
-<body>
+<!-- Christmas fix, original: <body> -->
+<body style="padding-top: 120px;">
 <div id="mainContainer">
-  <div class="site-top-bar">
+  <!-- Christmas fix, original: <div class="site-top-bar"> -->
+  <div class="site-top-bar" style="height: 120px;">
     <div class="row site-top-bar-wrapper">
       <div class="columns small-12 top-bar-content">
-        <div class="row" style="height:100%">
+        <!-- Christmas fix, original: <div class="row" style="height:100%"> -->
+		<div class="row" style="padding-top: 7px;">
           <div class="top-bar-content-left columns small-4 large-5">
             <div class="mobile-nav-trigger hide-for-large">
               <div class="mobile-hamburger-menu">
@@ -101,6 +104,26 @@
             </div>
           </div>
         </div>
+		<!-- Christmas fix -->
+		<div class="row"><h3 id="christmas-message">FOR GUARANTEED FREE SHIPMENT BY CHRISTMAS ALL ORDERS MUST BE SUMMITED BY DECEMBER 14.</h3></div>
+		<style>
+		#christmas-message {
+			margin: 10px auto;
+			text-align: center;
+			font-size: 22px;
+			color: red;
+		}
+		@media only screen and (max-width: 1170px) {
+			#christmas-message {
+				font-size: 14px;
+			}
+		}
+		@media only screen and (max-width: 380px) {
+			#christmas-message {
+				font-size: 12px;
+			}
+		}
+		</style>
       </div>
     </div>
   </div>
@@ -121,10 +144,11 @@
             <nav id="shopby-drill-mobile">
               <div class="mobile-drilldown-content module cat-links">
                 <div class="drilldown-inner">
-                  <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                  <select class="shopby-dropdown-select-make" onChange="populateModel(this)">
                       <option value="0">Select Make</option>
                        <option value="Cadillac">Cadillac</option>
                       <option value="Chevrolet">Chevrolet</option>
+		      <option value="Chrysler">Chrysler</option>
                       <option value="Dodge">Dodge</option>
                       <option value="Ford">Ford</option>
                       <option value="GMC">GMC</option>
@@ -138,13 +162,13 @@
                   </select>
                 </div>
                 <div class="drilldown-inner">
-                  <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
-                     <option value="0">Select Year</option>
+                  <select class="shopby-dropdown-select-model" onChange="populateYear(this)">
+                     <option value="0">Select Model</option>
                  </select>
                 </div>
                 <div class="drilldown-inner">
-                   <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
-                      <option value="0">Select a model</option>
+                   <select class="shopby-dropdown-select-year" onChange="redirectToVaultPage(this)">
+                      <option value="0">Select Year</option>
                   </select>
                 </div>
               </div>
@@ -194,10 +218,11 @@
                       <div class="cat-drilldown-container">
                         <div class="cat-drilldown">
                           <div class="drilldown-inner">
-                            <select class="shopby-dropdown-select-make" onChange="populateYear(this)">
+                            <select class="shopby-dropdown-select-make" onChange="populateModel(this)">
                                 <option value="0" disabled selected>Select Make</option>
                                 <option value="Cadillac">Cadillac</option>
                                 <option value="Chevrolet">Chevrolet</option>
+				<option value="Chrysler">Chrysler</option>
                                 <option value="Dodge">Dodge</option>
                                 <option value="Ford">Ford</option>
                                 <option value="GMC">GMC</option>
@@ -213,15 +238,15 @@
                         </div>
                         <div class="cat-drilldown">
                           <div class="drilldown-inner">
-                            <select class="shopby-dropdown-select-year" onChange="populateModel(this)">
-                               <option value="0" disabled selected>Select Year</option>
+                            <select class="shopby-dropdown-select-model" onChange="populateYear(this)">
+                               <option value="0" disabled selected>Select Model</option>
                            </select>
                           </div>
                         </div>
                         <div class="cat-drilldown">
                           <div class="drilldown-inner">
-                            <select class="shopby-dropdown-select-model" onChange="redirectToVaultPage(this)">
-                               <option value="0" disabled selected>Select a model</option>
+                            <select class="shopby-dropdown-select-year" onChange="redirectToVaultPage(this)">
+                               <option value="0" disabled selected>Select Year</option>
                            </select>
                           </div>
                         </div>
