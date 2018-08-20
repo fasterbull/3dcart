@@ -35,12 +35,15 @@
     }
 </script>
 </head>
+<!-- Christmas fix: <body style="padding-top: 120px;"> -->
 <body>
 <div id="mainContainer">
+  <!-- Christmas fix: <div class="site-top-bar" style="height: 120px;"> -->
   <div class="site-top-bar">
     <div class="row site-top-bar-wrapper">
       <div class="columns small-12 top-bar-content">
-        <div class="row" style="height:100%">
+        <!-- Christmas fix, original: <div class="row" style="padding-top: 7px;"> -->
+		<div class="row" style="height:100%">
           <div class="top-bar-content-left columns small-4 large-5">
             <div class="mobile-nav-trigger hide-for-large">
               <div class="mobile-hamburger-menu">
@@ -61,7 +64,7 @@
           </div>
           <div class="top-bar-content-right columns small-8 large-7">
             <div class="row align-right desktop-nav">
-              <div class="columns small-8 right-user-links shrink" style="padding-right: 0;">
+              <div class="columns small-8 right-user-links shrink">
                 <div class="account-links">
                   <!--START: login-->
                   <!--END: login-->
@@ -103,6 +106,26 @@
             </div>
           </div>
         </div>
+		<!-- Christmas fix -->
+		<!--<div class="row"><h3 id="christmas-message">FOR GUARANTEED FREE SHIPMENT BY CHRISTMAS ALL ORDERS MUST BE SUMMITED BY DECEMBER 14.</h3></div>-->
+		<style>
+		#christmas-message {
+			margin: 10px auto;
+			text-align: center;
+			font-size: 22px;
+			color: red;
+		}
+		@media only screen and (max-width: 1170px) {
+			#christmas-message {
+				font-size: 14px;
+			}
+		}
+		@media only screen and (max-width: 380px) {
+			#christmas-message {
+				font-size: 12px;
+			}
+		}
+		</style>
       </div>
     </div>
   </div>
@@ -162,7 +185,7 @@
        <li><a href="[store_url]/Universal-Console-Vault-Safe_p_13.html">UNIVERSAL VAULT</a></li>
       <li><a href="[store_url]/ecommerce.html">ECOMMERCE</a></li>
       <li><a href="[store_url]/oem-customers.html">OEM</a></li>
-      <li><a href="[store_url]/partner-network.html">PARTNER NETWORK</a></li>
+      <li><a href="[store_url]/partner-network.html">AFFILIATE PROGRAM</a></li>
       <li><a href="[store_url]/our-mission-and-vision.html">ABOUT US</a></li>
       <li><a href="[store_url]/crm.asp?action=contactus">Contact</a></li>
     </ul>
@@ -254,7 +277,7 @@
               <ul class="nav-cat-dropdown nav-dropdown hidden">
                 <li><a href="[store_url]/ecommerce.html">ECOMMERCE</a></li>
                 <li><a href="[store_url]/oem-customers.html">OEM</a></li>
-                <li><a href="[store_url]/partner-network.html">PARTNER NETWORK</a></li>
+                <li><a href="[store_url]/partner-network.html">AFFILIATE PROGRAM</a></li>
               </ul>
             </li>
             <li class="nav-dropdown-container about-dropdown">
